@@ -1,0 +1,15 @@
+.page-content{
+    width: calc(100% - 310px);
+    margin-right: auto;
+    padding: 35px 0;
+} 
+:root {
+    --main-color: #34ac72;
+    --text-color: #393d48;
+    --muted-color: #707070;
+}
+@import 'header';
+@import 'pageContent';
+@import 'pageContentHeader';
+@import 'tableList'; 
+

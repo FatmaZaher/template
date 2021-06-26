@@ -1,0 +1,114 @@
+[
+  {
+    "header": true,
+    "hiddenOnCollapse": true
+  },
+
+  {
+    "href": "/home",
+    "title": "الرئيسية",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-home"
+    }
+  },
+  {
+    "href": "/ControlPanel",
+    "title": "لوحة التحكم",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-home"
+    }
+  },
+  {
+    "href": "/Profile",
+    "title": "الملف الشخصي",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-user"
+    }
+  },
+  {
+    "href": "/Reports",
+    "title": "التقارير",
+    "icon": {
+      "element": "i",
+      "class": "far fa-bookmark"
+    }
+  },
+  {
+    "href": "/Sections",
+    "title": "الأقسام والإدارات",
+    "icon": {
+      "element": "i",
+      "class": "far fa-folder"
+    }
+  },
+
+  {
+    "href": "/Employees",
+    "title": "الموظفين",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-users"
+    }
+  },
+
+  {
+    "href": "/Samples",
+    "title": "العينات",
+    "icon": {
+      "element": "i",
+      "class": "far fa-file"
+    }
+  },
+  {
+    "href": "/Objections",
+    "title": "الإعتراضات",
+    "icon": {
+      "element": "i",
+      "class": "far fa-star"
+    }
+  },
+
+  {
+    "href": "/Justifications",
+    "title": "التبريرات",
+    "icon": {
+      "element": "i",
+      "class": "far fa-file"
+    }
+  },
+  {
+    "href": "/Responsibilities",
+    "title": "المسؤوليات",
+    "icon": {
+      "element": "i",
+      "class": "far fa-file"
+    }
+  },
+  {
+    "href": "/ComplianceCases",
+    "title": "حالات الإمتثال",
+    "icon": {
+      "element": "i",
+      "class": "far fa-file"
+    }
+  },
+  {
+    "href": "/Settings",
+    "title": "الإعدادات",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-cogs"
+    }
+  },
+  {
+    "href": "/Logout",
+    "title": "تسجيل الخروج",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-sign-out-alt"
+    }
+  }
+]

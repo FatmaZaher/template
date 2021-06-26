@@ -1,0 +1,67 @@
+.btn {
+  float: left;
+  background-color: var(--main-color) !important;
+  padding: 10px 15px;
+  border-radius: 25px;
+  color: #fff !important;
+  border: none !important;
+  span {
+    margin-right: 5px;
+  }
+  i {
+    font-size: 14px;
+  }
+  &:hover {
+    background-color: #298a5b;
+  }
+}
+.modal-content {
+  padding: 20px;
+  .modal-header {
+    border-bottom: none;
+    h5 {
+      font-size: 15px;
+    }
+    .close {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+  .modal-body {
+    .form-control,
+    .custom-select,
+    .custom-file-label {
+      border-radius: 25px;
+      border: 1px solid #34ac7242;
+      padding: 0 20px !important;
+      outline: none !important;
+      background-color: #34ac7217;
+    }
+    .custom-file-label {
+      height: 40px;
+      line-height: 40px;
+      margin-top: 15px;
+    }
+    .custom-file-input ~ .custom-file-label[data-browse]::after {
+      content: 'رفع صورة';
+      left: 3px;
+      right: auto;
+      border-radius: 25px;
+      background-color: var(--main-color);
+      color: #fff;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+      margin-top: 3px;
+    }
+  }
+  .modal-footer {
+    display: none;
+  }
+  .footer-button {
+    margin-top: 50px;
+    .fot-btn {
+      width: 150px;
+    }
+  }
+}
