@@ -1,0 +1,23 @@
+.modal-content {
+  padding: 20px;
+  .modal-header {
+    border-bottom: none;
+    h5 {
+      font-size: 15px;
+    }
+    .close {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+  .modal-footer {
+    display: none;
+  }
+  .footer-button {
+    margin-top: 30px;
+    .fot-btn {
+      width: 150px;
+      font-size: 14px;
+    }
+  }
+}

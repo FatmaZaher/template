@@ -56,30 +56,6 @@ export default {
 }
 </script>
 <style lang="scss">
-.v-sidebar-menu {
-  right: 30px;
-  text-align: right;
-  top: 30px;
-  bottom: 30px;
-  padding: 0 10px;
-  border-radius: 20px;
-  box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
-  margin-left: 35px;
-  .vsm--link {
-    font-size: 14px;
-    padding: 5px;
-    padding-right: 40px;
-    margin: 5px;
-    border-radius: 25px;
-  }
-  .vsm--toggle-btn {
-    display: none;
-  }
-}
-.v-sidebar-menu.vsm_white-theme .vsm--link_level-1 .vsm--icon {
-  background-color: transparent;
-  margin-left: 10px;
-}
 .user-card {
   .image img {
     width: 80px;
@@ -94,6 +70,37 @@ export default {
     margin-bottom: 0;
   }
 }
+.v-sidebar-menu {
+  right: 30px;
+  text-align: right;
+  top: 30px;
+  bottom: 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+  box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
+  margin-left: 35px;
+  .vsm--link {
+    font-size: 14px;
+    padding: 5px;
+    padding-right: 10px;
+    margin: 5px;
+    border-radius: 25px;
+  }
+  .vsm--toggle-btn {
+    display: none;
+  }
+}
+.v-sidebar-menu.vsm_white-theme .vsm--link_level-1 .vsm--icon,
+.v-sidebar-menu.vsm_white-theme .vsm--link_level-2 .vsm--icon {
+  background-color: transparent;
+  margin: 0 10px;
+}
+.v-sidebar-menu.vsm_white-theme .vsm--link_level-2 {
+  padding-right: 40px;
+}
+.v-sidebar-menu.vsm_white-theme .vsm--link_level-2.vsm--link_active {
+  color: var(--main-color);
+}
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_exact-active,
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_active {
   box-shadow: none;
@@ -103,5 +110,15 @@ export default {
     color: #fff;
     background-color: transparent;
   }
+}
+.v-sidebar-menu.vsm_white-theme.vsm_expanded .vsm--item_open .vsm--link_level-1,
+.v-sidebar-menu.vsm_white-theme.vsm_expanded
+  .vsm--item_open
+  .vsm--link_level-1
+  .vsm--icon {
+  background-color: var(--main-color);
+}
+.v-sidebar-menu.vsm_white-theme .vsm--dropdown .vsm--list {
+  background-color: transparent;
 }
 </style>

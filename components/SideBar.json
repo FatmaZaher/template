@@ -5,7 +5,7 @@
   },
 
   {
-    "href": "/home",
+    "href": "/",
     "title": "الرئيسية",
     "icon": {
       "element": "i",
@@ -29,19 +29,46 @@
     }
   },
   {
-    "href": "/Reports",
+    "href": "#",
     "title": "التقارير",
     "icon": {
       "element": "i",
-      "class": "far fa-bookmark"
-    }
+      "class": "fas fa-bookmark"
+    },
+    "child": [
+      {
+        "href": "/Reports/AllReports",
+        "title": "كاقة التقارير",
+        "icon": {
+          "element": "i",
+          "class": "fas fa-bookmark"
+        }
+      },
+      {
+        "href": "/Reports/VerificationReport",
+        "title": "تقارير قيد التحقق",
+        "icon": {
+          "element": "i",
+          "class": "fas fa-bookmark"
+        }
+      },
+      {
+        "href": "/Reports/MonitoringResults",
+        "title": "نتائج عملية الرصد",
+        "icon": {
+          "element": "i",
+          "class": "fas fa-bookmark"
+        }
+      }
+      
+    ]
   },
   {
     "href": "/Sections",
     "title": "الأقسام والإدارات",
     "icon": {
       "element": "i",
-      "class": "far fa-folder"
+      "class": "fas fa-folder"
     }
   },
 
@@ -59,24 +86,24 @@
     "title": "العينات",
     "icon": {
       "element": "i",
-      "class": "far fa-file"
+      "class": "fas fa-file"
     }
   },
   {
     "href": "/Objections",
-    "title": "الإعتراضات",
+    "title": "إعتراضات مسؤول الإدارة ",
     "icon": {
       "element": "i",
-      "class": "far fa-star"
+      "class": "fas fa-star"
     }
   },
 
   {
     "href": "/Justifications",
-    "title": "التبريرات",
+    "title": "تبريرات مسؤول الإدارة",
     "icon": {
       "element": "i",
-      "class": "far fa-file"
+      "class": "fas fa-file"
     }
   },
   {
@@ -84,7 +111,7 @@
     "title": "المسؤوليات",
     "icon": {
       "element": "i",
-      "class": "far fa-file"
+      "class": "fas fa-file"
     }
   },
   {
@@ -92,7 +119,7 @@
     "title": "حالات الإمتثال",
     "icon": {
       "element": "i",
-      "class": "far fa-file"
+      "class": "fas fa-file"
     }
   },
   {

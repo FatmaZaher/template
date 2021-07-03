@@ -11,12 +11,13 @@
             <div>
               <b-button v-b-modal.add-modal class="btn">
                 <i class="fas fa-plus"></i>
-                <span>إضافة موظف </span>
+                <span>إضافة تقرير قيد التحقق </span>
               </b-button>
+
               <b-modal
                 id="add-modal"
                 ref="modal"
-                title="إضافة موظف"
+                title="إضافة تقرير قيد التحقق"
                 @show="resetModal"
                 @hidden="resetModal"
                 @ok="handleOk"
@@ -25,54 +26,41 @@
                   <b-row>
                     <b-col sm="12" md="6">
                       <b-form-group
-                        label="رقم الموظف"
-                        label-for="employeeNo"
-                        invalid-feedback="Employee No. is required"
+                        label="رمز التقرير"
+                        label-for="reportCode"
+                        invalid-feedback="Report Code is required"
                       >
                         <b-form-input
-                          id="employeeNo"
-                          v-model="employeeNo"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="الإسم"
-                        label-for="employeeName"
-                        invalid-feedback="Name is required"
-                      >
-                        <b-form-input
-                          id="employeeName"
-                          v-model="employeeName"
+                          id="reportCode"
+                          v-model="reportCode"
                           required
                         ></b-form-input>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12" md="6">
                       <b-form-group
-                        label="البريد الإلكتروني"
-                        label-for="employeeEmail"
-                        invalid-feedback="Email is required"
+                        label="رموز الحالات"
+                        label-for="casesCodes"
+                        invalid-feedback="Cases Code is required"
                       >
                         <b-form-input
-                          id="employeeEmail"
-                          v-model="employeeEmail"
+                          id="casesCodes"
+                          v-model="casesCodes"
                           required
                         ></b-form-input>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12" md="6">
                       <b-form-group
-                        label="القسم"
-                        label-for="section"
-                        invalid-feedback="Section is required"
+                        label="تاريخ الإصدار"
+                        label-for="releaseDate"
+                        invalid-feedback="Date is required"
                       >
-                        <b-form-select
-                          id="section"
-                          :options="sections"
-                        ></b-form-select>
+                        <b-form-datepicker
+                          id="releaseDate"
+                          v-model="releaseDate"
+                        >
+                        </b-form-datepicker>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12" md="6">
@@ -83,83 +71,94 @@
                       >
                         <b-form-select
                           id="administration"
+                          v-model="administration"
                           :options="administrations"
+                          required
                         ></b-form-select>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12" md="6">
                       <b-form-group
-                        label="المسمى الوظيفي"
-                        label-for="jobName"
-                        invalid-feedback="Job Name is required"
+                        label="مصدر الرصد"
+                        label-for="monitoringSource"
+                        invalid-feedback="Monitoring source is required"
                       >
                         <b-form-input
-                          id="jobName"
-                          v-model="jobName"
+                          id="monitoringSource"
+                          v-model="monitoringSource"
                           required
                         ></b-form-input>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12" md="6">
                       <b-form-group
-                        label="نسبة الإمتثال"
-                        label-for="CompliancePers"
-                        invalid-feedback="Persntage is required"
-                      >
-                        <b-form-input
-                          id="persntage"
-                          v-model="persntage"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="رقم الهاتف"
-                        label-for="mobileNo"
-                        invalid-feedback="Mobile No. is required"
-                      >
-                        <b-form-input
-                          id="mobileNo"
-                          v-model="mobileNo"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="المدينة"
-                        label-for="city"
-                        invalid-feedback="City is required"
+                        label="حالة الامتثال"
+                        label-for="complianceCase"
+                        invalid-feedback="Compliance Case is required"
                       >
                         <b-form-select
-                          id="city"
-                          v-model="city"
-                          :options="cites"
+                          id="complianceCase"
+                          v-model="complianceCase"
+                          :options="complianceCases"
                           required
                         ></b-form-select>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12" md="6">
                       <b-form-group
-                        label="الصلاحية"
-                        label-for="validity"
-                        invalid-feedback="Validity is required"
+                        label="الإجراء"
+                        label-for="action"
+                        invalid-feedback="Action source is required"
                       >
-                        <b-form-select
-                          id="validity"
-                          :options="validites"
+                        <b-form-input
+                          id="action"
+                          v-model="action"
                           required
-                        ></b-form-select>
+                        ></b-form-input>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="12" md="6">
+                      <b-form-group
+                        label="النشاط"
+                        label-for="active"
+                        invalid-feedback="Active is required"
+                      >
+                        <b-form-input
+                          id="active"
+                          v-model="active"
+                          required
+                        ></b-form-input>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="12" md="6">
+                      <b-form-group
+                        label="رمز العينة"
+                        label-for="sampleCode"
+                        invalid-feedback="Sample Code is required"
+                      >
+                        <b-form-input
+                          id="sampleCode"
+                          v-model="sampleCode"
+                          required
+                        ></b-form-input>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="12" md="6">
+                      <b-form-group
+                        label="الاحتواء والاجراء الفعلي"
+                        label-for="actual"
+                        invalid-feedback="is required"
+                      >
+                        <b-form-input
+                          id="actual"
+                          v-model="actual"
+                          required
+                        ></b-form-input>
                       </b-form-group>
                     </b-col>
                   </b-row>
-                  <b-form-file
-                    placeholder="إضافة صورة"
-                    drop-placeholder="Drop file here..."
-                  ></b-form-file>
                   <div class="footer-button d-flex justify-content-center">
-                    <b-button type="submit" class="fot-btn">حفظ</b-button>
+                    <b-button type="submit" class="fot-btn">إضافة</b-button>
                   </div>
                 </form>
               </b-modal>
@@ -183,35 +182,47 @@
 export default {
   data() {
     return {
-      title: 'الموظفين',
+      title: 'تقارير قيد التحقق',
       fields: [
         {
-          key: 'employeeNo',
-          label: 'الرقم الوظيفي',
+          key: 'reportCode',
+          label: 'رمز التقرير',
         },
         {
-          key: 'employeeName',
-          label: 'الإسم',
+          key: 'sampleCode',
+          label: 'رمز العينة',
         },
         {
-          key: 'section',
-          label: 'القسم',
+          key: 'casesCodes',
+          label: 'رموز الحالات',
+        },
+        {
+          key: 'releaseDate',
+          label: 'تاريخ الإصدار ',
+        },
+        {
+          key: 'monitoringSource',
+          label: 'مصدر الرصد',
+        },
+        {
+          key: 'complianceCase',
+          label: 'حالة الامتثال',
+        },
+        {
+          key: 'action',
+          label: 'الإجراء',
         },
         {
           key: 'administration',
           label: 'الإدارة',
         },
         {
-          key: 'employeeEmail',
-          label: 'البريد الإلكتروني',
+          key: 'active',
+          label: 'النشاط',
         },
         {
-          key: 'jobName',
-          label: 'المسمى الوظيفي',
-        },
-        {
-          key: 'CompliancePers',
-          label: 'نسبة الإمتثال',
+          key: 'actual',
+          label: 'الاحتواء والاجراء الفعلي',
         },
         {
           key: 'id',
@@ -220,45 +231,39 @@ export default {
       ],
       items: [
         {
-          employeeNo: 'مثال',
-          employeeName: 'مثال',
-          section: 'مثال',
+          reportCode: 'مثال',
+          casesCodes: 'مثال',
+          releaseDate: 'مثال',
           administration: 'مثال',
-          employeeEmail: 'مثال',
-          jobName: 'مثال',
-          CompliancePers: 'مثال',
-          id: 9,
-        },
-        {
-          employeeNo: 'مثال',
-          employeeName: 'مثال',
-          section: 'مثال',
-          administration: 'مثال',
-          employeeEmail: 'مثال',
-          jobName: 'مثال',
-          CompliancePers: 'مثال',
-          id: '',
+          monitoringSource: 'مثال',
+          complianceCase: 'ممتثل',
+          action: 'مثال',
+          active: 'مثال',
+          sampleCode: 'مثال',
+          actual: 'مثال',
+          id: 2,
         },
       ],
-      employeeNo: '',
-      employeeName: '',
-      section: '',
-      city: '',
+      reportCode: '',
+      casesCodes: '',
+      releaseDate: '',
       administration: '',
-      employeeEmail: '',
-      jobName: '',
-      persntage: '',
-      mobileNo: '',
-      validity: '',
-      validites: ['validity', 'validity', 'validity', 'validity'],
-      cites: ['city 1', 'city 1', 'city 1', 'city 1', 'city 1', 'city 1'],
-      sections: ['section 1', 'section 1', 'section 1', 'section 1'],
+      monitoringSource: '',
+      complianceCase: '',
+      complianceCases: ['ممتثل', 'غير ممتثل'],
+      action: '',
+      active: '',
+      sampleCode: '',
+      actual: '',
       administrations: [
         'administration',
         'administration',
         'administration',
         'administration',
       ],
+      action: '',
+      reportsType: '',
+      transformPoint: '',
     }
   },
   computed: {
@@ -305,4 +310,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style></style>

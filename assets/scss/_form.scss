@@ -1,0 +1,33 @@
+.form-control,
+.custom-select,
+.custom-file-label {
+  border-radius: 25px;
+  border: 1px solid #34ac7242;
+  padding: 0 20px !important;
+  outline: none !important;
+  background-color: #34ac7217;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.custom-file-input ~ .custom-file-label[data-browse]::after {
+  content: 'رفع';
+  left: 0;
+  right: auto;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: #fff;
+  line-height: 30px;
+  padding: 0 10px;
+}
+
+.b-form-btn-label-control.form-control {
+  height: 35px !important;
+  display: flex;
+  font-size: 10px !important;
+  align-items: center;
+  padding: 0 !important;
+  .btn {
+    height: 35px !important;
+  }
+}

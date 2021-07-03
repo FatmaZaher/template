@@ -1,0 +1,24 @@
+.tab_section {
+  .nav-tabs {
+    border-bottom: none;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .nav-item {
+      .nav-link {
+        border: none;
+        color: var(--text-color);
+        margin: 0 15px;
+        width: 100px;
+        border-radius: 20px;
+        text-align: center;
+        background-color: rgba(52, 172, 114, 0.15);
+        &.active {
+          color: #fff;
+          background-color: var(--main-color);
+        }
+      }
+    }
+  }
+}

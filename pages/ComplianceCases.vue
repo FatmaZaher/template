@@ -8,7 +8,7 @@
 export default {
   head() {
     return {
-      title: 'Event Listing',
+     
     }
   },
 }

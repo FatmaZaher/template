@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>Events</h1>
+    <h6>{{title}}
+    </h6>
   </div>
 </template>
-
 <script>
 export default {
-
+  props: ['title'],
 }
 </script>
-
-<style></style>
+<style lang="scss"></style>

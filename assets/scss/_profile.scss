@@ -1,0 +1,75 @@
+.presonal-file {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
+    i {
+      margin-left: 5px;
+      font-size: 13px;
+    }
+    .right-side {
+      width: 25%;
+      background-color: var(--main-color);
+      padding: 50px 20px;
+      color: #fff;
+      .image {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+      }
+      .info div {
+        margin-bottom: 35px;
+        span {
+          margin-right: 25px;
+        }
+      }
+    }
+    .left-side {
+      width: 75%;
+      padding: 50px;
+      .table-left-side {
+        margin: 40px 0;
+        table {
+          color: var(--text-color);
+          tbody {
+            tr {
+              font-size: 13px;
+              td {
+                border-top: 1px solid #eee;
+              }
+            }
+          }
+          .hidden_header {
+            display: none;
+          }
+        }
+      }
+      .tab_section {
+        h6{
+            color: var(--main-color);
+            margin-bottom: 30px;
+        }
+        .nav-tabs {
+          display: flex;
+          justify-content: start;
+          .nav-item {
+            .nav-link {
+              color: var(--text-color);
+              border-radius: 0;
+              padding: 0;
+              margin: 0 0 0 50px;
+              text-align: right;
+              background-color: transparent;
+              font-weight: 700;
+              width: auto;
+              &.active {
+                color: var(--main-color);
+  
+              }
+            }
+          }
+        }
+      }
+    }
+  }
