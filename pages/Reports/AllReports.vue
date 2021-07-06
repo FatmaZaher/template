@@ -16,7 +16,7 @@
               :modalTitle="modalTitle"
               :is-report-code="true"
               :is-release-date="true"
-              :is-sampels-no="true"
+              :is-samples-no="true"
               :is-monitoring-source="true"
               :is-report-no="true"
               :is-compliance-case="true"
@@ -94,18 +94,97 @@ export default {
       ],
       items: [
         {
-          reportCode: 40,
-          releaseDate: 'مثال',
-          samplesNo: 'مثال',
+          reportCode: 'Cac 01 22',
+          reportNo: '01',
+          reportsType: 'إداري',
+          samplesNo: '20',
+          releaseDate: 'Monday, July 12, 2021',
           monitoringSource: 'مثال',
-          reportNo: 'مثال',
+          administration: 'إدارة التخطيط',
+          action: 'تم التصحيح',
+          verificationCase: 'جاري التحقق',
           complianceCase: 'ممتثل',
-          administration: 'مثال',
-          action: 'مثال',
-          reportsType: 'مثال',
-          verificationCase: 'مثال',
           id: 1,
         },
+        {
+          reportCode: 'BNS 88 02',
+          reportNo: '02',
+          reportsType: 'إداري',
+          samplesNo: '20',
+          releaseDate: 'Monday, July 12, 2021',
+          monitoringSource: 'مثال',
+          administration: 'إدارة التسويق',
+          action: 'تم التصحيح',
+          verificationCase: 'تم التحقق',
+          complianceCase: 'غير ممتثل',
+          id: 1,
+        },
+        {
+          reportCode: 'Mn1 01 52',
+          reportNo: '03',
+          reportsType: 'إحصائي',
+          samplesNo: '21',
+          releaseDate: 'Monday, July 13, 2021',
+          monitoringSource: 'مثال',
+          administration: 'إدارة التخطيط',
+          action: 'تم التصحيح',
+          verificationCase: 'جاري التحقق',
+          complianceCase: 'ممتثل',
+          id: 1,
+        },
+        {
+          reportCode: 'MJd 77 02',
+          reportNo: '04',
+          reportsType: 'إداري',
+          samplesNo: '22',
+          releaseDate: 'Monday, July 0, 2021',
+          monitoringSource: 'مثال',
+          administration: 'الإدارة المالية ',
+          action: 'تم التصحيح',
+          verificationCase: 'تم التحقق',
+          complianceCase: ' غير ممتثل',
+          id: 1,
+        },
+        {
+          reportCode: 'CMM 01 28',
+          reportNo: '05',
+          reportsType: 'مالي',
+          samplesNo: '23',
+          releaseDate: 'Monday, July 4, 2021',
+          monitoringSource: 'مثال',
+          administration: 'إدارة التسويق',
+          action: 'تم التصحيح',
+          verificationCase: 'جاري التحقق',
+          complianceCase: 'ممتثل',
+          id: 1,
+        },
+        {
+          reportCode: 'MVD 01 10',
+          reportNo: '06',
+          reportsType: 'إحصائي',
+          samplesNo: '24',
+          releaseDate: 'Monday, July 6, 2021',
+          monitoringSource: 'مثال',
+          administration: 'الإدارة المالية ',
+          action: 'تم التصحيح',
+          verificationCase: 'تم التحقق',
+          complianceCase: 'غير ممتثل',
+          id: 1,
+        },
+        {
+          reportCode: 'CPP 22 01',
+          reportNo: '07',
+          reportsType: 'مالي',
+          samplesNo: '25',
+          releaseDate: 'Monday, July 17, 2021',
+          monitoringSource: 'مثال',
+          administration: 'إدارة الإنتاج',
+          action: 'تم التصحيح',
+          verificationCase: 'جاري التحقق',
+          complianceCase: 'ممتثل',
+          id: 1,
+        },
+
       ],
     }
   },
@@ -122,5 +201,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

@@ -51,9 +51,25 @@ export default {
       ],
       items: [
         {
-          reportNo: 40,
-          sampleCode: 'مثال',
-          complianceCase: 'مثال',
+          reportNo: '04',
+          sampleCode: '50 C2',
+          complianceCase: 'ممتثل',
+          verificationCase: 'تم التحقق',
+          actual: 'مثال',
+          id: 7,
+        },
+         {
+          reportNo: '07',
+          sampleCode: '40 C2',
+          complianceCase: 'غير ممتثل',
+          verificationCase: 'تم التحقق',
+          actual: 'مثال',
+          id: 7,
+        },
+         {
+          reportNo: '09',
+          sampleCode: '70 82',
+          complianceCase: 'ممتثل',
           verificationCase: 'تم التحقق',
           actual: 'مثال',
           id: 7,

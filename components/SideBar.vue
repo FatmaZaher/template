@@ -3,6 +3,7 @@
     <div
       class="overlay"
       v-bind:class="{ opcity1: withOverlay, opcity0: noOverlay }"
+      @click="hidesidebar"
     ></div>
     <sidebar-menu
       :menu="SideBarMenu"
@@ -79,16 +80,22 @@ export default {
         this.noOverlay = true
       }
     },
+    hidesidebar(){
+       this.rightSideBar = true
+        this.zeroRight = false
+        this.withOverlay = false
+        this.noOverlay = true
+    }
   },
 }
 </script>
 <style lang="scss">
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 4;
   left: 0;
   background-color: #00000087;
   transition: 0.5s ease;
@@ -187,7 +194,7 @@ export default {
 @media (max-width: 767px) {
   .rightSideClass {
     right: -270px;
-    z-index: 2;
+    z-index: 5;
   }
   .zeroRightClass {
     right: 0;

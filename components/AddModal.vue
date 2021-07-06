@@ -124,10 +124,10 @@
         <b-col sm="12" md="6" v-if="isSampelsNo">
           <b-form-group
             label="عدد العينات"
-            label-for="sampelsNo"
+            label-for="samplesNo"
             invalid-feedback="Sampels No. is required"
           >
-            <b-form-input id="sampelsNo" required></b-form-input>
+            <b-form-input id="samplesNo" required></b-form-input>
           </b-form-group>
         </b-col>
         <b-col sm="12" md="6" v-if="isMonitoringSource">
@@ -296,12 +296,12 @@
           <b-form-radio-group
             v-model="selected"
             :options="radioOptions"
-            class="mb-5 d-flex justify-content-center"
+            class="d-flex justify-content-center"
             value-field="item"
             text-field="name"
             disabled-field="notEnabled"
           ></b-form-radio-group>
-          <div class="mt-3">
+          <div class="mt-5">
             <b-row v-if="selected == 1">
               <b-col sm="12" md="6">
                 <b-form-group
@@ -349,9 +349,7 @@
           <p class="mt-3">هل أنت متأكد من عملية الحذف</p>
           <div class="footer-button d-flex justify-content-center">
             <b-button type="" class="fot-btn mx-3">حذف</b-button>
-            <b-button type="" class="fot-btn mx-3"
-              >إغلاق</b-button
-            >
+            <b-button type="" class="fot-btn mx-3">إغلاق</b-button>
           </div>
         </div>
       </b-row>
@@ -526,15 +524,20 @@ export default {
     return {
       validites: ['validity1', 'validity2', 'validity3', 'validity4'],
       cites: ['city 2', 'city 3', 'city 4', 'city 5', 'city 6', 'city 7'],
-      sections: ['section 1', 'section 2', 'section 3', 'section 4'],
+      sections: [
+        'قسم الشئون الماليه والمحاسبة',
+        'قسم الموارد البشرية',
+        'قسم الجوده',
+        'قسم ادارة المخازن وتوفير المنتج',
+      ],
       administrations: [
-        'administration1',
-        'administration2',
-        'administration3',
-        'administration4',
+        'إدارة التسويق',
+        'الإدارة المالية',
+        'إدارة الإنتاج',
+        'إدارة التخطيط',
       ],
       complianceCases: ['ممتثل', 'غير ممتثل'],
-      reportsTypes: ['Type1', 'Type2', 'Type3', 'Type4'],
+      reportsTypes: ['إحصائي', 'مالي', 'إداري', 'تحليلي'],
       verificationCases: ['لم يتم التحقق بعد', 'جاري التحقق', 'تم التحقق'],
       monitoringCases: ['صحيحة', 'خاطئة'],
       selected: 1,

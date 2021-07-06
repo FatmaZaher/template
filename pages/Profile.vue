@@ -58,14 +58,14 @@
         <b-tabs class="mt-3">
           <b-tab title="العينات الممثلة" active>
             <div class="table-left-side">
-              <TableList :items="sampels" :fields="samplefield" :rows="rows" />
+              <TableList :items="samples" :fields="samplefield" :rows="rows" />
             </div>
           </b-tab>
           <b-tab title="العينات الفير ممثلة">
-            <TableList :items="sampels" :fields="samplefield" :rows="rows" />
+            <TableList :items="samples" :fields="samplefield" :rows="rows" />
           </b-tab>
           <b-tab title="الجميع">
-            <TableList :items="sampels" :fields="samplefield" :rows="rows" />
+            <TableList :items="samples" :fields="samplefield" :rows="rows" />
           </b-tab>
         </b-tabs>
       </div>
@@ -108,8 +108,7 @@ export default {
           label: 'نسبة الإمتثال',
         },
       ],
-
-      sampels: [
+      samples: [
         {
           sampleName: 'sdd',
           sampleCode: 'dfdf',
@@ -122,7 +121,7 @@ export default {
   },
   computed: {
     rows() {
-      return this.sampels.length
+      return this.samples.length
     },
   },
 }

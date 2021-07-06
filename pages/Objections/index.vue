@@ -52,9 +52,27 @@ export default {
       ],
       items: [
         {
-          reportNo: 40,
-          sampleNo: 'مثال',
-          objectionReson: 'مثال',
+          reportNo: '01',
+          sampleNo: '001',
+          objectionReson: 'السبب',
+          id: 3,
+        },
+        {
+          reportNo: '02',
+          sampleNo: '002',
+          objectionReson: 'السبب',
+          id: 3,
+        },
+        {
+          reportNo: '03',
+          sampleNo: '003',
+          objectionReson: 'السبب',
+          id: 3,
+        },
+        {
+          reportNo: '04',
+          sampleNo: '004',
+          objectionReson: 'السبب',
           id: 3,
         },
       ],

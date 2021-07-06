@@ -57,6 +57,10 @@
     border-radius: 25px;
     background-color: #d6eee3;
     font-weight: 700;
+    @media (max-width: 767px){
+      font-size: 13px;
+      padding: 5px 25px 8px 40px;
+    }
     .custom-control-input:checked ~ .custom-control-label::before {
       border-color: var(--main-color);
       background-color: var(--main-color);

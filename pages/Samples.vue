@@ -17,7 +17,7 @@
               :is-sample-code="true"
               :is-sample-name="true"
               :is-administration="true"
-              :is-sampels-no="true"
+              :is-samples-no="true"
               :is-responsible1="true"
               :is-responsible2="true"
               :is-responsible3="true"
@@ -81,9 +81,19 @@ export default {
       items: [
         {
           sampleName: 'مثال',
-          sampleCode: 'مثال',
-          samplesNo: 'مثال',
-          administration: 'مثال',
+          sampleCode: '69 B2',
+          samplesNo: '120',
+          administration: 'الإدارة المالية',
+          responsible1: 'مثال',
+          responsible2: 'مثال',
+          responsible3: 'مثال',
+          id: 10,
+        },
+        {
+          sampleName: 'مثال',
+          sampleCode: '69 B2',
+          samplesNo: '120',
+          administration: 'الإدارة المالية',
           responsible1: 'مثال',
           responsible2: 'مثال',
           responsible3: 'مثال',

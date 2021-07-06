@@ -54,7 +54,22 @@ export default {
       ],
       items: [
         {
-          sampleCode: 'مثال',
+          sampleCode: '50 C2',
+          monitoringCase: 'خاطئة',
+          id: 1,
+        },
+        {
+          sampleCode: '40 M8',
+          monitoringCase: 'صحيحة',
+          id: 1,
+        },
+        {
+          sampleCode: '88 C2',
+          monitoringCase: 'صحيحة',
+          id: 1,
+        },
+        {
+          sampleCode: '69 B2',
           monitoringCase: 'خاطئة',
           id: 1,
         },

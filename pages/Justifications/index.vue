@@ -52,8 +52,14 @@ export default {
       ],
       items: [
         {
-          reportNo: 40,
-          sampleNo: 'مثال',
+          reportNo: '03',
+          sampleNo: '003',
+          justification: 'مثال',
+          id: 4,
+        },
+        {
+          reportNo: '07',
+          sampleNo: '007',
           justification: 'مثال',
           id: 4,
         },
