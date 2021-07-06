@@ -6,6 +6,10 @@
   color: #fff;
   border: none !important;
   position: relative;
+  @media (max-width: 767px) {
+    font-size: 14px;
+    padding: 10px;
+  }
   span {
     margin-right: 5px;
   }

@@ -1,8 +1,11 @@
 <template>
-  <div class="">
-    <b-container fluid>
+  <div class="h-100">
+    <b-container fluid class="h-100">
       <SideBar />
-      <nuxt />
+      <div class="page-content">
+        <Header />
+        <nuxt />
+      </div>
     </b-container>
   </div>
 </template>
@@ -14,7 +17,6 @@ export default {
 }
 </script>
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700;800&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 @import url('~/assets/scss/style.scss');
@@ -24,13 +26,14 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   direction: rtl;
+  height: 100%;
 }
 body {
   margin: 0;
   font-family: 'Tajawal', sans-serif;
-  font-size: 14px;
   line-height: 1.5;
   text-align: right;
+  height: 100%;
   color: var(--text-color);
 }
 h1,

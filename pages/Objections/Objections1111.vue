@@ -1,23 +1,20 @@
 <template>
-  <div class="page-content">
-    <Header :title="title" />
-    <div class="content">
-      <div class="header-content">
-        <b-row class="align-items-center">
-          <b-col sm="12" md="6">
-            <HeadPage :title="title"></HeadPage>
-          </b-col>
-        </b-row>
-      </div>
-      <TableList
-        :items="items"
-        :rows="rows"
-        :fields="fields"
-        :is-show="true"
-        :is-edit="true"
-        :is-delete="true"
-      />
+  <div class="content">
+    <div class="header-content">
+      <b-row class="align-items-center">
+        <b-col cols="6">
+          <HeadPage :title="title"></HeadPage>
+        </b-col>
+      </b-row>
     </div>
+    <TableList
+      :items="items"
+      :rows="rows"
+      :fields="fields"
+      :is-show="true"
+      :is-edit="true"
+      :is-delete="true"
+    />
   </div>
 </template>
 <script>

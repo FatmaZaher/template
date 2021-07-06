@@ -1,33 +1,65 @@
-.form-control,
-.custom-select,
-.custom-file-label {
-  border-radius: 25px;
-  border: 1px solid #34ac7242;
-  padding: 0 20px !important;
-  outline: none !important;
-  background-color: #34ac7217;
-  font-size: 14px;
-  line-height: 40px;
-}
-
-.custom-file-input ~ .custom-file-label[data-browse]::after {
-  content: 'رفع';
-  left: 0;
-  right: auto;
-  border-radius: 25px;
-  background-color: var(--main-color);
-  color: #fff;
-  line-height: 30px;
-  padding: 0 10px;
-}
-
-.b-form-btn-label-control.form-control {
-  height: 35px !important;
-  display: flex;
-  font-size: 10px !important;
-  align-items: center;
-  padding: 0 !important;
-  .btn {
+.form-group {
+  label{
+    font-size: 15px;
+    @media (max-width: 767px) {
+      font-size: 13px;
+    }
+  }
+  .form-control,
+  .v-select,
+  .custom-file-label {
+    border-radius: 25px;
+    border: 1px solid #34ac7242;
+    padding: 0 20px !important;
+    outline: none !important;
+    background-color: #34ac7217;
+    font-size: 14px;
+    line-height: 40px;
+    @media (max-width: 767px) {
+      font-size: 13px;
+    }
+  }
+  .v-select {
+    .vs__dropdown-toggle {
+      border: none;
+      height: 35px;
+      .vs--searchable .vs__dropdown-toggle {
+        height: 35px;
+      }
+    }
+  }
+  .custom-file-input ~ .custom-file-label[data-browse]::after {
+    content: 'رفع';
+    left: 0;
+    right: auto;
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: #fff;
+    line-height: 30px;
+    padding: 0 10px;
+  }
+  .b-form-btn-label-control.form-control {
     height: 35px !important;
+    display: flex;
+    font-size: 10px !important;
+    align-items: center;
+    padding: 0 !important;
+    .btn {
+      height: 35px !important;
+    }
+  }
+}
+.sectionForm {
+  padding: 0 15px;
+  width: 100%;
+  .custom-control {
+    padding: 10px 55px 10px 70px;
+    border-radius: 25px;
+    background-color: #d6eee3;
+    font-weight: 700;
+    .custom-control-input:checked ~ .custom-control-label::before {
+      border-color: var(--main-color);
+      background-color: var(--main-color);
+    }
   }
 }

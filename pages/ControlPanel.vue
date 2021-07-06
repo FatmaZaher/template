@@ -1,10 +1,5 @@
 <template>
-  <div class="page-content">
-    <Header :title="title"/>
-    <div class="content">
-      control panel
-    </div>
-  </div>
+  <div class="content">control panel</div>
 </template>
 
 <script>
@@ -13,7 +8,7 @@ export default {
     return {
       title: 'لوحة التحكم',
     }
-  }
+  },
 }
 </script>
 

@@ -25,6 +25,7 @@
     "core-js": "^3.9.1",
     "json-server": "^0.16.3",
     "nuxt": "^2.15.3",
+    "vue-select": "^3.11.2",
     "vue-sidebar-menu": "^4.8.1"
   },
   "devDependencies": {

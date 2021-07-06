@@ -1,181 +1,43 @@
 <template>
-  <div class="page-content">
-    <Header :title="title" />
-    <div class="content">
-      <div class="header-content">
-        <b-row class="align-items-center">
-          <b-col sm="12" md="6">
-            <HeadPage :title="title"></HeadPage>
-          </b-col>
-          <b-col sm="12" md="6">
-            <div>
-              <b-button v-b-modal.add-modal class="btn">
-                <i class="fas fa-plus"></i>
-                <span>إضافة موظف </span>
-              </b-button>
-              <b-modal
-                id="add-modal"
-                ref="modal"
-                title="إضافة موظف"
-                @show="resetModal"
-                @hidden="resetModal"
-                @ok="handleOk"
-              >
-                <form ref="form" @submit.stop.prevent="handleSubmit">
-                  <b-row>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="رقم الموظف"
-                        label-for="employeeNo"
-                        invalid-feedback="Employee No. is required"
-                      >
-                        <b-form-input
-                          id="employeeNo"
-                          v-model="employeeNo"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="الإسم"
-                        label-for="employeeName"
-                        invalid-feedback="Name is required"
-                      >
-                        <b-form-input
-                          id="employeeName"
-                          v-model="employeeName"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="البريد الإلكتروني"
-                        label-for="employeeEmail"
-                        invalid-feedback="Email is required"
-                      >
-                        <b-form-input
-                          id="employeeEmail"
-                          v-model="employeeEmail"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="القسم"
-                        label-for="section"
-                        invalid-feedback="Section is required"
-                      >
-                        <b-form-select
-                          id="section"
-                          :options="sections"
-                        ></b-form-select>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="الإدارة"
-                        label-for="administration"
-                        invalid-feedback="Administration is required"
-                      >
-                        <b-form-select
-                          id="administration"
-                          :options="administrations"
-                        ></b-form-select>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="المسمى الوظيفي"
-                        label-for="jobName"
-                        invalid-feedback="Job Name is required"
-                      >
-                        <b-form-input
-                          id="jobName"
-                          v-model="jobName"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="نسبة الإمتثال"
-                        label-for="CompliancePers"
-                        invalid-feedback="Persntage is required"
-                      >
-                        <b-form-input
-                          id="persntage"
-                          v-model="persntage"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="رقم الهاتف"
-                        label-for="mobileNo"
-                        invalid-feedback="Mobile No. is required"
-                      >
-                        <b-form-input
-                          id="mobileNo"
-                          v-model="mobileNo"
-                          required
-                        ></b-form-input>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="المدينة"
-                        label-for="city"
-                        invalid-feedback="City is required"
-                      >
-                        <b-form-select
-                          id="city"
-                          v-model="city"
-                          :options="cites"
-                          required
-                        ></b-form-select>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12" md="6">
-                      <b-form-group
-                        label="الصلاحية"
-                        label-for="validity"
-                        invalid-feedback="Validity is required"
-                      >
-                        <b-form-select
-                          id="validity"
-                          :options="validites"
-                          required
-                        ></b-form-select>
-                      </b-form-group>
-                    </b-col>
-                  </b-row>
-                  <b-form-file
-                    placeholder="إضافة صورة"
-                    drop-placeholder="Drop file here..."
-                  ></b-form-file>
-                  <div class="footer-button d-flex justify-content-center">
-                    <b-button type="submit" class="fot-btn">حفظ</b-button>
-                  </div>
-                </form>
-              </b-modal>
-            </div>
-          </b-col>
-        </b-row>
-      </div>
-      <TableList
-        :items="items"
-        :rows="rows"
-        :fields="fields"
-        :is-show="true"
-        :is-edit="true"
-        :is-delete="true"
-      />
+  <div class="content">
+    <div class="header-content">
+      <b-row class="align-items-center">
+        <b-col cols="6">
+          <HeadPage :title="title"></HeadPage>
+        </b-col>
+        <b-col cols="6">
+          <div>
+            <b-button @click="openModal" class="btn">
+              <i class="fas fa-plus"></i>
+              <span>{{ modalTitle }}</span>
+            </b-button>
+            <AddModal
+              v-model="openmodal"
+              :modalTitle="modalTitle"
+              :is-employee-no="true"
+              :is-employee-name="true"
+              :is-employee-email="true"
+              :is-section="true"
+              :is-city="true"
+              :is-administration="true"
+              :is-job-name="true"
+              :is-persntage="true"
+              :is-mobile-no="true"
+              :is-validity="true"
+              :is-add-photo="true"
+            />
+          </div>
+        </b-col>
+      </b-row>
     </div>
+    <TableList
+      :items="items"
+      :rows="rows"
+      :fields="fields"
+      :is-show="true"
+      :is-edit="true"
+      :is-delete="true"
+    />
   </div>
 </template>
 
@@ -183,7 +45,9 @@
 export default {
   data() {
     return {
+      openmodal: false,
       title: 'الموظفين',
+      modalTitle: 'إضافة موظف',
       fields: [
         {
           key: 'employeeNo',
@@ -239,25 +103,57 @@ export default {
           CompliancePers: 'مثال',
           id: '',
         },
-      ],
-      employeeNo: '',
-      employeeName: '',
-      section: '',
-      city: '',
-      administration: '',
-      employeeEmail: '',
-      jobName: '',
-      persntage: '',
-      mobileNo: '',
-      validity: '',
-      validites: ['validity', 'validity', 'validity', 'validity'],
-      cites: ['city 1', 'city 1', 'city 1', 'city 1', 'city 1', 'city 1'],
-      sections: ['section 1', 'section 1', 'section 1', 'section 1'],
-      administrations: [
-        'administration',
-        'administration',
-        'administration',
-        'administration',
+         {
+          employeeNo: 'مثال',
+          employeeName: 'مثال',
+          section: 'مثال',
+          administration: 'مثال',
+          employeeEmail: 'مثال',
+          jobName: 'مثال',
+          CompliancePers: 'مثال',
+          id: 9,
+        },
+         {
+          employeeNo: 'مثال',
+          employeeName: 'مثال',
+          section: 'مثال',
+          administration: 'مثال',
+          employeeEmail: 'مثال',
+          jobName: 'مثال',
+          CompliancePers: 'مثال',
+          id: 9,
+        },
+         {
+          employeeNo: 'مثال',
+          employeeName: 'مثال',
+          section: 'مثال',
+          administration: 'مثال',
+          employeeEmail: 'مثال',
+          jobName: 'مثال',
+          CompliancePers: 'مثال',
+          id: 9,
+        },
+         {
+          employeeNo: 'مثال',
+          employeeName: 'مثال',
+          section: 'مثال',
+          administration: 'مثال',
+          employeeEmail: 'مثال',
+          jobName: 'مثال',
+          CompliancePers: 'مثال',
+          id: 9,
+        },
+         {
+          employeeNo: 'مثال',
+          employeeName: 'مثال',
+          section: 'مثال',
+          administration: 'مثال',
+          employeeEmail: 'مثال',
+          jobName: 'مثال',
+          CompliancePers: 'مثال',
+          id: 9,
+        },
+        
       ],
     }
   },
@@ -267,39 +163,8 @@ export default {
     },
   },
   methods: {
-    checkFormValidity() {
-      //const valid = this.$refs.form.checkValidity()
-      //this.nameState = valid
-      //return valid
-    },
-    resetModal() {
-      /*(this.name = ''),
-        (this.employeeNo = ''),
-        (this.email = ''),
-        (this.mobileNo = ''),
-        (this.city = ''),
-        (this.section = ''),
-        (this.validity = ''),
-        (this.administration = ''),
-        (this.submittedNames = '')*/
-    },
-    handleOk(bvModalEvt) {
-      // Prevent modal from closing
-      //bvModalEvt.preventDefault()
-      // Trigger submit handler
-      //this.handleSubmit()
-    },
-    handleSubmit() {
-      // Exit when the form isn't valid
-      //if (!this.checkFormValidity()) {
-      //  return
-      //}
-      // Push the name to submitted names
-      //this.submittedNames.push(this.name)
-      // Hide the modal manually
-      //this.$nextTick(() => {
-      //  this.$bvModal.hide('add-modal')
-      //})
+    openModal() {
+      this.openmodal = true
     },
   },
 }
