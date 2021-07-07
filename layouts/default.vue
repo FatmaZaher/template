@@ -1,6 +1,6 @@
 <template>
-  <div class="h-100">
-    <b-container fluid class="h-100">
+  <div>
+    <b-container fluid>
       <SideBar />
       <div class="page-content">
         <Header />
