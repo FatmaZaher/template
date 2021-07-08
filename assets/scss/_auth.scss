@@ -1,0 +1,36 @@
+.formSection {
+  padding: 0 80px;
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+  }
+  button a {
+    color: #fff;
+  }
+  a {
+    color: var(--main-color);
+  }
+  .forgot {
+    font-size: 12px;
+  }
+  h3{
+     font-size: 20px; 
+  }
+}
+.imageSection {
+  padding: 80px;
+  img {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .formSection {
+    padding: 50px 20px;
+  }
+  .imageSection {
+    padding: 20px 0 0 0;
+    img{
+      height: 110px !important;
+    }
+  }
+}

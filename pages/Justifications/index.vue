@@ -10,7 +10,7 @@
             <b-button class="btn">
               <nuxt-link :to="'/Justifications/justificationSubmit'">
                 <i class="fas fa-plus"></i>
-                <span>إضافة تبرير </span>
+               إضافة تبرير
               </nuxt-link>
             </b-button>
           </div>

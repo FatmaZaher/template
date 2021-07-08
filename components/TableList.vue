@@ -16,12 +16,12 @@
           </b-button>
           <b-button class="btn" v-if="isObjection">
             <nuxt-link :to="'/Objections/objectionSubmit'">
-              <span>إعتراض</span>
+              إعتراض
             </nuxt-link>
           </b-button>
           <b-button class="btn" v-if="isJustification">
             <nuxt-link :to="'/Justifications/justificationSubmit'">
-              <span>تبرير</span>
+              تبرير
             </nuxt-link>
           </b-button>
           <b-button v-if="isShow" class="specialbtn">

@@ -160,6 +160,9 @@ export default {
     }
   }
 }
+.v-sidebar-menu.vsm_white-theme .vsm--link{
+  color: var(--text-color);
+}
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1 .vsm--icon,
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-2 .vsm--icon {
   background-color: transparent;

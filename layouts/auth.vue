@@ -1,16 +1,10 @@
 <template>
-  <b-container fluid>
-    <SideBar />
-    <div class="page-content">
-      <Header />
-      <nuxt />
-    </div>
-  </b-container>
+  <nuxt />
 </template>
 <script>
 export default {
   head: {
-    titleTemplate: 'Quality',
+    titleTemplate: 'Quality-login',
   },
 }
 </script>

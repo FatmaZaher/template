@@ -2,37 +2,37 @@
   <div class="content">
     <b-button class="btn">
       <nuxt-link :to="'/VerificationProcess'">
-        <span>عملية التحقق مسؤول الجودة</span>
+        عملية التحقق مسؤول الجودة
       </nuxt-link>
     </b-button>
     <b-button class="btn">
       <nuxt-link :to="'/Objections/Objections1111'">
-        <span>اعتراضات مسؤول الجودة</span>
+        اعتراضات مسؤول الجودة
       </nuxt-link>
     </b-button>
     <b-button class="btn">
       <nuxt-link :to="'/Justifications/Justifications1111'">
-        <span>تبريرات مسؤول الجودة</span>
+       تبريرات مسؤول الجودة
       </nuxt-link>
     </b-button>
     <b-button class="btn">
       <nuxt-link :to="'/VerificationResults'">
-        <span>نتائج التحقق لمدير الجودة</span>
+       نتائج التحقق لمدير الجودة
       </nuxt-link>
     </b-button>
     <b-button class="btn">
       <nuxt-link :to="'/ComprehensiveRecord'">
-        <span>السجل الشامل</span>
+        السجل الشامل
       </nuxt-link>
     </b-button>
     <b-button class="btn">
       <nuxt-link :to="'/MonitoringProcess'">
-        <span>عملية الرصد</span>
+        عملية الرصد
       </nuxt-link>
     </b-button>
     <b-button class="btn">
       <nuxt-link :to="'/MonitoringCases'">
-        <span>حالات الرصد</span>
+       حالات الرصد
       </nuxt-link>
     </b-button>
   </div>

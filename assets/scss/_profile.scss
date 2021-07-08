@@ -4,15 +4,12 @@
   margin-top: 30px;
   display: flex;
   box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
-  overflow-y: scroll;
-  height: 400px;
   i {
     margin-left: 5px;
     font-size: 13px;
   }
   .right-side {
     width: 25%;
-    height: 400px;
     background-color: var(--main-color);
     padding: 50px 20px;
     color: #fff;

@@ -131,7 +131,7 @@
     }
   },
   {
-    "href": "/Logout",
+    "href": "/Login",
     "title": "تسجيل الخروج",
     "icon": {
       "element": "i",

@@ -6,7 +6,7 @@
     </div>
     <form ref="form" @submit.stop.prevent="">
       <b-row>
-        <b-col sm="12" md="6">
+        <b-col   md="6">
           <b-form-group
             label="حالة التحقق"
             label-for="verificationCase"
@@ -16,7 +16,7 @@
           </b-form-group>
         </b-col>
 
-        <b-col sm="12" md="6">
+        <b-col   md="6">
           <b-form-group
             label="رمز العينة"
             label-for="sampleCode"
@@ -26,7 +26,7 @@
           </b-form-group>
         </b-col>
 
-        <b-col sm="12" md="6">
+        <b-col   md="6">
           <b-form-group
             label="اسم العينة"
             label-for="sampleName"
@@ -36,7 +36,7 @@
           </b-form-group>
         </b-col>
 
-        <b-col sm="12" md="6">
+        <b-col   md="6">
           <b-form-group
             label="رقم العينة"
             label-for="sampleNo"
@@ -45,16 +45,16 @@
             <b-form-input id="sampleNo" required></b-form-input>
           </b-form-group>
         </b-col>
-        <b-col sm="12">
+        <b-col  >
           <div class="footer-button">
             <b-row>
-              <b-col sm="12" md="6">
+              <b-col   md="6">
                 <b-button class="fot-btn w-100 mt-3">
                   <i class="fas fa-plus"></i>
                   <span>إضافة عينة جديدة </span>
                 </b-button>
               </b-col>
-              <b-col sm="12" md="6">
+              <b-col   md="6">
                 <b-button class="fot-btn w-100 mt-3">
                   <i class="fas fa-cog"></i>
                   <span>المقارنة والتحقق</span>

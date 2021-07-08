@@ -10,11 +10,6 @@
   width: 45%;
   margin: 50px auto;
 }
-@media (max-width: 767px) {
-  .subpage form {
-    width: 100%;
-  }
-}
 :root {
   --main-color: #34ac72;
   --text-color: #393d48;
@@ -24,6 +19,9 @@
   .page-content {
     width: 100%;
     margin: 0;
+  }
+  .subpage form {
+    width: 100%;
   }
 }
 @import 'header';
@@ -35,3 +33,4 @@
 @import 'profile';
 @import 'nuxtLink';
 @import 'form';
+@import 'auth';

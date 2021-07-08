@@ -10,7 +10,7 @@
             <b-button class="btn">
               <nuxt-link :to="'/Objections/objectionSubmit'">
                 <i class="fas fa-plus"></i>
-                <span>إضافة إعتراض </span>
+                إضافة إعتراض
               </nuxt-link>
             </b-button>
           </div>
