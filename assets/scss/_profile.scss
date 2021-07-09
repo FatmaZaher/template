@@ -5,10 +5,10 @@
   display: flex;
   box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
   i {
-    margin-left: 5px;
+    margin-right: 5px;
     font-size: 13px;
   }
-  .right-side {
+  .image-side {
     width: 25%;
     background-color: var(--main-color);
     padding: 50px 20px;
@@ -21,7 +21,7 @@
     .info div {
       margin-bottom: 35px;
       span {
-        margin-right: 25px;
+        margin-left: 25px;
       }
     }
   }
@@ -59,7 +59,7 @@
             border-radius: 0;
             padding: 0;
             margin: 0 0 0 50px;
-            text-align: right;
+            text-align: left;
             background-color: transparent;
             font-weight: 700;
             width: auto;
@@ -73,7 +73,7 @@
   }
   @media (max-width: 767px) {
     width: 100%;
-    .right-side {
+    .image-side {
       padding: 50px 10px;
       width: 27%;
       .image {
@@ -94,7 +94,7 @@
         }
         span {
           font-size: 8px;
-          margin-right: 10px;
+          margin-left: 10px;
         }
       }
     }

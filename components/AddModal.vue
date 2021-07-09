@@ -42,7 +42,7 @@
             label-for="section"
             invalid-feedback="Section is required"
           >
-            <v-select dir="rtl" :options="sections"></v-select>
+            <v-select dir="ltr" :options="sections"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isAdministration">
@@ -51,7 +51,7 @@
             label-for="administration"
             invalid-feedback="Administration is required"
           >
-            <v-select dir="rtl" :options="administrations"></v-select>
+            <v-select dir="ltr" :options="administrations"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isJobName">
@@ -87,7 +87,7 @@
             label-for="city"
             invalid-feedback="City is required"
           >
-            <v-select dir="rtl" :options="cites"></v-select>
+            <v-select dir="ltr" :options="cites"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isValidity">
@@ -96,7 +96,7 @@
             label-for="validity"
             invalid-feedback="Validity is required"
           >
-            <v-select dir="rtl" :options="validites"></v-select>
+            <v-select dir="ltr" :options="validites"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isAddPhoto">
@@ -158,7 +158,7 @@
             label-for="complianceCase"
             invalid-feedback="Compliance Case is required"
           >
-            <v-select dir="rtl" :options="complianceCases"></v-select>
+            <v-select dir="ltr" :options="complianceCases"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isAction">
@@ -176,7 +176,7 @@
             label-for="reportsType"
             invalid-feedback="Report Type is required"
           >
-            <v-select dir="rtl" :options="reportsTypes"></v-select>
+            <v-select dir="ltr" :options="reportsTypes"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isVerificationCase">
@@ -185,7 +185,7 @@
             label-for="verificationCase"
             invalid-feedback="Verification Case is required"
           >
-            <v-select dir="rtl" :options="verificationCases"></v-select>
+            <v-select dir="ltr" :options="verificationCases"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isCasesCode">
@@ -248,7 +248,7 @@
             label-for="monitoringCase"
             invalid-feedback="Monitoring Case Case is required"
           >
-            <v-select dir="rtl" :options="monitoringCases"></v-select>
+            <v-select dir="ltr" :options="monitoringCases"></v-select>
           </b-form-group>
         </b-col>
         <b-col md="6" v-if="isResponsible1">
@@ -313,7 +313,7 @@
                   label-for="section"
                   invalid-feedback="Section is required"
                 >
-                  <v-select dir="rtl" :options="sections"></v-select>
+                  <v-select dir="ltr" :options="sections"></v-select>
                 </b-form-group>
               </b-col>
               <b-col md="6">
@@ -333,7 +333,7 @@
                   label-for="administration"
                   invalid-feedback="Administration is required"
                 >
-                  <v-select dir="rtl" :options="administrations"></v-select>
+                  <v-select dir="ltr" :options="administrations"></v-select>
                 </b-form-group>
               </b-col>
               <b-col md="6">

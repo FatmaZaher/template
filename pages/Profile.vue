@@ -1,6 +1,6 @@
 <template>
   <div class="personal-file">
-    <div class="right-side">
+    <div class="image-side">
       <div class="image">
         <img src="~/assets/images/profile.png" alt="Person image" />
       </div>

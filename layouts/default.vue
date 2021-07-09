@@ -23,14 +23,14 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  direction: rtl;
+  direction: ltr;
   height: 100%;
 }
 body {
   margin: 0;
   font-family: 'Tajawal', sans-serif;
   line-height: 1.5;
-  text-align: right;
+  text-align: left;
   height: 100%;
   color: var(--text-color);
 }

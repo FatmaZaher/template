@@ -12,7 +12,7 @@
             label-for="verificationCase"
             invalid-feedback="Verification Case is required"
           >
-            <v-select dir="rtl" :options="verificationCases"></v-select>
+            <v-select dir="ltr" :options="verificationCases"></v-select>
           </b-form-group>
         </b-col>
 

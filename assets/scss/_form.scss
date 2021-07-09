@@ -30,8 +30,8 @@
   }
   .custom-file-input ~ .custom-file-label[data-browse]::after {
     content: 'رفع';
-    left: 0;
-    right: auto;
+    right: 0;
+    left: auto;
     border-radius: 25px;
     background-color: var(--main-color);
     color: #fff;
