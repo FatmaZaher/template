@@ -1,6 +1,5 @@
 <template>
   <div class="content">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit iusto odit veritatis eaque necessitatibus, tempore saepe quisquam harum. Explicabo sapiente odit voluptatem ea est? Maxime ipsam id veritatis eos qui.
     <b-button class="btn">
       <nuxt-link :to="'/VerificationProcess'">
         عملية التحقق مسؤول الجودة
