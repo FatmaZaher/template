@@ -9,7 +9,7 @@
         label-for="monitoringCase"
         invalid-feedback="Monitoring Case Case is required"
       >
-        <v-select dir="ltr" :options="monitoringCases"></v-select>
+        <v-select dir="rtl" :options="monitoringCases"></v-select>
       </b-form-group>
       <b-form-group
         label="ملاحظات إدارة الجودة"

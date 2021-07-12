@@ -1,7 +1,7 @@
 .table-list {
   margin-top: 30px;
   table {
-    text-align: left;
+    text-align: right;
     font-size: 14px;
     thead {
       tr {
@@ -16,10 +16,10 @@
           color: var(--text-color);
           font-weight: bold;
           &:nth-child(1) {
-            border-radius: 50px 0 0 50px;
+            border-radius: 0 50px 50px 0;
           }
           &:nth-last-child(1) {
-            border-radius: 0 50px 50px 0;
+            border-radius: 50px 0 0 50px;
           }
         }
       }

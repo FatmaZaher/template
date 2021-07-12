@@ -6,6 +6,9 @@ export default {
   head: {
     titleTemplate: 'Quality-login',
   },
+    mounted() {
+    document.querySelector('html').setAttribute('dir', 'rtl')
+  },
 }
 </script>
 <style>
@@ -17,14 +20,14 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  direction: ltr;
+  direction: rtl;
   height: 100%;
 }
 body {
   margin: 0;
   font-family: 'Tajawal', sans-serif;
   line-height: 1.5;
-  text-align: left;
+  text-align: right;
   height: 100%;
   color: var(--text-color);
 }
