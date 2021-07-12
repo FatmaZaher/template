@@ -12,6 +12,9 @@ export default {
   head: {
     titleTemplate: 'Quality',
   },
+  mounted() {
+    document.querySelector('html').setAttribute('dir', 'rtl')
+  },
 }
 </script>
 <style>

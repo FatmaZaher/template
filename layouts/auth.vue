@@ -6,6 +6,9 @@ export default {
   head: {
     titleTemplate: 'Quality-login',
   },
+    mounted() {
+    document.querySelector('html').setAttribute('dir', 'rtl')
+  },
 }
 </script>
 <style>
