@@ -18,11 +18,11 @@
           <div class="image">
             <img src="~/assets/images/Photo.png" alt="Person image" />
           </div>
-          <div class="text mr-3 d-flex align-items-center">
+          <div class="text text-left ml-3 d-flex align-items-center">
             <div>
               <h6 class="mb-3">اسم الشخص</h6>
               <p>اسم التخصص</p>
-            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@ export default {
 }
 .v-sidebar-menu {
   right: 30px;
-  text-align: right;
+  text-align: left;
   top: 30px;
   bottom: 30px;
   padding: 0 10px;
