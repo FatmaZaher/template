@@ -40,11 +40,7 @@ export default {
       // Install them before as dependencies with npm or yarn
       plugins: {
         // Disable a plugin by passing false as value
-<<<<<<< HEAD
         "postcss-rtl": true,
-=======
-        'postcss-rtl': true,
->>>>>>> 871217fb311fca0edbcfd0ed6fd05898d431155d
       },
       preset: {
         // Change the postcss-preset-env settings
