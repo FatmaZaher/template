@@ -11,6 +11,8 @@
     "lint": "npm run lint:js && npm run lint:style",
     "heroku-postbuild": "npm run build"
   },
+ 
+
   "dependencies": {
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.9.1",
