@@ -16,10 +16,10 @@
           color: var(--text-color);
           font-weight: bold;
           &:nth-child(1) {
-            border-radius: 0 50px 50px 0;
+            border-radius: 50px 0 0 50px;
           }
           &:nth-last-child(1) {
-            border-radius: 50px 0 0 50px;
+            border-radius: 0 50px 50px 0;
           }
         }
       }

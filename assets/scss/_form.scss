@@ -1,6 +1,7 @@
 .form-group {
   label{
     font-size: 15px;
+    text-align: left;
     @media (max-width: 767px) {
       font-size: 13px;
     }
@@ -30,8 +31,8 @@
   }
   .custom-file-input ~ .custom-file-label[data-browse]::after {
     content: 'رفع';
-    left: 0;
-    right: auto;
+    right: 0;
+    left: auto;
     border-radius: 25px;
     background-color: var(--main-color);
     color: #fff;

@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <div class="header-content">
-      <b-row class="row align-items-center">
+      <b-row class="row align-items-center text-left">
         <b-col cols="6">
           <HeadPage :title="title"></HeadPage>
         </b-col>

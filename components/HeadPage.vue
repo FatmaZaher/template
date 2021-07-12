@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text-left">
     <h6>{{ title }}</h6>
   </div>
 </template>

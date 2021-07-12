@@ -1,5 +1,5 @@
 .btn {
-  float: left;
+  float: right;
   background-color: var(--main-color) !important;
   padding: 10px 15px;
   border-radius: 25px;
@@ -22,4 +22,7 @@
   &:hover {
     background-color: #298a5b;
   }
+}
+.main-btn{
+
 }
