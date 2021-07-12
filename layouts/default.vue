@@ -12,6 +12,9 @@ export default {
   head: {
     titleTemplate: 'Quality',
   },
+  mounted() {
+    document.querySelector('html').setAttribute('dir', 'rtl')
+  },
 }
 </script>
 <style>
@@ -23,10 +26,11 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  direction: ltr;
   height: 100%;
 }
 body {
+  direction: ltr;
+
   margin: 0;
   font-family: 'Tajawal', sans-serif;
   line-height: 1.5;
