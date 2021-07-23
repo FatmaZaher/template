@@ -1,13 +1,12 @@
 <template>
-  <div class="content">
+  <div class="manageBox">
     <b-row>
       <b-col>
-        <b-form-group label="الإدارة" >
+        <b-form-group label="البحث">
           <b-form-input
             type="text"
             v-model="search"
-            placeholder="البحث عن الإدارة"
-            class="w-50"
+            placeholder="search the admin"
           ></b-form-input>
         </b-form-group>
       </b-col>

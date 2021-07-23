@@ -1,301 +1,243 @@
 <template>
   <b-modal id="InviteUserModal" v-model="isVisible" size="lg" hide-footer>
     <template #modal-title>
-      <span>{{ modalTitle }}</span>
+      <span>{{ buttonTitle }}</span>
     </template>
-    <form ref="form" @submit.stop.prevent="">
+    <b-form ref="form" @submit.stop.prevent="">
       <b-row>
         <b-col md="6" v-if="isEmployeeNo">
-          <b-form-group
-            label="رقم الموظف"
-            label-for="employeeNo"
-            invalid-feedback="Employee No. is required"
-          >
-            <b-form-input id="employeeNo" required></b-form-input>
-          </b-form-group>
+          <Input
+            labelfor="employeeNo"
+            labelname="الرقم الوظيفي"
+            typeinput="number"
+          />
         </b-col>
         <b-col md="6" v-if="isEmployeeName">
-          <b-form-group
-            label="الإسم"
-            label-for="employeeName"
-            invalid-feedback="Name is required"
-          >
-            <b-form-input id="employeeName" required></b-form-input>
-          </b-form-group>
+          <Input
+            labelfor="employeeName"
+            labelname="إسم الموظف"
+            typeinput="text"
+          />
         </b-col>
         <b-col md="6" v-if="isEmployeeEmail">
-          <b-form-group
-            label="البريد الإلكتروني"
-            label-for="employeeEmail"
-            invalid-feedback="Email is required"
-          >
-            <b-form-input
-              id="employeeEmail"
-              type="email"
-              required
-            ></b-form-input>
-          </b-form-group>
+          <Input
+            labelfor="employeeEmail"
+            labelname="البريد الإلكتروني"
+            typeinput="email"
+          />
         </b-col>
         <b-col md="6" v-if="isSection">
-          <b-form-group
+          <VSelectInput
+            labelfor="section"
             label="القسم"
-            label-for="section"
-            invalid-feedback="Section is required"
-          >
-            <v-select dir="rtl" :options="sections"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isAdministration">
-          <b-form-group
-            label="الإدارة"
-            label-for="administration"
-            invalid-feedback="Administration is required"
-          >
-            <v-select dir="rtl" :options="administrations"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isJobName">
-          <b-form-group
-            label="المسمى الوظيفي"
-            label-for="jobName"
-            invalid-feedback="Job Name is required"
-          >
-            <b-form-input id="jobName" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isPersntage">
-          <b-form-group
-            label="نسبة الإمتثال"
-            label-for="CompliancePers"
-            invalid-feedback="Persntage is required"
-          >
-            <b-form-input id="persntage" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isMobileNo">
-          <b-form-group
-            label="رقم الهاتف"
-            label-for="mobileNo"
-            invalid-feedback="Mobile No. is required"
-          >
-            <b-form-input id="mobileNo" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isCity">
-          <b-form-group
-            label="المدينة"
-            label-for="city"
-            invalid-feedback="City is required"
-          >
-            <v-select dir="rtl" :options="cites"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isValidity">
-          <b-form-group
-            label="الصلاحية"
-            label-for="validity"
-            invalid-feedback="Validity is required"
-          >
-            <v-select dir="rtl" :options="validites"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isAddPhoto">
-          <b-form-group label="إضافة صورة">
-            <b-form-file
-              placeholder="إضافة صورة"
-              drop-placeholder="Drop file here..."
-            ></b-form-file>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isReportCode">
-          <b-form-group
-            label="رمز التقرير"
-            label-for="reportCode"
-            invalid-feedback="Report Code is required"
-          >
-            <b-form-input id="reportCode" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isReleaseDate">
-          <b-form-group
-            label="تاريخ الإصدار"
-            label-for="releaseDate"
-            invalid-feedback="Date is required"
-          >
-            <b-form-datepicker id="releaseDate"> </b-form-datepicker>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isSampelsNo">
-          <b-form-group
-            label="عدد العينات"
-            label-for="samplesNo"
-            invalid-feedback="Sampels No. is required"
-          >
-            <b-form-input id="samplesNo" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isMonitoringSource">
-          <b-form-group
-            label="مصدر الرصد"
-            label-for="monitoringSource"
-            invalid-feedback="Monitoring source is required"
-          >
-            <b-form-input id="monitoringSource" required></b-form-input>
-          </b-form-group>
+            :options="sectionList"
+          />
         </b-col>
         <b-col md="6" v-if="isReportNo">
-          <b-form-group
-            label="رقم التقرير"
-            label-for="reportNo"
-            invalid-feedback="Report No. source is required"
-          >
-            <b-form-input id="reportNo" required></b-form-input>
-          </b-form-group>
+          <Input
+            labelfor="reportNo"
+            labelname="رقم التقرير"
+            typeinput="number"
+          />
         </b-col>
-        <b-col md="6" v-if="isComplianceCase">
-          <b-form-group
-            label="حالة الامتثال"
-            label-for="complianceCase"
-            invalid-feedback="Compliance Case is required"
-          >
-            <v-select dir="rtl" :options="complianceCases"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isAction">
-          <b-form-group
-            label="الإجراء"
-            label-for="action"
-            invalid-feedback="Action source is required"
-          >
-            <b-form-input id="action" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isReportType">
-          <b-form-group
-            label="نوع التقرير"
-            label-for="reportsType"
-            invalid-feedback="Report Type is required"
-          >
-            <v-select dir="rtl" :options="reportsTypes"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isVerificationCase">
-          <b-form-group
-            label="حالة التحقق"
-            label-for="verificationCase"
-            invalid-feedback="Verification Case is required"
-          >
-            <v-select dir="rtl" :options="verificationCases"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isCasesCode">
-          <b-form-group
-            label="رموز الحالات"
-            label-for="casesCodes"
-            invalid-feedback="Cases Code is required"
-          >
-            <b-form-input id="casesCodes" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isActive">
-          <b-form-group
-            label="النشاط"
-            label-for="active"
-            invalid-feedback="Active is required"
-          >
-            <b-form-input id="active" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isActual">
-          <b-form-group
-            label="الاحتواء والاجراء الفعلي"
-            label-for="actual"
-            invalid-feedback="is required"
-          >
-            <b-form-input id="actual" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isSampleCode">
-          <b-form-group
-            label="رمز العينة"
-            label-for="sampleCode"
-            invalid-feedback="Sample Code is required"
-          >
-            <b-form-input id="sampleCode" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isRang">
-          <b-form-group
-            label="النطاق"
-            label-for="rang"
-            invalid-feedback="rang is required"
-          >
-            <b-form-input id="rang" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isRepetitiveCase">
-          <b-form-group
-            label="الحالة التكرارية"
-            label-for="repetitiveCase"
-            invalid-feedback="ٌRepetitive Case is required"
-          >
-            <b-form-input id="repetitiveCase" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isMonitoringCase">
-          <b-form-group
-            label="حالة الرصد"
-            label-for="monitoringCase"
-            invalid-feedback="Monitoring Case Case is required"
-          >
-            <v-select dir="rtl" :options="monitoringCases"></v-select>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isResponsible1">
-          <b-form-group
-            label="المسؤولية 1"
-            label-for="responsible1"
-            invalid-feedback="Responsible1 is required"
-          >
-            <b-form-input id="responsible1" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isResponsible2">
-          <b-form-group
-            label="المسؤولية 2"
-            label-for="responsible2"
-            invalid-feedback="Responsible2 is required"
-          >
-            <b-form-input id="responsible2" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isResponsible3">
-          <b-form-group
-            label="المسؤولية 3"
-            label-for="responsible3"
-            invalid-feedback="Responsible3 is required"
-          >
-            <b-form-input id="responsible3" required></b-form-input>
-          </b-form-group>
-        </b-col>
-        <b-col md="6" v-if="isMonitoringPers">
-          <b-form-group
-            label="نسبة صحة الرصد"
-            label-for="monitoringPers"
-            invalid-feedback="monitoringPers is required"
-          >
-            <b-form-input id="monitoringPers" required></b-form-input>
-          </b-form-group>
+        <b-col md="6" v-if="isReportCode">
+          <Input
+            labelfor="reportCode"
+            labelname="رمز التقرير"
+            typeinput="text"
+          />
         </b-col>
         <b-col md="6" v-if="isSampleName">
-          <b-form-group
-            label="اسم العينة"
-            label-for="sampleName"
-            invalid-feedback="Sample Name Code is required"
-          >
-            <b-form-input id="sampleName" required></b-form-input>
-          </b-form-group>
+          <Input
+            labelfor="sampleName"
+            labelname="اسم العينة"
+            typeinput="text"
+          />
         </b-col>
+        <b-col md="6" v-if="isSampleCodeSelect">
+          <VSelectInput
+            labelfor="sampleCode"
+            label="رمز العينة "
+            :options="sampleCodeList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isSampleCode">
+          <Input
+            labelfor="sampleCode"
+            labelname="رمز العينة"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isAdministration">
+          <VSelectInput
+            labelfor="administration"
+            label="الإدارة"
+            :options="administrationList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isJobName">
+          <Input
+            labelfor="jobName"
+            labelname="المسمى الوظيفي"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isPersntage">
+          <Input
+            labelfor="compliancePers"
+            labelname="نسبة الإمتثال"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isMobileNo">
+          <Input
+            labelfor="mobileNo"
+            labelname="رقم الهاتف"
+            typeinput="number"
+          />
+        </b-col>
+        <b-col md="6" v-if="isCity">
+          <VSelectInput labelfor="city" label="المدينة" :options="cityList" />
+        </b-col>
+        <b-col md="6" v-if="isValidity">
+          <VSelectInput
+            labelfor="validity"
+            label="الصلاحية"
+            :options="validityList"
+          />
+        </b-col>
+        <b-col md="6" offset-md="3" v-if="isAddPhoto">
+          <FormFile labelfor="File" labelname="إضافة صورة" />
+        </b-col>
+
+        <b-col md="6" v-if="isReleaseDate">
+          <DatepickerInput labelfor="releaseDate" labelname="تاريخ الإصدار" />
+        </b-col>
+        <b-col md="6" v-if="isCheckPoint">
+          <VSelectInput
+            labelfor="checkpoint"
+            label="نقطة التحقق"
+            :options="checkpointList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isSamplesNo">
+          <Input
+            labelfor="samplesNo"
+            labelname="عدد العينات"
+            typeinput="number"
+          />
+        </b-col>
+        <b-col md="6" v-if="isMonitoringSource">
+          <VSelectInput
+            labelfor="monitoringSource"
+            label="مصدر الرصد"
+            :options="monitoringSourceList"
+          />
+        </b-col>
+
+        <b-col md="6" v-if="isComplianceCase">
+          <VSelectInput
+            labelfor="complianceCase"
+            label="حالة الامتثال"
+            :options="complianceCaseList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isActionName">
+          <VSelectInput
+            labelfor="actionName"
+            label="إسم الإجراء"
+            :options="actionList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isReportType">
+          <VSelectInput
+            labelfor="reportsType"
+            label="نوع التقرير"
+            :options="reportsTypeList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isVerificationCase">
+          <VSelectInput
+            labelfor="verificationCase"
+            label="حالة التحقق"
+            :options="verificationCaseList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isCasesCode">
+          <Input
+            labelfor="casesCodes"
+            labelname="رموز الحالات"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isActive">
+          <Input labelfor="active" labelname="النشاط" typeinput="text" />
+        </b-col>
+        <b-col md="6" v-if="isActual">
+          <Input
+            labelfor="actual"
+            labelname="الاحتواء والاجراء الفعلي"
+            typeinput="text"
+          />
+        </b-col>
+
+        <b-col md="6" v-if="isRangName">
+          <VSelectInput
+            labelfor="rangName"
+            label="اسم النطاق"
+            :options="rangLsit"
+          />
+        </b-col>
+        <b-col md="6" v-if="isRepetitiveCase">
+          <Input
+            labelfor="repetitiveCase"
+            labelname="الحالة التكرارية"
+            typeinput="number"
+          />
+        </b-col>
+        <b-col md="6" v-if="isMonitoringCase">
+          <VSelectInput
+            labelfor="monitoringCase"
+            label="حالة الرصد"
+            :options="monitoringCaseList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isResponsible">
+          <Input
+            labelfor="responsible"
+            labelname="المسؤولية"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isResponsible1">
+          <Input
+            labelfor="responsible1"
+            labelname="المسؤولية 1"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isResponsible2">
+          <Input
+            labelfor="responsible2"
+            labelname="المسؤولية 2"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isResponsible3">
+          <Input
+            labelfor="responsible3"
+            labelname="المسؤولية 3"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isMonitoringPers">
+          <Input
+            labelfor="monitoringPers"
+            labelname="نسبة صحة الرصد"
+            typeinput="text"
+          />
+        </b-col>
+
         <div v-if="isSectionModal" class="sectionForm">
           <b-form-radio-group
             v-model="selected"
@@ -306,65 +248,66 @@
             disabled-field="notEnabled"
           ></b-form-radio-group>
           <div class="mt-5">
-            <b-row v-if="selected == 1">
-              <b-col md="6">
-                <b-form-group
-                  label="القسم"
-                  label-for="section"
-                  invalid-feedback="Section is required"
-                >
-                  <v-select dir="rtl" :options="sections"></v-select>
-                </b-form-group>
-              </b-col>
-              <b-col md="6">
-                <b-form-group
-                  label="إسم مدير القسم"
-                  label-for="managerName"
-                  invalid-feedback="Manager is required"
-                >
-                  <b-form-input id="Manager" required></b-form-input>
-                </b-form-group>
-              </b-col>
-            </b-row>
-            <b-row v-if="selected == 2">
-              <b-col md="6">
-                <b-form-group
-                  label="الإدارة"
-                  label-for="administration"
-                  invalid-feedback="Administration is required"
-                >
-                  <v-select dir="rtl" :options="administrations"></v-select>
-                </b-form-group>
-              </b-col>
-              <b-col md="6">
-                <b-form-group
-                  label="إسم مدير الإدارة"
-                  label-for="managerName"
-                  invalid-feedback="Manager is required"
-                >
-                  <b-form-input id="Manager" required></b-form-input>
-                </b-form-group>
-              </b-col>
-            </b-row>
+            <div v-if="selected == 1">
+              <Input
+                labelfor="section"
+                labelname="القسم (الوكالة)"
+                typeinput="text"
+              />
+              <VSelectInput
+                labelfor="sectionManagerName"
+                label="إسم مدير القسم"
+                :options="employeeNameList"
+              />
+              <VSelectInput
+                labelfor="administration"
+                label="إسم الإدارة التي يندرج تحتها القسم"
+                :options="administrationList"
+              />
+            </div>
+            <div v-if="selected == 2">
+              <Input
+                labelfor="administration"
+                labelname="الإدارة"
+                typeinput="text"
+              />
+              <VSelectInput
+                labelfor="adminManagerName"
+                label="إسم مدير الإدارة"
+                v-modal="kkkk"
+                :options="employeeNameList"
+              />
+            </div>
           </div>
         </div>
         <div v-if="isDeleteModal" class="text-center w-100">
-          <img src="~/assets/images/Group 12868.png" alt="" />
-          <p class="mt-3">هل أنت متأكد من عملية الحذف</p>
+          <img src="~/assets/images/Group 12868.png" alt="delete img" />
+          <p class="my-4">{{ deleteText }}</p>
           <div class="footer-button d-flex justify-content-center">
-            <b-button type="" class="fot-btn mx-3">حذف</b-button>
-            <b-button type="" class="fot-btn mx-3">إغلاق</b-button>
+            <b-button type="" class="fot-btn main-btn mx-3">حذف</b-button>
+            <b-button type="" class="fot-btn main-btn mx-3 close-btn"
+              >إغلاق</b-button
+            >
+          </div>
+        </div>
+        <div v-if="compareAndCheck" class="text-center w-100">
+          <img src="~/assets/images/Group 12821.png" alt="delete img" />
+          <p class="my-4">تمت عملية التحقق بنجاح وتحديد الحالة</p>
+          <div class="footer-button">
+            <b-button type="" class="fot-btn main-btn mx-3">ممتثل</b-button>
+            <b-button type="" class="fot-btn main-btn mx-3 close-btn"
+              >إغلاق</b-button
+            >
           </div>
         </div>
       </b-row>
-
       <div
         v-if="saveButton"
         class="footer-button d-flex justify-content-center"
       >
-        <b-button type="submit" class="fot-btn">حفظ</b-button>
+        <b-button type="submit" class="fot-btn main-btn">حفظ</b-button>
       </div>
-    </form>
+    </b-form>
   </b-modal>
 </template>
 
@@ -375,7 +318,7 @@ export default {
       type: Boolean,
       default: true,
     },
-    modalTitle: {
+    buttonTitle: {
       type: null,
       default: '',
     },
@@ -392,6 +335,10 @@ export default {
       default: false,
     },
     isEmployeeEmail: {
+      type: Boolean,
+      default: false,
+    },
+    isCheckPoint: {
       type: Boolean,
       default: false,
     },
@@ -435,7 +382,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    isSampelsNo: {
+    isSamplesNo: {
       type: Boolean,
       default: false,
     },
@@ -451,7 +398,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    isAction: {
+    isActionName: {
       type: Boolean,
       default: false,
     },
@@ -479,7 +426,15 @@ export default {
       type: Boolean,
       default: false,
     },
-    isRang: {
+    isSampleCodeSelect: {
+      type: Boolean,
+      default: false,
+    },
+    isRangName: {
+      type: Boolean,
+      default: false,
+    },
+    isRangCode: {
       type: Boolean,
       default: false,
     },
@@ -488,6 +443,10 @@ export default {
       default: false,
     },
     isMonitoringCase: {
+      type: Boolean,
+      default: false,
+    },
+    isResponsible: {
       type: Boolean,
       default: false,
     },
@@ -523,32 +482,53 @@ export default {
       type: Boolean,
       default: true,
     },
+    deleteText: {
+      type: String,
+      default: '',
+    },
+    compareAndCheck: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
-      validites: ['validity1', 'validity2', 'validity3', 'validity4'],
-      cites: ['city 2', 'city 3', 'city 4', 'city 5', 'city 6', 'city 7'],
-      sections: [
+      selected: 1,
+      validityList: ['validity1', 'validity2', 'validity3', 'validity4'],
+      cityList: ['city 2', 'city 3', 'city 4', 'city 5', 'city 6', 'city 7'],
+      sectionList: [
         'قسم الشئون الماليه والمحاسبة',
         'قسم الموارد البشرية',
         'قسم الجوده',
         'قسم ادارة المخازن وتوفير المنتج',
       ],
-      administrations: [
+      administrationList: [
         'إدارة التسويق',
         'الإدارة المالية',
         'إدارة الإنتاج',
         'إدارة التخطيط',
       ],
-      complianceCases: ['ممتثل', 'غير ممتثل'],
-      reportsTypes: ['إحصائي', 'مالي', 'إداري', 'تحليلي'],
-      verificationCases: ['لم يتم التحقق بعد', 'جاري التحقق', 'تم التحقق'],
-      monitoringCases: ['صحيحة', 'خاطئة'],
-      selected: 1,
+      complianceCaseList: ['ممتثل', 'غير ممتثل'],
+      reportsTypeList: ['إحصائي', 'مالي', 'إداري', 'تحليلي'],
+      verificationCaseList: ['لم يتم التحقق بعد', 'جاري التحقق', 'تم التحقق'],
+      monitoringCaseList: ['صحيحة', 'خاطئة'],
       radioOptions: [
         { item: 1, name: 'قسم' },
         { item: 2, name: 'إدارة' },
       ],
+      employeeNameList: ['Employee1', 'Employee3', 'Employee4', 'Employee5'],
+      checkpointList: ['checkpoint 2', 'checkpoint 3', 'checkpoint 4'],
+      monitoringSourceList: [
+        'Source 2',
+        'Source 3',
+        'Source 4',
+        'Source 5',
+        'Source 6',
+        'Source 7',
+      ],
+      actionList: ['action 2', 'action 3', 'action 4'],
+      rangLsit: ['داخل نطاق الرقابة والحوكمة', 'خارج نطاق الجودة والحوكمة'],
+      sampleCodeList: ['samples 2', 'samples 3', 'samples 4'],
     }
   },
   computed: {
@@ -559,6 +539,11 @@ export default {
       set(val) {
         this.$emit('input', val)
       },
+    },
+  },
+  methods: {
+    closeModal() {
+      this.openmodal = false
     },
   },
 }

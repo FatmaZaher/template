@@ -6,17 +6,17 @@
           <HeadPage :title="title"></HeadPage>
         </b-col>
         <b-col cols="6">
-          <div>
-            <b-button @click="openModal" class="btn">
+          <div class="d-flex justify-content-end">
+            <b-button @click="openModal" class="btn main-btn">
               <i class="fas fa-plus"></i>
-              <span>{{ modalTitle }}</span>
+              <span>{{ buttonTitle }}</span>
             </b-button>
             <AddModal
               v-model="openmodal"
-              :modalTitle="modalTitle"
+              :buttonTitle="buttonTitle"
               :is-report-code="true"
               :is-sample-code="true"
-              :is-rang="true"
+              :is-rang-name="true"
               :is-repetitive-case="true"
               :is-monitoring-case="true"
               :is-release-date="true"
@@ -45,7 +45,7 @@ export default {
   data() {
     return {
       title: 'نتائج عملية الرصد',
-      modalTitle: 'إضافة عملية رصد',
+      buttonTitle: 'إضافة عملية رصد',
       openmodal: false,
       fields: [
         {
@@ -57,8 +57,8 @@ export default {
           label: 'رمز العينة',
         },
         {
-          key: 'rang',
-          label: 'النطاق',
+          key: 'rangName',
+          label: 'اسم النطاق',
         },
         {
           key: 'repetitiveCase',
@@ -89,6 +89,10 @@ export default {
           label: 'نسبة صحة الرصد',
         },
         {
+          key: 'qualityManagerNotes',
+          label: 'ملاحظات مدير الجودة',
+        },
+        {
           key: 'id',
           label: '',
         },
@@ -97,7 +101,7 @@ export default {
         {
           reportCode: 'BNS 88 02',
           sampleCode: '50 C2',
-          rang: 'مثال',
+          rangName: 'مثال',
           repetitiveCase: '11',
           monitoringCase: 'صحيحة',
           releaseDate: 'Tuesday, July 27, 2021',
@@ -105,47 +109,9 @@ export default {
           responsible1: 'مثال',
           responsible2: 'مثال',
           monitoringPers: '80%',
+          qualityManagerNotes: '',
           id: 8,
-        },
-        {
-          reportCode: 'MV 11 78',
-          sampleCode: '40 M8',
-          rang: 'مثال',
-          repetitiveCase: '4',
-          monitoringCase: 'غير صحيحة',
-          releaseDate: 'Tuesday, July 27, 2021',
-          administration: 'إدارة التسويق',
-          responsible1: 'مثال',
-          responsible2: 'مثال',
-          monitoringPers: '56%',
-          id: 8,
-        },
-        {
-          reportCode: 'Ke 15 02',
-          sampleCode: '88 C2',
-          rang: 'مثال',
-          repetitiveCase: '7',
-          monitoringCase: 'صحيحة',
-          releaseDate: 'Tuesday, July 27, 2021',
-          administration: 'إدارة الإنتاج',
-          responsible1: 'مثال',
-          responsible2: 'مثال',
-          monitoringPers: '77%',
-          id: 8,
-        },
-        {
-          reportCode: 'BNS 88 02',
-          sampleCode: '69 B2',
-          rang: 'مثال',
-          repetitiveCase: '8',
-          monitoringCase: 'غير صحيحة',
-          releaseDate: 'Tuesday, July 27, 2021',
-          administration: 'إدارة الإنتاج',
-          responsible1: 'مثال',
-          responsible2: 'مثال',
-          monitoringPers: '50%',
-          id: 8,
-        },
+        }
       ],
     }
   },

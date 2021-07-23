@@ -20,20 +20,17 @@
       :items="items"
       :rows="rows"
       :fields="fields"
-      :is-edit="true"
-      :is-delete="true"
-      :delete-text="deleteText"
+      :is-objection="true"
+      :is-justification="true"
     />
   </div>
 </template>
-
 <script>
 export default {
   data() {
     return {
       title: 'كافة التقارير',
       buttonTitle: 'إضافة تقرير',
-      deleteText: 'هل تريد حذف التقرير من قائمة التقارير؟',
       fields: [
         {
           key: 'reportNo',
@@ -151,7 +148,7 @@ export default {
           responsible1: 'مثال',
           responsible2: 'مثال',
           responsible3: 'مثال',
-          id: 2,
+          id: 1,
         },
       ],
     }
@@ -164,4 +161,4 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss"></style>

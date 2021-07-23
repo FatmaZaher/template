@@ -38,15 +38,7 @@
     "child": [
       {
         "href": "/Reports/AllReports",
-        "title": "كاقة التقارير",
-        "icon": {
-          "element": "i",
-          "class": "fas fa-bookmark"
-        }
-      },
-      {
-        "href": "/Reports/VerificationReport",
-        "title": "تقارير قيد التحقق",
+        "title": "كافة التقارير",
         "icon": {
           "element": "i",
           "class": "fas fa-bookmark"
@@ -60,7 +52,15 @@
           "class": "fas fa-bookmark"
         }
       }
-      
+      ,
+      {
+        "href": "/Reports/VerificationResults",
+        "title": "نتائج عملية التحقق",
+        "icon": {
+          "element": "i",
+          "class": "fas fa-bookmark"
+        }
+      }
     ]
   },
   {
@@ -80,7 +80,6 @@
       "class": "fas fa-users"
     }
   },
-
   {
     "href": "/Samples",
     "title": "العينات",
@@ -90,8 +89,24 @@
     }
   },
   {
+    "href": "/Rang",
+    "title": "النطاقات",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-file"
+    }
+  },
+  {
+    "href": "/Action",
+    "title": "الإجراءات",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-file"
+    }
+  },
+  {
     "href": "/Objections",
-    "title": "إعتراضات مسؤول الإدارة ",
+    "title": "الإعتراضات",
     "icon": {
       "element": "i",
       "class": "fas fa-star"
@@ -100,38 +115,46 @@
 
   {
     "href": "/Justifications",
-    "title": "تبريرات مسؤول الإدارة",
+    "title": "التبريرات",
     "icon": {
       "element": "i",
       "class": "fas fa-file"
     }
   },
   {
-    "href": "/Responsibilities",
-    "title": "المسؤوليات",
+    "href": "/Cases",
+    "title": "الحالات",
     "icon": {
       "element": "i",
       "class": "fas fa-file"
     }
   },
   {
-    "href": "/ComplianceCases",
-    "title": "حالات الإمتثال",
+    "href": "/MonitoringCases",
+    "title": "حالات الرصد",
     "icon": {
       "element": "i",
       "class": "fas fa-file"
     }
   },
   {
-    "href": "/Settings",
-    "title": "الإعدادات",
+    "href": "/ComplianceRecord",
+    "title": "سجل الإمتثال",
     "icon": {
       "element": "i",
-      "class": "fas fa-cogs"
+      "class": "fas fa-file"
     }
   },
   {
-    "href": "/Login",
+    "href": "/VerificationProcess",
+    "title": "عملية التحقق",
+    "icon": {
+      "element": "i",
+      "class": "fas fa-file"
+    }
+  },
+  {
+    "href": "/Auth/Login",
     "title": "تسجيل الخروج",
     "icon": {
       "element": "i",

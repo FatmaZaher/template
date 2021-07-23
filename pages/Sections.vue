@@ -6,14 +6,14 @@
           <HeadPage :title="title"></HeadPage>
         </b-col>
         <b-col cols="6">
-          <div>
-            <b-button @click="openModal" class="btn">
+          <div class="d-flex justify-content-end">
+            <b-button @click="openModal" class="btn main-btn">
               <i class="fas fa-plus"></i>
-              <span>{{ modalTitle }}</span>
+              <span>{{ buttonTitle }}</span>
             </b-button>
             <AddModal
               v-model="openmodal"
-              :modalTitle="modalTitle"
+              :buttonTitle="buttonTitle"
               :is-section-modal="true"
             />
           </div>
@@ -35,9 +35,8 @@ export default {
   data() {
     return {
       title: 'الأقسام والإدارات',
-      modalTitle: 'إضافة قسم أو إدارة',
+      buttonTitle: 'إضافة قسم أو إدارة',
       openmodal: false,
-      selected: '',
       fields: [
         {
           key: 'serialNo',

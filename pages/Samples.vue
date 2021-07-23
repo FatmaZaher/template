@@ -6,14 +6,14 @@
           <HeadPage :title="title"></HeadPage>
         </b-col>
         <b-col cols="6">
-          <div>
-            <b-button @click="openModal" class="btn">
+          <div class="d-flex justify-content-end">
+            <b-button @click="openModal" class="btn main-btn">
               <i class="fas fa-plus"></i>
-              <span>{{ modalTitle }}</span>
+              <span>{{ buttonTitle }}</span>
             </b-button>
             <AddModal
               v-model="openmodal"
-              :modalTitle="modalTitle"
+              :buttonTitle="buttonTitle"
               :is-sample-code="true"
               :is-sample-name="true"
               :is-administration="true"
@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       title: 'العينات',
-      modalTitle: 'إضافة عينة',
+      buttonTitle: 'إضافة عينة',
       openmodal: false,
       fields: [
         {

@@ -10,7 +10,7 @@
       width="270px"
       widthCollapsed="50px"
       theme="white-theme"
-      v-bind:class="{ rightSideClass: rightSideBar, zeroRightClass: zeroRight }"
+      v-bind:class="{ ShowSideBar: show, HideSideBar: hide }"
     >
       <div slot="header">
         <span class="showSideBar" @click="showsidebar">»</span>
@@ -18,7 +18,7 @@
           <div class="image">
             <img src="~/assets/images/Photo.png" alt="Person image" />
           </div>
-          <div class="text mr-3 d-flex align-items-center">
+          <div class="text text-left ml-3 d-flex align-items-center">
             <div>
               <h6 class="mb-3">اسم الشخص</h6>
               <p>اسم التخصص</p>
@@ -57,8 +57,8 @@ export default {
   data() {
     return {
       SideBarMenu: [],
-      rightSideBar: true,
-      zeroRight: false,
+      show: false,
+      hide: true,
       noOverlay: true,
       withOverlay: false,
     }
@@ -68,24 +68,24 @@ export default {
   },
   methods: {
     showsidebar() {
-      if (this.rightSideBar) {
-        this.rightSideBar = false
-        this.zeroRight = true
+      if (this.hide) {
+        this.show = true
+        this.hide = false
         this.withOverlay = true
         this.noOverlay = false
       } else {
-        this.rightSideBar = true
-        this.zeroRight = false
+        this.show = false
+        this.hide = true
         this.withOverlay = false
         this.noOverlay = true
       }
     },
-    hidesidebar(){
-       this.rightSideBar = true
-        this.zeroRight = false
-        this.withOverlay = false
-        this.noOverlay = true
-    }
+    hidesidebar() {
+      this.show = false
+      this.hide = true
+      this.withOverlay = false
+      this.noOverlay = true
+    },
   },
 }
 </script>
@@ -103,18 +103,18 @@ export default {
   display: none;
 }
 .v-sidebar-menu {
-  right: 30px;
-  text-align: right;
+  left: 30px;
+  text-align: left;
   top: 30px;
   bottom: 30px;
   padding: 0 10px;
   border-radius: 20px;
   box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
-  margin-left: 35px;
-  transition: 0.5s ease;
+  margin-right: 35px;
+  transition: left 0.5s ease;
   @media (max-width: 767px) {
-      border-radius: 20px 0 0  20px;
-    }
+    border-radius: 0 20px 20px 0;
+  }
   .user-card {
     .image img {
       width: 80px;
@@ -132,7 +132,7 @@ export default {
   .vsm--link {
     font-size: 14px;
     padding: 5px;
-    padding-right: 10px;
+    padding-left: 10px;
     margin: 5px;
     border-radius: 25px;
   }
@@ -142,14 +142,14 @@ export default {
   .showSideBar {
     color: #ffffff;
     position: absolute;
-    left: -29px;
+    right: -29px;
     top: 95px;
     width: 30px;
     height: 30px;
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-    border-radius: 25px 0 0 25px;
+    border-radius: 0 25px 25px 0;
     box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
     background-color: var(--main-color);
     transition: 0.5s ease;
@@ -160,7 +160,7 @@ export default {
     }
   }
 }
-.v-sidebar-menu.vsm_white-theme .vsm--link{
+.v-sidebar-menu.vsm_white-theme .vsm--link {
   color: var(--text-color);
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1 .vsm--icon,
@@ -169,7 +169,7 @@ export default {
   margin: 0 10px;
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-2 {
-  padding-right: 40px;
+  padding-left: 40px;
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-2.vsm--link_active {
   color: var(--main-color);
@@ -195,12 +195,12 @@ export default {
   background-color: transparent;
 }
 @media (max-width: 767px) {
-  .rightSideClass {
-    right: -270px;
-    z-index: 5;
+  .ShowSideBar {
+     left: 0;
   }
-  .zeroRightClass {
-    right: 0;
+  .HideSideBar {
+    left: -270px;
+    z-index: 5;
   }
   .opcity1 {
     opacity: 1;

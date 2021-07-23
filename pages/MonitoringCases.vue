@@ -6,15 +6,15 @@
           <HeadPage :title="title"></HeadPage>
         </b-col>
         <b-col cols="6">
-          <div>
-            <b-button @click="openModal" class="btn">
+          <div class="d-flex justify-content-end">
+            <b-button @click="openModal" class="btn main-btn">
               <i class="fas fa-plus"></i>
-              <span>{{ modalTitle }}</span>
+              <span>{{ buttonTitle }}</span>
             </b-button>
             <AddModal
               v-model="openmodal"
-              :modalTitle="modalTitle"
-              :is-sample-code="true"
+              :buttonTitle="buttonTitle"
+              :is-sample-code-select="true"
               :is-monitoring-case="true"
             />
           </div>
@@ -36,7 +36,7 @@ export default {
   data() {
     return {
       title: 'حالات الرصد',
-      modalTitle: 'إضافة حالة رصد',
+      buttonTitle: 'إضافة حالة رصد',
       openmodal: false,
       fields: [
         {

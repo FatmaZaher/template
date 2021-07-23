@@ -6,14 +6,14 @@
           <HeadPage :title="title"></HeadPage>
         </b-col>
         <b-col cols="6">
-          <div>
-            <b-button @click="openModal" class="btn">
+          <div class="d-flex justify-content-end">
+            <b-button @click="openModal" class="btn main-btn">
               <i class="fas fa-plus"></i>
-              <span>{{ modalTitle }}</span>
+              <span>{{ buttonTitle }}</span>
             </b-button>
             <AddModal
               v-model="openmodal"
-              :modalTitle="modalTitle"
+              :buttonTitle="buttonTitle"
               :is-employee-no="true"
               :is-employee-name="true"
               :is-employee-email="true"
@@ -47,15 +47,23 @@ export default {
     return {
       openmodal: false,
       title: 'الموظفين',
-      modalTitle: 'إضافة موظف',
+      buttonTitle: 'إضافة موظف',
       fields: [
+        {
+          key: 'employeeName',
+          label: 'إسم الموظف',
+        },
         {
           key: 'employeeNo',
           label: 'الرقم الوظيفي',
         },
         {
-          key: 'employeeName',
-          label: 'الإسم',
+          key: 'employeeEmail',
+          label: 'البريد الإلكتروني',
+        },
+        {
+          key: 'city',
+          label: 'المدينة',
         },
         {
           key: 'section',
@@ -66,15 +74,16 @@ export default {
           label: 'الإدارة',
         },
         {
-          key: 'employeeEmail',
-          label: 'البريد الإلكتروني',
+          key: 'validity',
+          label: 'الصلاحية'
         },
         {
           key: 'jobName',
           label: 'المسمى الوظيفي',
         },
+
         {
-          key: 'CompliancePers',
+          key: 'compliancePers',
           label: 'نسبة الإمتثال',
         },
         {
@@ -90,7 +99,7 @@ export default {
           administration: 'إدارة التسويق',
           employeeEmail: 'mohammed@gmail.com',
           jobName: 'نائب المدير',
-          CompliancePers: '85%',
+          compliancePers: '85%',
           id: 9,
         },
         {
@@ -100,7 +109,7 @@ export default {
           administration: 'الإدارة المالية',
           employeeEmail: 'swsan@gmail.com',
           jobName: 'موظف إداري',
-          CompliancePers: '78%',
+          compliancePers: '78%',
           id: 9,
         },
         {
@@ -110,7 +119,7 @@ export default {
           administration: 'إدارة التخطيط',
           employeeEmail: 'ali@gmail.com',
           jobName: 'موظف إداري',
-          CompliancePers: '41%',
+          compliancePers: '41%',
           id: 9,
         },
         {
@@ -120,7 +129,7 @@ export default {
           administration: 'إدارة التسويق',
           employeeEmail: 'aliaa@gmail.com',
           jobName: 'موظف إداري',
-          CompliancePers: '85%',
+          compliancePers: '85%',
           id: 9,
         },
         {
@@ -130,10 +139,9 @@ export default {
           administration: 'إدارة الإنتاج',
           employeeEmail: 'mohammed@gmail.com',
           jobName: 'نائب المدير',
-          CompliancePers: '85%',
+          compliancePers: '85%',
           id: 9,
         },
-        
       ],
     }
   },

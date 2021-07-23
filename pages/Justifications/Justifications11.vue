@@ -5,6 +5,16 @@
         <b-col cols="6">
           <HeadPage :title="title"></HeadPage>
         </b-col>
+        <b-col cols="6">
+          <div class="d-flex justify-content-end">
+            <b-button class="btn main-btn">
+              <nuxt-link :to="'/Justifications/justificationSubmit'">
+                <i class="fas fa-plus"></i>
+               إضافة تبرير
+              </nuxt-link>
+            </b-button>
+          </div>
+        </b-col>
       </b-row>
     </div>
     <TableList
@@ -37,34 +47,22 @@ export default {
           label: 'التبرير',
         },
         {
-          key: 'complianceCase',
-          label: 'حالة الامتثال',
-        },
-        {
-          key: 'verificationCase',
-          label: 'حالة التحقق',
-        },
-        {
           key: 'id',
           label: '',
         },
       ],
       items: [
         {
-         reportNo: '03',
+          reportNo: '03',
           sampleNo: '003',
           justification: 'مثال',
-          complianceCase: 'غير ممتثل',
-          verificationCase: 'قيد التحقق',
-          id: 6,
+          id: 4,
         },
         {
           reportNo: '07',
           sampleNo: '007',
           justification: 'مثال',
-          complianceCase: 'ممتثل',
-          verificationCase: 'جاري التحقق',
-          id: 6,
+          id: 4,
         },
       ],
     }

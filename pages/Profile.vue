@@ -104,7 +104,7 @@ export default {
           label: 'سبب عدم الإمتثال',
         },
         {
-          key: 'CompliancePers',
+          key: 'compliancePers',
           label: 'نسبة الإمتثال',
         },
       ],
@@ -114,7 +114,7 @@ export default {
           sampleCode: 'dfdf',
           sampleDate: 'dfdf',
           noSample: 'dfdf',
-          CompliancePers: 'dfdf',
+          compliancePers: 'dfdf',
         },
       ],
     }

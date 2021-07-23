@@ -14,29 +14,30 @@
           <b-button class="" v-if="index">
             <span class="spanId"> {{ data.index }}</span>
           </b-button>
-          <b-button class="btn" v-if="isObjection">
+          <b-button class="btn main-btn" v-if="isObjection">
             <nuxt-link :to="'/Objections/objectionSubmit'">
               إعتراض
             </nuxt-link>
           </b-button>
-          <b-button class="btn" v-if="isJustification">
+          <b-button class="btn main-btn" v-if="isJustification">
             <nuxt-link :to="'/Justifications/justificationSubmit'">
               تبرير
             </nuxt-link>
           </b-button>
           <b-button v-if="isShow" class="specialbtn">
-            <img src="~/assets/images/Show.png" alt="" />
+            <img src="~/assets/images/Show.png" alt="Show" />
           </b-button>
           <b-button v-if="isEdit" class="specialbtn">
-            <img src="~/assets/images/Edit.png" alt="" />
+            <img src="~/assets/images/Edit.png" alt="Edit" />
           </b-button>
           <b-button @click="openModal" v-if="isDelete" class="specialbtn">
-            <img src="~/assets/images/Delete.png" alt="" />
+            <img src="~/assets/images/Delete.png" alt="Delete" />
             <AddModal
               v-model="openmodal"
-              :modalTitle="deleteTitle"
+              :buttonTitle="deleteTitle"
               :is-delete-modal="true"
               :save-button="false"
+              :delete-text="deleteText"
             />
           </b-button>
         </div>
@@ -100,6 +101,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    deleteText: {
+      type: String,
+      default: 'هل أنت متأكد من عملية الحذف؟',
+    },
   },
   data() {
     return {
@@ -107,7 +112,6 @@ export default {
       currentPage: 1,
       openmodal: false,
       showTitle: 'عرض',
-      editTitle: 'تعديل',
       deleteTitle: 'تأكيد الحذف',
     }
   },

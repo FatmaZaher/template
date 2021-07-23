@@ -33,10 +33,6 @@ export default {
           label: 'رمز العينة',
         },
         {
-          key: 'complianceCase',
-          label: 'حالة الامتثال',
-        },
-        {
           key: 'verificationCase',
           label: 'حالة التحقق',
         },
@@ -53,7 +49,6 @@ export default {
         {
           reportNo: '04',
           sampleCode: '50 C2',
-          complianceCase: 'ممتثل',
           verificationCase: 'تم التحقق',
           actual: 'مثال',
           id: 7,
@@ -61,7 +56,6 @@ export default {
          {
           reportNo: '07',
           sampleCode: '40 C2',
-          complianceCase: 'غير ممتثل',
           verificationCase: 'تم التحقق',
           actual: 'مثال',
           id: 7,
@@ -69,7 +63,6 @@ export default {
          {
           reportNo: '09',
           sampleCode: '70 82',
-          complianceCase: 'ممتثل',
           verificationCase: 'تم التحقق',
           actual: 'مثال',
           id: 7,

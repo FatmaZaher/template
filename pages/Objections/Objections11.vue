@@ -1,9 +1,19 @@
 <template>
   <div class="content">
     <div class="header-content">
-      <b-row class="align-items-center">
+      <b-row class="row align-items-center text-left">
         <b-col cols="6">
           <HeadPage :title="title"></HeadPage>
+        </b-col>
+        <b-col cols="6">
+          <div class="d-flex justify-content-end">
+            <b-button class="btn main-btn">
+              <nuxt-link :to="'/Objections/objectionSubmit'">
+                <i class="fas fa-plus"></i>
+                إضافة إعتراض
+              </nuxt-link>
+            </b-button>
+          </div>
         </b-col>
       </b-row>
     </div>
@@ -17,6 +27,7 @@
     />
   </div>
 </template>
+
 <script>
 export default {
   data() {
@@ -32,16 +43,8 @@ export default {
           label: 'رقم العينة',
         },
         {
-          key: 'complianceCase',
-          label: 'حالة الامتثال',
-        },
-        {
           key: 'objectionReson',
           label: 'سبب الإعتراض',
-        },
-        {
-          key: 'verificationCase',
-          label: 'حالة التحقق',
         },
         {
           key: 'id',
@@ -52,34 +55,26 @@ export default {
         {
           reportNo: '01',
           sampleNo: '001',
-          complianceCase: 'ممتثل',
           objectionReson: 'السبب',
-          verificationCase: 'تم التحقق',
-          id: 4,
+          id: 3,
         },
         {
-           reportNo: '02',
+          reportNo: '02',
           sampleNo: '002',
-          complianceCase: 'غير ممتثل',
           objectionReson: 'السبب',
-          verificationCase: 'تم التحقق',
-          id: 4,
+          id: 3,
         },
         {
           reportNo: '03',
           sampleNo: '003',
-          complianceCase: 'غير ممتثل',
           objectionReson: 'السبب',
-          verificationCase: 'جاري التحقق',
-          id: 4,
+          id: 3,
         },
         {
-           reportNo: '04',
+          reportNo: '04',
           sampleNo: '004',
-          complianceCase: 'ممتثل',
           objectionReson: 'السبب',
-          verificationCase: 'جاري التحقق',
-          id: 4,
+          id: 3,
         },
       ],
     }

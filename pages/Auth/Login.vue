@@ -5,28 +5,22 @@
         <div class="mb-4 mb-m-5">
           <h3>تسجيل الدخول</h3>
         </div>
-        <form ref="form" @submit.stop.prevent="">
-          <b-form-group
-            label="البريد الإلكتروني"
-            label-for="email"
-            invalid-feedback="Email is required"
-          >
-            <b-form-input id="email" type="email" required></b-form-input>
-          </b-form-group>
-
-          <b-form-group
-            label="كلمة المرور"
-            label-for="password"
-            invalid-feedback="password is required"
-          >
-            <b-form-input id="password" type="password" required></b-form-input>
-          </b-form-group>
+        <b-form ref="form" @submit.stop.prevent="">
+          <Input
+            labelfor="employeeEmail"
+            labelname="البريد الإلكتروني"
+            typeinput="email"
+          />
+          <Input
+            labelfor="password"
+            labelname="كلمة المرور"
+            typeinput="password"
+          />
           <div class="forgot">
-            <nuxt-link :to="'/ForgotPassword'">
+            <nuxt-link :to="'/Auth/ForgotPassword'">
               هل نسيت كلمة المرور ؟
             </nuxt-link>
           </div>
-
           <b-form-checkbox
             class="mt-3"
             id="checkbox-1"
@@ -38,15 +32,14 @@
           </b-form-checkbox>
           <p class="my-3">
             مستخدم جديد؟
-            <nuxt-link :to="'/Register'"> إنشاء حساب </nuxt-link>
+            <nuxt-link :to="'/Auth/Register'"> إنشاء حساب </nuxt-link>
           </p>
-
           <div class="footer-button">
-            <b-button type="submit" class="fot-btn w-100 mt-3">
+            <b-button type="submit" class="fot-btn main-btn w-100 mt-3">
               <nuxt-link :to="'/'"> دخول </nuxt-link>
             </b-button>
           </div>
-        </form>
+        </b-form>
       </div>
     </b-col>
     <b-col md="7" order="1" order-md="2">

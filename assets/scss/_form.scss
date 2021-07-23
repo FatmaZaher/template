@@ -1,6 +1,8 @@
 .form-group {
-  label{
+  margin-bottom: 35px;
+  label {
     font-size: 15px;
+    text-align: left;
     @media (max-width: 767px) {
       font-size: 13px;
     }
@@ -15,6 +17,7 @@
     background-color: #34ac7217;
     font-size: 14px;
     line-height: 40px;
+    height: 40px;
     @media (max-width: 767px) {
       font-size: 13px;
     }
@@ -27,19 +30,25 @@
         height: 35px;
       }
     }
+    .vs__open-indicator{
+      fill: var(--main-color);
+    }
   }
   .custom-file-input ~ .custom-file-label[data-browse]::after {
     content: 'رفع';
-    left: 0;
-    right: auto;
+    right: 0;
+    left: auto;
     border-radius: 25px;
     background-color: var(--main-color);
     color: #fff;
-    line-height: 30px;
-    padding: 0 10px;
+    width: 50px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    padding: 0;
   }
   .b-form-btn-label-control.form-control {
-    height: 35px !important;
+    height: 40px !important;
     display: flex;
     font-size: 10px !important;
     align-items: center;
@@ -57,7 +66,7 @@
     border-radius: 25px;
     background-color: #d6eee3;
     font-weight: 700;
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 13px;
       padding: 5px 25px 8px 40px;
     }
@@ -67,3 +76,7 @@
     }
   }
 }
+.dropdown-menu {
+  min-width: 269px !important;
+}
+

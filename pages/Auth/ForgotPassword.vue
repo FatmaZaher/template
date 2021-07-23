@@ -5,29 +5,26 @@
         <div class="mb-4 mb-m-5">
           <h3>هل نسيت كلمة المرور ؟</h3>
         </div>
-        <form ref="form" @submit.stop.prevent="">
-          <b-form-group
-            label="البريد الإلكتروني"
-            label-for="email"
-            invalid-feedback="Email is required"
-          >
-            <b-form-input id="email" type="email" required></b-form-input>
-          </b-form-group>
-
+        <b-form ref="form" @submit.stop.prevent="">
+          <Input
+            labelfor="employeeEmail"
+            labelname="البريد الإلكتروني"
+            typeinput="email"
+          />
           <div class="footer-button">
-            <b-button type="submit" class="fot-btn w-100 my-3">
-              <nuxt-link :to="'/ResetPassword'">
+            <b-button type="submit" class="fot-btn main-btn w-100 my-3">
+              <nuxt-link :to="'/Auth/ResetPassword'">
                 إعادة تعيين كلمة المرور
               </nuxt-link>
             </b-button>
           </div>
           <p class="my-3 text-center">
-            <nuxt-link :to="'/Login'">
+            <nuxt-link :to="'/Auth/Login'">
               العودة إلى صفحة الدخول
               <i class="fas fa-chevron-circle-left"></i>
             </nuxt-link>
           </p>
-        </form>
+        </b-form>
       </div>
     </b-col>
     <b-col md="7" order="1" order-md="2">
