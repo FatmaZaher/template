@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 @import url('~/assets/scss/style.scss');
 
@@ -30,9 +30,8 @@ html {
 }
 body {
   direction: ltr;
-
   margin: 0;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Almarai', sans-serif;
   line-height: 1.5;
   text-align: left;
   height: 100%;

@@ -2,7 +2,7 @@
   <div class="manageBox">
     <b-row>
       <b-col>
-        <b-form-group label="البحث">
+        <b-form-group >
           <b-form-input
             type="text"
             v-model="search"

@@ -1,7 +1,7 @@
 <template>
   <div class="content subpage">
     <div class="text-center mt-4">
-      <h6>{{ title }}</h6>
+      <h5>{{ title }}</h5>
     </div>
     <b-form ref="form" @submit.stop.prevent="">
       <VSelectInput
@@ -26,7 +26,7 @@
         <b-button type="submit" class="fot-btn main-btn w-100 mt-3 mr-3"
           >حفظ</b-button
         >
-        <b-button type="submit" class="fot-btn main-btn w-100 mt-3 close-btn"
+        <b-button type="" class="fot-btn main-btn w-100 mt-3 close-btn"
           ><nuxt-link :to="'/Action'"> إلغاء </nuxt-link>
         </b-button>
       </div>
@@ -40,7 +40,7 @@ export default {
     return {
       openmodal: false,
       buttonTitle: '',
-      title: 'إضافة عينة',
+      title: 'إضافة عينة جديدة',
       sampleNameList: ['jjj', 'gg', 'ttt'],
       sampleNoList: ['01', '02', '03'],
       sectionList: [

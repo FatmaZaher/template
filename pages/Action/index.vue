@@ -9,7 +9,8 @@
           <div class="d-flex justify-content-end">
             <b-button class="btn main-btn">
               <nuxt-link :to="'/Action/AddAction'">
-                {{ buttonTitle }}
+                <PlusIcon />
+                <span class="ml-1"> {{ buttonTitle }}</span>
               </nuxt-link>
             </b-button>
           </div>

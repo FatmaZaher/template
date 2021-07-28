@@ -1,24 +1,22 @@
 <template>
   <div class="header">
     <b-row>
-      <b-col cols="0" sm="1">
-        <div class="b-color"></div>
-      </b-col>
-      <b-col cols="6" sm="6" class="d-flex align-items-center">
+      <b-col cols="8" class="d-flex align-items-center">
+        <img src="~/assets/images/logo.png" alt="logo" class="logo-img mr-3"/>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb p-0 m-0">
-            <li class="breadcrumb-item mr-4">
+            <li class="breadcrumb-item mr-3">
               <nuxt-link :to="'/'">الرئيسية</nuxt-link>
             </li>
             <li class="breadcrumb-item active" aria-current="page">الفرع</li>
           </ol>
         </nav>
       </b-col>
-      <b-col cols="6" sm="5">
-        <span>EN</span>
-        <nuxt-link :to="'/Profile'">
+      <b-col cols="4" class="d-flex justify-content-end">
+        <nuxt-link :to="'/Profile'" class="mr-3">
           <img src="~/assets/images/Photo.png" alt="personal picture" class="profiel-img"/>
         </nuxt-link>
+        <span>EN</span>
       </b-col>
     </b-row>
   </div>
@@ -28,7 +26,4 @@ export default {
 }
 </script>
 <style lang="scss">
-.profiel-img{
-  cursor: pointer;
-}
 </style>

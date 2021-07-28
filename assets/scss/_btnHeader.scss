@@ -1,8 +1,7 @@
-
-.btn{
+.btn {
   border: none !important;
 }
-.main-btn{
+.main-btn {
   background-color: var(--main-color) !important;
   padding: 10px 15px;
   border-radius: 25px;
@@ -17,11 +16,11 @@
   }
   i {
     font-size: 14px;
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 10px;
     }
   }
-  a{
+  a {
     color: #fff;
   }
   &:hover {
@@ -33,11 +32,12 @@
   .fot-btn {
     width: 150px;
     font-size: 14px;
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       font-size: 10px;
     }
   }
 }
-.close-btn{
-    background-color:#f00 !important;
+.close-btn {
+  background-color: var(--red-color) !important;
+  color: #fff !important;
 }

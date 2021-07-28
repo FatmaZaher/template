@@ -22,7 +22,7 @@
 export default {
   data() {
     return {
-      title: 'سجل إمتثال الموظفين',
+      title: ' إمتثال الموظفين للإدارة الواحدة',
       buttonTitle: 'إضافة جديد ',
       openmodal: false,
       fields: [

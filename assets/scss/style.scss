@@ -1,19 +1,9 @@
-.page-content {
-  width: calc(100% - 310px);
-  margin-left: auto;
-  padding: 35px 0;
-  @media (max-width: 767px) {
-    margin: 0;
-  }
-}
-.subpage form {
-  width: 45%;
-  margin: 50px auto;
-}
 :root {
-  --main-color: #34ac72;
+  --main-color: #63c257;
   --text-color: #393d48;
   --muted-color: #707070;
+  --back-color: #63c2573b;
+  --red-color: #e00009
 }
 @media (max-width: 767px) {
   .page-content {
@@ -25,7 +15,7 @@
   }
 }
 @import 'header';
-@import 'pageContent';
+@import 'page';
 @import 'btnHeader';
 @import 'tableList';
 @import 'modal';
@@ -34,3 +24,4 @@
 @import 'nuxtLink';
 @import 'form';
 @import 'auth';
+@import 'menu-icons';

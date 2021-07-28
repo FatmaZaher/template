@@ -2,7 +2,7 @@
   <div class="content">
     <b-row>
       <b-col>
-        <b-form-group label="الإدارة" >
+        <b-form-group>
           <b-form-input
             type="text"
             v-model="search"
@@ -13,7 +13,7 @@
       </b-col>
       <b-col></b-col>
     </b-row>
-    <b-row class="w-100">
+    <b-row class="w-100 m-0">
       <b-col
         cols="6"
         md="3"
@@ -39,6 +39,34 @@
         </nuxt-link>
       </b-col>
     </b-row>
+    <!--<div class="content">
+      <b-button class="btn main-btn">
+        <nuxt-link :to="'/Reports/Objections/Objections11'">
+          اعتراضات مسؤول الإدارة
+        </nuxt-link>
+      </b-button>
+      <b-button class="btn main-btn">
+        <nuxt-link :to="'/Reports/Justifications/Justifications11'">
+          تبريرات مسؤول الإدارة
+        </nuxt-link>
+      </b-button>
+      <b-button class="btn main-btn">
+        <nuxt-link :to="'/Reports/ManagerReports'">
+          كافة التقارير مسؤول الإدارة
+        </nuxt-link>
+      </b-button>
+      <b-button class="btn main-btn">
+        <nuxt-link :to="'/VerificationProcess'">
+          عملية التحقق مسؤول الجودة
+        </nuxt-link>
+      </b-button>
+      <b-button class="btn main-btn">
+        <nuxt-link :to="'/MonitoringProcess'"> عملية الرصد </nuxt-link>
+      </b-button>
+      <b-button class="btn main-btn">
+        <nuxt-link :to="'/Error'"> error </nuxt-link>
+      </b-button>
+    </div>-->
   </div>
 </template>
 <script>

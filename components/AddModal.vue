@@ -1,38 +1,10 @@
 <template>
-  <b-modal id="InviteUserModal" v-model="isVisible" size="lg" hide-footer>
+  <b-modal id="InviteUserModal" v-model="isVisible" :size="size" hide-footer>
     <template #modal-title>
       <span>{{ buttonTitle }}</span>
     </template>
     <b-form ref="form" @submit.stop.prevent="">
       <b-row>
-        <b-col md="6" v-if="isEmployeeNo">
-          <Input
-            labelfor="employeeNo"
-            labelname="الرقم الوظيفي"
-            typeinput="number"
-          />
-        </b-col>
-        <b-col md="6" v-if="isEmployeeName">
-          <Input
-            labelfor="employeeName"
-            labelname="إسم الموظف"
-            typeinput="text"
-          />
-        </b-col>
-        <b-col md="6" v-if="isEmployeeEmail">
-          <Input
-            labelfor="employeeEmail"
-            labelname="البريد الإلكتروني"
-            typeinput="email"
-          />
-        </b-col>
-        <b-col md="6" v-if="isSection">
-          <VSelectInput
-            labelfor="section"
-            label="القسم"
-            :options="sectionList"
-          />
-        </b-col>
         <b-col md="6" v-if="isReportNo">
           <Input
             labelfor="reportNo"
@@ -54,13 +26,6 @@
             typeinput="text"
           />
         </b-col>
-        <b-col md="6" v-if="isSampleCodeSelect">
-          <VSelectInput
-            labelfor="sampleCode"
-            label="رمز العينة "
-            :options="sampleCodeList"
-          />
-        </b-col>
         <b-col md="6" v-if="isSampleCode">
           <Input
             labelfor="sampleCode"
@@ -75,41 +40,6 @@
             :options="administrationList"
           />
         </b-col>
-        <b-col md="6" v-if="isJobName">
-          <Input
-            labelfor="jobName"
-            labelname="المسمى الوظيفي"
-            typeinput="text"
-          />
-        </b-col>
-        <b-col md="6" v-if="isPersntage">
-          <Input
-            labelfor="compliancePers"
-            labelname="نسبة الإمتثال"
-            typeinput="text"
-          />
-        </b-col>
-        <b-col md="6" v-if="isMobileNo">
-          <Input
-            labelfor="mobileNo"
-            labelname="رقم الهاتف"
-            typeinput="number"
-          />
-        </b-col>
-        <b-col md="6" v-if="isCity">
-          <VSelectInput labelfor="city" label="المدينة" :options="cityList" />
-        </b-col>
-        <b-col md="6" v-if="isValidity">
-          <VSelectInput
-            labelfor="validity"
-            label="الصلاحية"
-            :options="validityList"
-          />
-        </b-col>
-        <b-col md="6" offset-md="3" v-if="isAddPhoto">
-          <FormFile labelfor="File" labelname="إضافة صورة" />
-        </b-col>
-
         <b-col md="6" v-if="isReleaseDate">
           <DatepickerInput labelfor="releaseDate" labelname="تاريخ الإصدار" />
         </b-col>
@@ -127,14 +57,6 @@
             typeinput="number"
           />
         </b-col>
-        <b-col md="6" v-if="isMonitoringSource">
-          <VSelectInput
-            labelfor="monitoringSource"
-            label="مصدر الرصد"
-            :options="monitoringSourceList"
-          />
-        </b-col>
-
         <b-col md="6" v-if="isComplianceCase">
           <VSelectInput
             labelfor="complianceCase"
@@ -173,14 +95,25 @@
         <b-col md="6" v-if="isActive">
           <Input labelfor="active" labelname="النشاط" typeinput="text" />
         </b-col>
-        <b-col md="6" v-if="isActual">
+        <b-col v-if="isActual">
           <Input
             labelfor="actual"
             labelname="الاحتواء والاجراء الفعلي"
             typeinput="text"
           />
         </b-col>
-
+        <b-col v-if="isQualityNotes">
+          <Textarea
+            labelfor="qualityManagerNotes"
+            labelname="ملاحظات مدير الجودة"
+          />
+        </b-col>
+        <b-col v-if="isStakeholderNotes">
+          <Textarea
+            labelfor="stakeholderNotes"
+            labelname="ملاحظات الجهة المعنية"
+          />
+        </b-col>
         <b-col md="6" v-if="isRangName">
           <VSelectInput
             labelfor="rangName"
@@ -195,11 +128,25 @@
             typeinput="number"
           />
         </b-col>
-        <b-col md="6" v-if="isMonitoringCase">
+        <b-col md="6" v-if="isMonitoringCaseSelect">
           <VSelectInput
             labelfor="monitoringCase"
             label="حالة الرصد"
             :options="monitoringCaseList"
+          />
+        </b-col>
+        <b-col md="6" v-if="isMonitoringStatusCode">
+          <Input
+            labelfor="monitoringStatusCode"
+            labelname="رمز حالة الرصد"
+            typeinput="text"
+          />
+        </b-col>
+        <b-col md="6" v-if="isMonitoringCase">
+          <Input
+            labelfor="monitoringCase"
+            labelname="حالة الرصد"
+            typeinput="text"
           />
         </b-col>
         <b-col md="6" v-if="isResponsible">
@@ -237,7 +184,13 @@
             typeinput="text"
           />
         </b-col>
-
+        <b-col md="6" v-if="isCompliancePers">
+          <Input
+            labelfor="compliancePers"
+            labelname="نسبة الإمتثال"
+            typeinput="text"
+          />
+        </b-col>
         <div v-if="isSectionModal" class="sectionForm">
           <b-form-radio-group
             v-model="selected"
@@ -281,21 +234,69 @@
           </div>
         </div>
         <div v-if="isDeleteModal" class="text-center w-100">
-          <img src="~/assets/images/Group 12868.png" alt="delete img" />
+          <div class="iconModal my-2" style="backgroundColor: var(--red-color) !important" >
+            <TrashIcon class="icon"/>
+          </div>
           <p class="my-4">{{ deleteText }}</p>
           <div class="footer-button d-flex justify-content-center">
-            <b-button type="" class="fot-btn main-btn mx-3">حذف</b-button>
-            <b-button type="" class="fot-btn main-btn mx-3 close-btn"
+            <b-button type="" class="fot-btn main-btn mr-3">حذف</b-button>
+            <b-button type="" class="fot-btn main-btn close-btn"
               >إغلاق</b-button
             >
           </div>
         </div>
         <div v-if="compareAndCheck" class="text-center w-100">
-          <img src="~/assets/images/Group 12821.png" alt="delete img" />
+          <div class="iconModal">
+            <CheckIcon class="icon" />
+          </div>
           <p class="my-4">تمت عملية التحقق بنجاح وتحديد الحالة</p>
           <div class="footer-button">
-            <b-button type="" class="fot-btn main-btn mx-3">ممتثل</b-button>
-            <b-button type="" class="fot-btn main-btn mx-3 close-btn"
+            <b-button type="" class="fot-btn main-btn mr-3">ممتثل</b-button>
+            <b-button type="" class="fot-btn main-btn close-btn"
+              >إغلاق</b-button
+            >
+          </div>
+        </div>
+        <div v-if="complianceRecord" class="text-center w-100">
+          <div class="mb-4">
+            <EditIcon />
+            <span class="ml-1">تعديل إمتثال الإدارة</span>
+          </div>
+          <Input
+            labelfor="administration"
+            labelname="الإدارة"
+            typeinput="text"
+          />
+          <Input
+            labelfor="compliancePers"
+            labelname="نسبة الإمتثال"
+            typeinput="text"
+          />
+          <div class="footer-button">
+            <b-button
+              type=""
+              @click="editConfirmModal"
+              class="fot-btn main-btn mr-3"
+              >حفظ
+              <b-modal v-model="editconfirmmodal" hide-footer>
+                <div class="mb-4 text-center">
+                  <div>تعديل الحالة</div>
+                  <div class="iconModal my-4">
+                    <EditIcon class="icon" />
+                  </div>
+                  <div>هل تقبل تعديل حالة الإمتثال؟</div>
+                </div>
+                <div class="footer-button d-flex justify-content-center">
+                  <b-button type="" class="fot-btn main-btn mr-3"
+                    >تأكيد</b-button
+                  >
+                  <b-button type="" class="fot-btn main-btn close-btn"
+                    >إغلاق</b-button
+                  >
+                </div>
+              </b-modal>
+            </b-button>
+            <b-button type="" class="fot-btn main-btn close-btn"
               >إغلاق</b-button
             >
           </div>
@@ -318,6 +319,10 @@ export default {
       type: Boolean,
       default: true,
     },
+    size: {
+      type: String,
+      default: 'lg',
+    },
     buttonTitle: {
       type: null,
       default: '',
@@ -326,51 +331,11 @@ export default {
       type: null,
       default: '',
     },
-    isEmployeeNo: {
-      type: Boolean,
-      default: false,
-    },
-    isEmployeeName: {
-      type: Boolean,
-      default: false,
-    },
-    isEmployeeEmail: {
-      type: Boolean,
-      default: false,
-    },
     isCheckPoint: {
       type: Boolean,
       default: false,
     },
-    isSection: {
-      type: Boolean,
-      default: false,
-    },
-    isCity: {
-      type: Boolean,
-      default: false,
-    },
     isAdministration: {
-      type: Boolean,
-      default: false,
-    },
-    isJobName: {
-      type: Boolean,
-      default: false,
-    },
-    isPersntage: {
-      type: Boolean,
-      default: false,
-    },
-    isMobileNo: {
-      type: Boolean,
-      default: false,
-    },
-    isValidity: {
-      type: Boolean,
-      default: false,
-    },
-    isAddPhoto: {
       type: Boolean,
       default: false,
     },
@@ -383,10 +348,6 @@ export default {
       default: false,
     },
     isSamplesNo: {
-      type: Boolean,
-      default: false,
-    },
-    isMonitoringSource: {
       type: Boolean,
       default: false,
     },
@@ -422,11 +383,15 @@ export default {
       type: Boolean,
       default: false,
     },
-    isSampleCode: {
+    isQualityNotes: {
       type: Boolean,
       default: false,
     },
-    isSampleCodeSelect: {
+    isStakeholderNotes: {
+      type: Boolean,
+      default: false,
+    },
+    isSampleCode: {
       type: Boolean,
       default: false,
     },
@@ -442,7 +407,15 @@ export default {
       type: Boolean,
       default: false,
     },
+    isMonitoringCaseSelect: {
+      type: Boolean,
+      default: false,
+    },
     isMonitoringCase: {
+      type: Boolean,
+      default: false,
+    },
+    isMonitoringStatusCode: {
       type: Boolean,
       default: false,
     },
@@ -463,6 +436,10 @@ export default {
       default: false,
     },
     isMonitoringPers: {
+      type: Boolean,
+      default: false,
+    },
+    isCompliancePers: {
       type: Boolean,
       default: false,
     },
@@ -490,9 +467,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    complianceRecord: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
+      editconfirmmodal: false,
       selected: 1,
       validityList: ['validity1', 'validity2', 'validity3', 'validity4'],
       cityList: ['city 2', 'city 3', 'city 4', 'city 5', 'city 6', 'city 7'],
@@ -518,17 +500,8 @@ export default {
       ],
       employeeNameList: ['Employee1', 'Employee3', 'Employee4', 'Employee5'],
       checkpointList: ['checkpoint 2', 'checkpoint 3', 'checkpoint 4'],
-      monitoringSourceList: [
-        'Source 2',
-        'Source 3',
-        'Source 4',
-        'Source 5',
-        'Source 6',
-        'Source 7',
-      ],
       actionList: ['action 2', 'action 3', 'action 4'],
       rangLsit: ['داخل نطاق الرقابة والحوكمة', 'خارج نطاق الجودة والحوكمة'],
-      sampleCodeList: ['samples 2', 'samples 3', 'samples 4'],
     }
   },
   computed: {
@@ -545,6 +518,25 @@ export default {
     closeModal() {
       this.openmodal = false
     },
+    editConfirmModal() {
+      this.editconfirmmodal = true
+    },
   },
 }
 </script>
+<style lang="scss" scoped>
+.iconModal {
+  background-color: var(--main-color);
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  line-height: 100px;
+  .icon {
+    width: 30px;
+  }
+  svg {
+    fill: #fff;
+  }
+}
+</style>

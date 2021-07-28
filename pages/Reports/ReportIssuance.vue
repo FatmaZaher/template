@@ -167,12 +167,8 @@ export default {
   data() {
     return {
       monitoringSourceList: [
-        'Source 2',
-        'Source 3',
-        'Source 4',
-        'Source 5',
-        'Source 6',
-        'Source 7',
+        'إدارة الجودةv',
+        'إدارة المالية',
       ],
       statusNameList: ['status 2', 'status 3', 'status 4'],
       administrationList: [

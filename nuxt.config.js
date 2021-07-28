@@ -20,7 +20,12 @@ export default {
   plugins: ['@/plugins/v-select.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    {path: "~/components"},
+    {path: "~/components/icons"},
+    {path: "~/components/form"},
+    {path: "~/components/auth"},
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [

@@ -1,5 +1,5 @@
 <template>
-  <b-row class="w-100 mr-0">
+  <b-row class="w-100 m-0">
     <b-col md="5" class="d-flex align-items-center" order="2" order-md="1">
       <div class="formSection w-100">
         <div class="mb-4 mb-m-5">
@@ -43,7 +43,7 @@
     </b-col>
     <b-col md="7" order="1" order-md="2">
       <div class="imageSection">
-        <img src="~/assets/images/register.svg" alt="Resgister image" />
+        <RegisterSvg />
       </div>
     </b-col>
   </b-row>

@@ -1,9 +1,9 @@
 <template>
-  <div class="content">
-    <div class="d-flex mb-5">
-      <img src="~/assets/images/error.webp" alt="error" class="w-50 m-auto" />
+  <div class="">
+    <div class="p-5 text-center">
+      <ErrorSvg class="w-50"/>
     </div>
-    <p class="text-center my-5">الصفحة المطلوبة غير موجودة</p>
+    <p class="text-center my-3">الصفحة المطلوبة غير موجودة</p>
     <div class="text-center my-5">
       <b-button class="btn main-btn">
         <nuxt-link :to="'/'">
@@ -15,6 +15,8 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'auth',
+}
 </script>
 <style scoped lang="scss"></style>

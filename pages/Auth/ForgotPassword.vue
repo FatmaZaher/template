@@ -1,5 +1,5 @@
 <template>
-  <b-row class="w-100 mr-0">
+  <b-row class="w-100 m-0">
     <b-col md="5" class="d-flex align-items-center" order="2" order-md="1">
       <div class="formSection w-100">
         <div class="mb-4 mb-m-5">
@@ -20,8 +20,8 @@
           </div>
           <p class="my-3 text-center">
             <nuxt-link :to="'/Auth/Login'">
-              العودة إلى صفحة الدخول
-              <i class="fas fa-chevron-circle-left"></i>
+              <span class="mr-1"> العودة إلى صفحة الدخول</span>
+              <BackIcon />
             </nuxt-link>
           </p>
         </b-form>
@@ -29,7 +29,7 @@
     </b-col>
     <b-col md="7" order="1" order-md="2">
       <div class="imageSection">
-        <img src="~/assets/images/forgot.svg" alt="Forgot image" />
+        <ForgotSvg />
       </div>
     </b-col>
   </b-row>

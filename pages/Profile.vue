@@ -5,45 +5,47 @@
         <img src="~/assets/images/profile.png" alt="Person image" />
       </div>
       <div class="info">
-        <div>
-          <h6>
-            <i class="fas fa-graduation-cap"></i>
-            نسبة الإمتثال
-          </h6>
-          <span>90 %</span>
-        </div>
-        <div>
-          <h6>
-            <i class="far fa-address-card"></i>
-            الرقم الوظيفي
-          </h6>
-          <span>059212121</span>
-        </div>
-        <div>
-          <h6>
-            <i class="fas fa-mobile-alt"></i>
-            رقم الجوال
-          </h6>
-          <span>059261548</span>
-        </div>
-        <div>
-          <h6>
-            <i class="fas fa-at"></i>
-            البريد الإلكتروني
-          </h6>
-          <span>fatma@gmail.com</span>
-        </div>
+        <b-list-group>
+          <b-list-group-item
+            ><p>
+              <GraduateIcon />
+              <span class="ml-1"> نسبة الإمتثال</span>
+            </p>
+            <span>90 %</span></b-list-group-item
+          >
+          <b-list-group-item
+            ><p>
+              <CardIcon />
+              <span class="ml-1">الرقم الوظيفي</span>
+            </p>
+            <span>059212121</span>
+          </b-list-group-item>
+          <b-list-group-item
+            ><p>
+              <PhoneIcon />
+              <span class="ml-1">رقم الجوال</span>
+            </p>
+            <span>059261548</span>
+          </b-list-group-item>
+          <b-list-group-item
+            ><p>
+              <EmailIcon />
+              <span class="ml-1">البريد الإلكتروني</span>
+            </p>
+            <span>example@gmail.com</span>
+          </b-list-group-item>
+        </b-list-group>
       </div>
     </div>
     <div class="left-side">
       <div class="left-header">
         <h5>
-          <i class="far fa-user"></i>
-          محمد أحمد حسين محمد
+          <UserIcon />
+          <span class="ml-1">محمد أحمد حسين محمد</span>
         </h5>
         <p>
-          <i class="fas fa-globe"></i>
-          مدير قسم التسويق
+          <NetworkIcon />
+          <span class="ml-1">مدير قسم التسويق</span>
         </p>
       </div>
       <div class="table-left-side">

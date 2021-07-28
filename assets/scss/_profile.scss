@@ -5,10 +5,6 @@
   display: flex;
   box-shadow: 0 3px 36px 0 rgb(0 0 0 / 10%);
   text-align: left;
-  i {
-    margin-left: 5px;
-    font-size: 13px;
-  }
   .right-side {
     width: 25%;
     background-color: var(--main-color);
@@ -19,11 +15,10 @@
       justify-content: center;
       margin-bottom: 50px;
     }
-    .info div {
-      margin-bottom: 35px;
-      span {
-        margin-right: 25px;
-      }
+    .list-group-item{
+      background-color: transparent;
+      border: none;
+      font-size: 14px;
     }
   }
   .left-side {

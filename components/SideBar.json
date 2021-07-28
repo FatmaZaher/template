@@ -8,157 +8,320 @@
     "href": "/",
     "title": "الرئيسية",
     "icon": {
-      "element": "i",
-      "class": "fas fa-home"
+      "element": "span",
+      "class": "menu-dashboard-icon"
     }
   },
   {
     "href": "/ControlPanel",
     "title": "لوحة التحكم",
     "icon": {
-      "element": "i",
-      "class": "fas fa-home"
+      "element": "span",
+      "class": "menu-control-icon"
     }
   },
   {
     "href": "/Profile",
     "title": "الملف الشخصي",
     "icon": {
-      "element": "i",
-      "class": "fas fa-user"
+      "element": "span",
+      "class": "menu-profile-icon"
     }
   },
   {
     "href": "#",
-    "title": "التقارير",
+    "title": "الأقسام والإدارات",
     "icon": {
-      "element": "i",
-      "class": "fas fa-bookmark"
-    },
+      "element": "span",
+      "class": "menu-sections-icon"
+    }
+    ,
     "child": [
       {
-        "href": "/Reports/AllReports",
-        "title": "كافة التقارير",
+        "href": "/Sections",
+        "title": "كافة الأقسام والإدارات",
         "icon": {
-          "element": "i",
-          "class": "fas fa-bookmark"
+          "element": "span",
+          "class": "menu-sectionAdmin-icon"
         }
       },
       {
-        "href": "/Reports/MonitoringResults",
-        "title": "نتائج عملية الرصد",
+        "href": "/Sections/ManagerReports",
+        "title": "تقارير الإدارات",
         "icon": {
-          "element": "i",
-          "class": "fas fa-bookmark"
+          "element": "span",
+          "class": "menu-pages-icon"
         }
-      }
-      ,
+      },
       {
-        "href": "/Reports/VerificationResults",
-        "title": "نتائج عملية التحقق",
+        "href": "/Sections/ComplianceRatios",
+        "title": "نسب إمتثال الإدارات",
         "icon": {
-          "element": "i",
-          "class": "fas fa-bookmark"
+          "element": "span",
+          "class": "menu-persantage-icon"
         }
       }
     ]
   },
   {
-    "href": "/Sections",
-    "title": "الأقسام والإدارات",
-    "icon": {
-      "element": "i",
-      "class": "fas fa-folder"
-    }
-  },
-
-  {
-    "href": "/Employees",
+    "href": "#",
     "title": "الموظفين",
     "icon": {
-      "element": "i",
-      "class": "fas fa-users"
-    }
+      "element": "span",
+        "class": "menu-group-icon"
+    },
+    "child": [
+      {
+        "href": "/Employees",
+        "title": "كافة الموظفين ",
+        "icon": {
+          "element": "span",
+          "class": "menu-profile-icon"
+        }
+      },
+      {
+        "href": "/Employees/AddEmployees",
+        "title": "إضافة موظف",
+        "icon": {
+          "element": "span",
+          "class": "menu-addUser-icon"
+        }
+      }
+    ]
   },
   {
-    "href": "/Samples",
+    "href": "#",
+    "title": "التقارير",
+    "icon": {
+      "element": "span",
+          "class": "menu-pages-icon"
+    },
+    "child": [
+      {
+        "href": "/Reports",
+        "title": "كافة التقارير",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Reports/ConfidenceLevel",
+        "title": "مستوى الثقة",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Reports/Objections",
+        "title": "الإعتراضات",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Reports/Justifications",
+        "title": "التبريرات",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      }
+    ]
+  }
+,
+  {
+    "href": "#",
     "title": "العينات",
     "icon": {
-      "element": "i",
-      "class": "fas fa-file"
-    }
+      "element": "span",
+          "class": "menu-pages-icon"
+    },
+    "child": [
+      {
+        "href": "/Samples",
+        "title": "جميع العينات",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Samples/RepresentativeSamples",
+        "title": "العينات الممثلة",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Samples/UnrepresentedSamples",
+        "title": "العينات الغير ممثلة",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Samples/AddSamples",
+        "title": "إضافة عينة",
+        "icon": {
+          "element": "span",
+          "class": "menu-add-icon"
+        }
+      }
+    ]
+  },
+  {
+    "href": "#",
+    "title": "الرصد",
+    "icon": {
+      "element": "span",
+      "class": "menu-pages-icon"
+    },
+    "child": [
+      {
+        "href": "/Monitoring/MonitoringCases",
+        "title": "حالات الرصد",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Monitoring/MonitoringSources",
+        "title": "مصادر الرصد",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Monitoring/AddMonitoringSources",
+        "title": "إضافة مصدر الرصد",
+        "icon": {
+          "element": "span",
+          "class": "menu-add-icon"
+        }
+      },
+      {
+        "href": "/Monitoring/MonitoringProcess",
+        "title": "عملية الرصد",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      },
+      {
+        "href": "/Monitoring/MonitoringReports",
+        "title": "تقارير الرصد",
+        "icon": {
+          "element": "span",
+          "class": "menu-pages-icon"
+        }
+      }
+    ]
+  },
+  {
+    "href": "#",
+    "title": "التحقق",
+    "icon": {
+      "element": "span",
+      "class": "menu-verification-icon"
+    },
+    "child": [
+      {
+        "href": "/Verification",
+        "title": "نتائج عملية التحقق",
+        "icon": {
+          "element": "span",
+          "class": "menu-verification-icon"
+        }
+      },
+      {
+        "href": "/Verification/VerificationProcess",
+        "title": "عملية التحقق",
+        "icon": {
+          "element": "span",
+          "class": "menu-verification-icon"
+        }
+      },
+      {
+        "href": "/Verification/Cases",
+        "title": "الحالات",
+        "icon": {
+          "element": "span",
+          "class": "menu-verification-icon"
+        }
+      },
+      {
+        "href": "/Verification/Cases/AddCase",
+        "title": "إضافة حالة",
+        "icon": {
+          "element": "span",
+          "class": "menu-add-icon"
+        }
+      }
+    ]
+  },
+  {
+    "href": "#",
+    "title": "السجل الشامل",
+    "icon": {
+      "element": "span",
+      "class": "menu-compliance-icon"
+    },
+    "child": [
+      {
+        "href": "/ComprehensiveRecord/ComplianceRecord",
+        "title": "سجل إمتثال الإدارات",
+        "icon": {
+          "element": "span",
+          "class": "menu-compliance-icon"
+        }
+      }
+    ]
   },
   {
     "href": "/Rang",
     "title": "النطاقات",
     "icon": {
-      "element": "i",
-      "class": "fas fa-file"
+      "element": "span",
+      "class": "menu-rang-icon"
     }
   },
   {
     "href": "/Action",
     "title": "الإجراءات",
     "icon": {
-      "element": "i",
-      "class": "fas fa-file"
+      "element": "span",
+      "class": "menu-action-icon"
     }
   },
   {
-    "href": "/Objections",
-    "title": "الإعتراضات",
+    "href": "/Powers",
+    "title": "الصلاحيات",
     "icon": {
-      "element": "i",
-      "class": "fas fa-star"
-    }
-  },
-
-  {
-    "href": "/Justifications",
-    "title": "التبريرات",
-    "icon": {
-      "element": "i",
-      "class": "fas fa-file"
+      "element": "span",
+      "class": "menu-power-icon"
     }
   },
   {
-    "href": "/Cases",
-    "title": "الحالات",
+    "href": "/Settings",
+    "title": "الإعدادات",
     "icon": {
-      "element": "i",
-      "class": "fas fa-file"
-    }
-  },
-  {
-    "href": "/MonitoringCases",
-    "title": "حالات الرصد",
-    "icon": {
-      "element": "i",
-      "class": "fas fa-file"
-    }
-  },
-  {
-    "href": "/ComplianceRecord",
-    "title": "سجل الإمتثال",
-    "icon": {
-      "element": "i",
-      "class": "fas fa-file"
-    }
-  },
-  {
-    "href": "/VerificationProcess",
-    "title": "عملية التحقق",
-    "icon": {
-      "element": "i",
-      "class": "fas fa-file"
+      "element": "span",
+      "class": "menu-settings-icon"
     }
   },
   {
     "href": "/Auth/Login",
     "title": "تسجيل الخروج",
     "icon": {
-      "element": "i",
-      "class": "fas fa-sign-out-alt"
+      "element": "span",
+      "class": "menu-logout-icon"
     }
   }
 ]

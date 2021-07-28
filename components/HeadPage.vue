@@ -1,6 +1,6 @@
 <template>
   <div class="text-left">
-    <h6>{{ title }}</h6>
+    <h6 class="title">{{ title }}</h6>
   </div>
 </template>
 <script>
@@ -9,9 +9,13 @@ export default {
 }
 </script>
 <style lang="scss">
+.title{
+  font-size: 18px;
+  font-weight: 700;
+}
 @media (max-width: 767px) {
-  h6 {
-    font-size: 14px;
+ .title {
+    font-size: 15px;
   }
 }
 </style>

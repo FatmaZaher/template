@@ -11,7 +11,7 @@
   .v-select,
   .custom-file-label {
     border-radius: 25px;
-    border: 1px solid #34ac7242;
+    border: 1px solid #63c25769;
     padding: 0 20px !important;
     outline: none !important;
     background-color: #34ac7217;
@@ -55,6 +55,9 @@
     padding: 0 !important;
     .btn {
       height: 35px !important;
+      svg{
+        fill: var(--main-color);
+      }
     }
   }
 }
@@ -64,7 +67,7 @@
   .custom-control {
     padding: 10px 55px 10px 70px;
     border-radius: 25px;
-    background-color: #d6eee3;
+    background-color: var(--back-color);
     font-weight: 700;
     @media (max-width: 767px) {
       font-size: 13px;
@@ -78,5 +81,13 @@
 }
 .dropdown-menu {
   min-width: 269px !important;
+}
+.custom-control-input:checked ~ .custom-control-label::before{
+  border-color: var(--main-color);
+  background-color: var(--main-color);
+}
+.allCheck .custom-control-input:checked ~ .custom-control-label::before{
+  border-color: var(--red-color);
+  background-color: var(--red-color);
 }
 

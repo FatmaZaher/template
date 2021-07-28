@@ -19,9 +19,6 @@
 }
 .imageSection {
   padding: 80px;
-  img {
-    width: 100%;
-  }
 }
 @media (max-width: 767px) {
   .formSection {
@@ -29,8 +26,8 @@
   }
   .imageSection {
     padding: 20px 0 0 0;
-    img{
-      height: 110px !important;
+    svg{
+      height: 150px !important;
     }
   }
 }
