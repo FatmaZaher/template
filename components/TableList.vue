@@ -17,7 +17,7 @@
           <b-button
             class="btn main-btn"
             v-if="isObjection"
-            style="backgroundcolor: #ec6848 !important"
+            style="backgroundColor: #ec6848 !important"
           >
             <nuxt-link :to="'/Reports/Objections/objectionSubmit'">
               إعتراض
@@ -64,6 +64,7 @@
               v-model="actualmodal"
               :is-actual="true"
               :save-button="false"
+              size=""
             />
           </b-button>
         </div>
@@ -79,6 +80,7 @@
               v-model="qualitymodal"
               :is-quality-notes="true"
               :save-button="false"
+              size=""
             />
           </b-button>
         </div>
@@ -94,6 +96,7 @@
               v-model="stakeholdermodal"
               :is-stakeholder-notes="true"
               :save-button="false"
+              size=""
             />
           </b-button>
         </div>
