@@ -22,7 +22,7 @@
             <div>
               <h6 class="mb-3">اسم الشخص</h6>
               <p>اسم التخصص</p>
-          </div>
+            </div>
           </div>
         </div>
       </div>
@@ -122,6 +122,7 @@ export default {
     }
     .text h6 {
       color: var(--text-color);
+      font-weight: 700;
     }
     .text p {
       color: var(--muted-color);
@@ -130,11 +131,11 @@ export default {
     }
   }
   .vsm--link {
-    font-size: 14px;
-    padding: 5px;
-    padding-left: 10px;
+    font-size: 15px;
+    padding: 5px 0;
     margin: 5px;
     border-radius: 25px;
+    font-weight: 600;
   }
   .vsm--toggle-btn {
     display: none;
@@ -169,20 +170,20 @@ export default {
   margin: 0 10px;
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-2 {
-  padding-left: 40px;
+  padding-left: 0;
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-2.vsm--link_active {
   color: var(--main-color);
+  .vsm--icon {
+    filter: invert(62%) sepia(35%) saturate(691%) hue-rotate(66deg)
+      brightness(102%) contrast(86%);
+  }
 }
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_exact-active,
 .v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_active {
   box-shadow: none;
   background-color: var(--main-color);
   color: #fff;
-  .vsm--icon {
-    color: #fff;
-    background-color: transparent;
-  }
 }
 .v-sidebar-menu.vsm_white-theme.vsm_expanded .vsm--item_open .vsm--link_level-1,
 .v-sidebar-menu.vsm_white-theme.vsm_expanded
@@ -191,12 +192,24 @@ export default {
   .vsm--icon {
   background-color: var(--main-color);
 }
+.v-sidebar-menu.vsm_white-theme
+  .vsm--link_level-1.vsm--link_exact-active
+  .vsm--icon,
+.v-sidebar-menu.vsm_white-theme .vsm--link_level-1.vsm--link_active .vsm--icon,
+.v-sidebar-menu.vsm_white-theme.vsm_expanded
+  .vsm--item_open
+  .vsm--link_level-1
+  .vsm--icon {
+  filter: invert(86%) sepia(99%) saturate(2%) hue-rotate(88deg) brightness(104%)
+    contrast(100%);
+  background-color: transparent;
+}
 .v-sidebar-menu.vsm_white-theme .vsm--dropdown .vsm--list {
   background-color: transparent;
 }
 @media (max-width: 767px) {
   .ShowSideBar {
-     left: 0;
+    left: 0;
   }
   .HideSideBar {
     left: -270px;
