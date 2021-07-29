@@ -111,6 +111,16 @@
           </nuxt-link>
         </div>
       </template>
+      <template #cell(objectionReson)="data">
+        <div>
+          <b-button v-if="index">
+            <span class="spanId"> {{ data.index }}</span>
+          </b-button>
+          <nuxt-link :to="'/Reports/Objections/ObjectionText'">
+            <FileIcon />
+          </nuxt-link>
+        </div>
+      </template>
       <template #cell(all)="data">
         <div class="action">
           <b-button v-if="index">

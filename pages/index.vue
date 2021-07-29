@@ -1,14 +1,21 @@
 <template>
   <div class="content">
     <b-row>
-      <b-col>
-        <b-form-group>
-          <b-form-input
+      <b-col md="4">
+        <b-form-group label-cols="2" label="الإدارة" label-for="input-sm">
+          <!--<b-form-input
+            id="input-sm"
             type="text"
             v-model="search"
             placeholder="البحث عن الإدارة"
-            class="w-50"
-          ></b-form-input>
+          ></b-form-input>-->
+          <v-select
+            class="input"
+            v-model="search"
+            :options="administrationList"
+            :multiple="isMulti"
+            dir="rtl"
+          ></v-select>
         </b-form-group>
       </b-col>
       <b-col></b-col>
@@ -105,6 +112,12 @@ export default {
           img: require('~/assets/images/Screenshot_13.png'),
           compliancePers: '60%',
         },
+      ],
+      administrationList: [
+        'إدارة التسويق',
+        'الإدارة المالية',
+        'إدارة الإنتاج',
+        'إدارة التخطيط',
       ],
     }
   },

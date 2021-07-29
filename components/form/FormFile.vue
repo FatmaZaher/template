@@ -1,7 +1,6 @@
 <template>
   <b-form-group :label="labelname" :label-for="labelfor">
     <b-form-file
-      v-model="text"
       :id="labelfor"
       placeholder=""
       drop-placeholder="أسقط الملف هنا..."
@@ -13,10 +12,6 @@
 <script>
 export default {
   props: {
-    value: {
-      type: String,
-      default: '',
-    },
     labelname: {
       type: String,
       default: '',
@@ -34,16 +29,7 @@ export default {
       default: '',
     },
   },
-  computed: {
-    text: {
-      get() {
-        return this.value
-      },
-      set(value) {
-        this.$emit('input', value)
-      },
-    },
-  },
+
 }
 </script>
 <style scoped lang="scss"></style>

@@ -9,7 +9,6 @@
     ></v-select>
   </b-form-group>
 </template>
-
 <script>
 export default {
   props: {
