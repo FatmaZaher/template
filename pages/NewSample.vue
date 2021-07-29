@@ -20,7 +20,7 @@
         :options="administrationList"
       />
       <VSelectInput labelfor="section" label="القسم" :options="sectionList" />
-      <FormFile labelfor="newSampleFile" labelname="إضافة عينة من ملف" />
+      <FormFile labelfor="newSampleFile" labelname="إضافة عينة من ملف" accept=".doc, .docx, .pdf"/>
       <Textarea labelfor="roles" labelname="النقاط والشروط" />
       <div class="footer-button d-flex justify-content-between">
         <b-button type="submit" class="fot-btn main-btn w-100 mt-3 mr-3"
@@ -38,7 +38,6 @@
 export default {
   data() {
     return {
-      openmodal: false,
       buttonTitle: '',
       title: 'إضافة عينة جديدة',
       sampleNameList: ['jjj', 'gg', 'ttt'],
@@ -56,11 +55,6 @@ export default {
         'إدارة التخطيط',
       ],
     }
-  },
-  methods: {
-    openModal() {
-      this.openmodal = true
-    },
   },
 }
 </script>

@@ -49,18 +49,12 @@
 export default {
   data() {
     return {
-      openmodal: false,
       title: 'عملية التحقق',
       verificationCaseList: ['لم يتم التحقق بعد', 'جاري التحقق', 'تم التحقق'],
       sampleCodeList: ['samples 2', 'samples 3', 'samples 4'],
       sampleNameList: ['jjj', 'gg', 'ttt'],
       sampleNoList: ['01', '02', '03'],
     }
-  },
-  methods: {
-    openModal() {
-      this.openmodal = true
-    },
   },
 }
 </script>

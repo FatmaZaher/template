@@ -25,7 +25,11 @@
           </b-button>
         </b-col>
       </b-row>
-      <FormFile labelfor="File" labelname="المرفقات" />
+      <FormFile
+        labelfor="objectionFile"
+        labelname="المرفقات"
+        accept=".doc, .docx, .pdf"
+      />
       <Textarea labelfor="objectionReson" labelname="سبب الإعتراض" />
       <div class="footer-button d-flex justify-content-center">
         <b-button type="submit" class="fot-btn main-btn w-100 mt-3"
@@ -45,11 +49,6 @@ export default {
       reportNoList: ['101', '212', '1212'],
       sampleNoList: ['01', '02', '03'],
     }
-  },
-  methods: {
-    openModal() {
-      this.openmodal = true
-    },
   },
 }
 </script>

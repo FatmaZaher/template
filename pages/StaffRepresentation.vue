@@ -24,7 +24,6 @@ export default {
     return {
       title: ' إمتثال الموظفين للإدارة الواحدة',
       buttonTitle: 'إضافة جديد ',
-      openmodal: false,
       fields: [
         {
           key: 'employeeNo',
@@ -68,11 +67,6 @@ export default {
   computed: {
     rows() {
       return this.items.length
-    },
-  },
-  methods: {
-    openModal() {
-      this.openmodal = true
     },
   },
 }

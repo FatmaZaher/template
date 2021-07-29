@@ -5,6 +5,14 @@
         <b-col cols="6">
           <HeadPage :title="title"></HeadPage>
         </b-col>
+        <b-col cols="6">
+          <div class="d-flex justify-content-end">
+            <b-button class="btn main-btn">
+              <CheckIcon fill="#fff" />
+              <span class="ml-1"> {{ buttonTitle }}</span>
+            </b-button>
+          </div>
+        </b-col>
       </b-row>
     </div>
     <TableList
@@ -22,9 +30,8 @@
 export default {
   data() {
     return {
-      title: ' صلاحيات مديرو الإدارات',
-      buttonTitle: 'إضافة جديد ',
-      openmodal: false,
+      title: ' صلاحيات مديري الإدارات',
+      buttonTitle: 'حفظ ',
       fields: [
         {
           key: 'all',
@@ -73,11 +80,6 @@ export default {
   computed: {
     rows() {
       return this.items.length
-    },
-  },
-  methods: {
-    openModal() {
-      this.openmodal = true
     },
   },
 }

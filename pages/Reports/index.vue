@@ -138,7 +138,7 @@ export default {
         {
           reportNo: '01',
           reportCode: 'BNS 88 02',
-          releaseDate: 'Sunday, July 25, 2021',
+          releaseDate: 'الأربعاء، 21 يوليو 2021',
           caseCode: 'BNS 88',
           sampleCode: 'nn 10',
           sampleName: 'vdvdvd',

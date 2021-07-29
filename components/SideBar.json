@@ -29,7 +29,7 @@
     }
   },
   {
-    "href": "#",
+    "href": "/Sections",
     "title": "الأقسام والإدارات",
     "icon": {
       "element": "span",
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "href": "#",
+    "href": "/Employees",
     "title": "الموظفين",
     "icon": {
       "element": "span",
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "href": "#",
+    "href": "/Reports",
     "title": "التقارير",
     "icon": {
       "element": "span",
@@ -133,7 +133,7 @@
   }
 ,
   {
-    "href": "#",
+    "href": "/Samples",
     "title": "العينات",
     "icon": {
       "element": "span",
@@ -175,7 +175,7 @@
     ]
   },
   {
-    "href": "#",
+    "href": "/Monitoring",
     "title": "الرصد",
     "icon": {
       "element": "span",
@@ -183,7 +183,7 @@
     },
     "child": [
       {
-        "href": "/Monitoring/MonitoringCases",
+        "href": "/Monitoring",
         "title": "حالات الرصد",
         "icon": {
           "element": "span",
@@ -225,7 +225,7 @@
     ]
   },
   {
-    "href": "#",
+    "href": "/Verification",
     "title": "التحقق",
     "icon": {
       "element": "span",

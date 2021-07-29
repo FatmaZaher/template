@@ -24,7 +24,7 @@
             </nuxt-link>
           </b-button>
           <b-button class="btn main-btn" v-if="isJustification">
-            <nuxt-link :to="'/Reports/Justifications/justificationSubmit'">
+            <nuxt-link :to="'/Reports/Justifications/JustificationSubmit'">
               تبرير
             </nuxt-link>
           </b-button>
@@ -106,7 +106,7 @@
           <b-button v-if="index">
             <span class="spanId"> {{ data.index }}</span>
           </b-button>
-          <nuxt-link :to="'/'">
+          <nuxt-link :to="'/Reports/Justifications/JustificationText'">
             <FileIcon />
           </nuxt-link>
         </div>

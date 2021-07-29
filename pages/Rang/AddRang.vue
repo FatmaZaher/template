@@ -17,6 +17,7 @@
       <FormFile 
         labelfor="ٌRangFile" 
         labelname="إدخال نطاقات من ملف" 
+        accept=".doc, .docx, .pdf"
         />
 
       <div class="footer-button d-flex justify-content-between">

@@ -13,21 +13,6 @@
                 <span class="ml-1"> {{ buttonTitle }}</span>
               </nuxt-link>
             </b-button>
-            <!--<AddModal
-              v-model="openmodal"
-              :buttonTitle="buttonTitle"
-              :is-employee-no="true"
-              :is-employee-name="true"
-              :is-employee-email="true"
-              :is-section="true"
-              :is-city="true"
-              :is-administration="true"
-              :is-job-name="true"
-              :is-persntage="true"
-              :is-mobile-no="true"
-              :is-validity="true"
-              :is-add-photo="true"
-            />-->
           </div>
         </b-col>
       </b-row>
@@ -51,12 +36,16 @@ export default {
       buttonTitle: 'إضافة موظف',
       fields: [
         {
+          key: 'employeeNo',
+          label: 'الرقم الوظيفي',
+        },
+        {
           key: 'employeeName',
           label: 'إسم الموظف',
         },
         {
-          key: 'employeeNo',
-          label: 'الرقم الوظيفي',
+          key: 'employeePhoto',
+          label: 'صورة المستخدم',
         },
         {
           key: 'employeeEmail',

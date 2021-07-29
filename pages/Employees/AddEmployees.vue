@@ -72,7 +72,11 @@
           />
         </b-col>
         <b-col md="6" offset-md="3">
-          <FormFile labelfor="File" labelname="إضافة صورة" />
+          <FormFile
+            labelfor="employeePhoto"
+            labelname="إضافة صورة"
+            accept=".jpg, .jpeg , .png, .gif"
+          />
         </b-col>
 
         <div class="footer-button d-flex justify-content-between">

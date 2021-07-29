@@ -17,7 +17,11 @@
         label="الموظف المسؤول"
         :options="employeeNameList"
       />
-      <FormFile labelfor="caseFile" labelname="رفع الحالات من ملف" />
+      <FormFile
+        labelfor="caseFile"
+        labelname="رفع الحالات من ملف"
+        accept=".doc, .docx, .pdf"
+      />
 
       <div class="footer-button d-flex justify-content-between">
         <b-button type="submit" class="fot-btn main-btn w-100 mt-3 mr-3"

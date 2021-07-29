@@ -8,7 +8,7 @@
         <b-col cols="6">
           <div class="d-flex justify-content-end">
             <b-button class="btn main-btn">
-              <nuxt-link :to="'/Reports/Justifications/justificationSubmit'">
+              <nuxt-link :to="'/Reports/Justifications/JustificationSubmit'">
                 <PlusIcon />
                 <span class="ml-1"> إضافة تبرير</span>
               </nuxt-link>

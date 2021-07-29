@@ -32,7 +32,6 @@
 export default {
   data() {
     return {
-      openmodal: false,
       title: 'الإجراءات',
       buttonTitle: 'إضافة إجراء ',
       fields: [
@@ -71,11 +70,6 @@ export default {
   computed: {
     rows() {
       return this.items.length
-    },
-  },
-  methods: {
-    openModal() {
-      this.openmodal = true
     },
   },
 }
