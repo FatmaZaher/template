@@ -6,7 +6,7 @@
           <b-col md="6">
             <Input
               labelfor="employeeName"
-              labelname="إسم الموظف"
+              labelname="الاسم"
               typeinput="text"
             />
           </b-col>
