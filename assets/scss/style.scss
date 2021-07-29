@@ -5,15 +5,7 @@
   --back-color: #63c2573b;
   --red-color: #e00009
 }
-@media (max-width: 767px) {
-  .page-content {
-    width: 100%;
-    margin: 0;
-  }
-  .subpage form {
-    width: 100%;
-  }
-}
+
 @import 'header';
 @import 'page';
 @import 'btnHeader';
