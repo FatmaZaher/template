@@ -19,6 +19,8 @@
       background-color: transparent;
       border: none;
       font-size: 14px;
+      padding: 5px;
+    margin-bottom: 20px;
     }
   }
   .left-side {
@@ -71,7 +73,7 @@
     width: 100%;
     .right-side {
       padding: 50px 10px;
-      width: 27%;
+      width: 30%;
       .image {
         margin-bottom: 20px;
         img {
@@ -79,30 +81,32 @@
           width: 60px;
         }
       }
-      .info div {
+      .info {
         margin-bottom: 20px;
-        h6 {
+        p {
           font-size: 8px;
           margin-bottom: 5px;
-          i {
-            font-size: 10px;
+          svg {
+            width: 10px;
           }
         }
         span {
           font-size: 8px;
-          margin-right: 10px;
         }
       }
     }
     .left-side {
       padding: 50px 20px;
-      width: 73%;
+      width: 70%;
       .left-header {
         h5 {
           font-size: 13px;
         }
         p {
           font-size: 10px;
+        }
+        svg{
+          width: 12px;
         }
       }
       .table-left-side {

@@ -2,9 +2,9 @@
   <div>
     <Header :title="subPageTitle" />
     <div class="content">
-      <div class="header-content">
+      <div class="header-content mt-3">
         <b-row class="align-items-center">
-          <b-col cols="6">
+          <b-col>
             <HeadPage :title="title" />
           </b-col>
         </b-row>

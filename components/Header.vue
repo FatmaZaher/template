@@ -1,17 +1,17 @@
 <template>
   <div class="header">
     <b-row>
-      <b-col cols="8" class="d-flex align-items-center">
-        <img src="~/assets/images/logo.png" alt="logo" class="logo-img mr-3" />
+      <b-col cols="9" md="8" class="d-flex align-items-center">
+        <img src="~/assets/images/logo.png" alt="logo" class="logo-img mr-md-3" />
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb p-0 m-0">
-            <li class="breadcrumb-item mr-3">
+            <li class="breadcrumb-item  mr-md-3">
               <nuxt-link :to="'/'">الرئيسية</nuxt-link>
             </li>
             <li
               v-if="subHeader"
-              class="breadcrumb-item mr-3"
-              style="fontSize: 16px !important"
+              class="breadcrumb-item mr-md-3"
+              style="fontsize: 16px !important"
             >
               <nuxt-link :to="subHeaderlink"
                 ><PointIcon /><span class="ml-1">{{
@@ -23,7 +23,7 @@
               v-if="subHead"
               class="breadcrumb-item active"
               aria-current="page"
-              style="fontSize: 15px !important"
+              style="fontsize: 15px !important"
             >
               <PointIcon />
               <span class="ml-1">{{ title }}</span>
@@ -31,8 +31,8 @@
           </ol>
         </nav>
       </b-col>
-      <b-col cols="4" class="d-flex justify-content-end">
-        <nuxt-link :to="'/Profile'" class="mr-3">
+      <b-col cols="3" md="4" class="d-flex justify-content-end">
+        <nuxt-link :to="'/Profile'" class="mr-md-3 mr-1">
           <img
             src="~/assets/images/Photo.png"
             alt="personal picture"

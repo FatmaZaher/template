@@ -2,9 +2,9 @@
   <div>
     <Header :title="title" />
     <div class="content">
-      <div class="header-content">
-        <b-row class="row align-items-center">
-          <b-col cols="6">
+      <div class="header-content mt-2">
+        <b-row>
+          <b-col cols="6" class="d-flex align-items-center">
             <HeadPage :title="title" />
           </b-col>
         </b-row>

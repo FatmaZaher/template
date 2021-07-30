@@ -3,13 +3,13 @@
     <Header :title="title" />
     <div class="content">
       <div class="header-content">
-        <b-row class="align-items-center">
-          <b-col cols="6">
+        <b-row>
+          <b-col cols="4" class="d-flex align-items-center">
             <HeadPage :title="title" />
           </b-col>
-          <b-col cols="6">
+          <b-col cols="8">
             <div class="d-flex justify-content-end">
-              <b-button class="btn main-btn mr-3">
+              <b-button class="btn main-btn mr-md-3 mr-1">
                 <nuxt-link :to="'/Reports/ReportIssuance'">
                   <PlusIcon />
                   <span class="ml-1"> {{ buttonTitle }}</span>

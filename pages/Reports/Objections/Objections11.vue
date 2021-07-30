@@ -1,8 +1,8 @@
 <template>
   <div class="content">
     <div class="header-content">
-      <b-row class="row align-items-center text-left">
-        <b-col cols="6">
+      <b-row>
+        <b-col cols="6" class="d-flex align-items-center">
           <HeadPage :title="title" />
         </b-col>
         <b-col cols="6">

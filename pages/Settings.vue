@@ -4,7 +4,7 @@
     <div class="content">
       <div class="header-content">
         <b-form ref="form" @submit.stop.prevent="">
-          <b-row class="w-100">
+          <b-row>
             <b-col md="6">
               <Input
                 labelfor="employeeName"

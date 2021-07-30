@@ -3,8 +3,8 @@
     <Header :title="title" />
     <div class="content">
       <div class="header-content">
-        <b-row class="align-items-center">
-          <b-col cols="6">
+        <b-row>
+          <b-col cols="6" class="d-flex align-items-center">
             <HeadPage :title="title" />
           </b-col>
           <b-col cols="6">

@@ -22,6 +22,10 @@
           &:nth-last-child(1) {
             border-radius: 0 50px 50px 0;
           }
+          @media (max-width: 767px) {
+            font-size: 10px;
+            min-width: 130px;
+          }
         }
       }
     }
@@ -42,6 +46,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+          @media (max-width: 767px) {
+            font-size: 10px;
           }
         }
       }
@@ -74,6 +81,10 @@
       width: 40px;
       border-radius: 5px;
       text-align: center;
+      @media (max-width: 767px) {
+        font-size: 14px;
+        width: 30px;
+      }
     }
     .page-item.active .page-link {
       background-color: var(--main-color);

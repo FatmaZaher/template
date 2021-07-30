@@ -20,24 +20,24 @@
         <b-col
           cols="6"
           md="3"
-          class="w-100 p-3 mb-3"
+          class="w-100 mb-3"
           v-for="department in filterdepartments"
           :key="department.administration"
           :department="department"
         >
-          <nuxt-link :to="'/StaffRepresentation'">
-            <div class="box p-3">
+          <nuxt-link :to="'/StaffRepresentation'" >
+            <div class="box p-md-3 p-3">
               <b-row>
-                <b-col class="d-flex align-items-center">
+                <b-col md="6" class="m-2 m-md-0 d-flex align-items-center justify-content-center">
                   <span class="main-btn">
                     {{ department.compliancePers }}
                   </span>
                 </b-col>
-                <b-col>
+                <b-col md="6" class="d-flex align-items-center justify-content-center">
                   <img :src="department.img" alt="" />
                 </b-col>
               </b-row>
-              <div class="text-center mt-3">
+              <div class="text-center mt-md-3 mt-1 adminName">
                 {{ department.administration }}
               </div>
             </div>
@@ -136,6 +136,14 @@ a {
 .box {
   box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.1);
   border-radius: 25px;
+  img{
+    height: 50px;
+  }
+  .adminName{
+     @media (max-width: 767px) {
+       font-size: 10px;
+     }
+  }
 }
 .inputIcon {
   top: 8px;

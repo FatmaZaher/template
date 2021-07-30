@@ -3,11 +3,11 @@
     <Header :title="subPageTitle" />
     <div class="content">
       <div class="header-content">
-        <b-row class="align-items-center">
-          <b-col cols="6">
+        <b-row>
+          <b-col cols="7" class="d-flex align-items-center">
             <HeadPage :title="title" />
           </b-col>
-          <b-col cols="6">
+          <b-col cols="5">
             <div class="d-flex justify-content-end">
               <b-button class="btn main-btn">
                 <CheckIcon fill="#fff" />
