@@ -34,8 +34,11 @@
     .vs__open-indicator {
       fill: var(--main-color);
     }
-    .vs__actions {
+    .vs__open-indicator {
       display: none;
+    }
+    .vs__clear {
+      margin-right: 13px !important;
     }
   }
   .custom-file-input ~ .custom-file-label[data-browse]::after {
@@ -70,7 +73,7 @@
     top: 37px;
     background-color: #edf8f2;
     svg {
-      width: 20px;
+      width: 17px;
       fill: var(--main-color);
     }
   }
