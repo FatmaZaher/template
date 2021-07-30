@@ -16,6 +16,15 @@
       padding: 20px;
       min-height: 480px;
     }
+    .title{
+      font-size: 18px;
+      font-weight: 700;
+    }
+    @media (max-width: 767px) {
+     .title {
+        font-size: 15px;
+      }
+    }
   }
   .subpage form {
     width: 45%;

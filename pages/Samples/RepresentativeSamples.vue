@@ -1,41 +1,33 @@
 <template>
-  <div class="content">
-    <div class="header-content">
-      <b-row class="align-items-center">
-        <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
-        </b-col>
-        <b-col cols="6">
-          <div class="d-flex justify-content-end">
-            <b-button class="btn main-btn">
-              <nuxt-link :to="'/Samples/AddSamples'">
-                <PlusIcon />
-                <span class="ml-1"> {{ buttonTitle }}</span>
-              </nuxt-link>
-            </b-button>
-            <!--<AddModal
-              v-model="openmodal"
-              :buttonTitle="buttonTitle"
-              :is-sample-code="true"
-              :is-sample-name="true"
-              :is-administration="true"
-              :is-samples-no="true"
-              :is-responsible1="true"
-              :is-responsible2="true"
-              :is-responsible3="true"
-            />-->
-          </div>
-        </b-col>
-      </b-row>
+  <div>
+    <Header :title="title" />
+    <div class="content">
+      <div class="header-content">
+        <b-row class="align-items-center">
+          <b-col cols="6">
+            <HeadPage :title="title" />
+          </b-col>
+          <b-col cols="6">
+            <div class="d-flex justify-content-end">
+              <b-button class="btn main-btn">
+                <nuxt-link :to="'/Samples/AddSamples'">
+                  <PlusIcon />
+                  <span class="ml-1"> {{ buttonTitle }}</span>
+                </nuxt-link>
+              </b-button>
+            </div>
+          </b-col>
+        </b-row>
+      </div>
+      <TableList
+        :items="items"
+        :rows="rows"
+        :fields="fields"
+        :is-show="true"
+        :is-edit="true"
+        :is-delete="true"
+      />
     </div>
-    <TableList
-      :items="items"
-      :rows="rows"
-      :fields="fields"
-      :is-show="true"
-      :is-edit="true"
-      :is-delete="true"
-    />
   </div>
 </template>
 
@@ -43,7 +35,7 @@
 export default {
   data() {
     return {
-      title: 'العينات',
+      title: 'العينات الممثلة',
       buttonTitle: 'إضافة عينة',
       fields: [
         {

@@ -13,4 +13,18 @@
       }
     }
   }
+  .iconModal {
+    background-color: var(--main-color);
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    line-height: 100px;
+    .icon {
+      width: 30px;
+    }
+    svg {
+      fill: #fff;
+    }
+  }
 }

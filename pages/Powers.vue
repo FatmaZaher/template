@@ -1,28 +1,31 @@
 <template>
-  <div class="content">
-    <div class="header-content">
-      <b-row class="align-items-center">
-        <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
-        </b-col>
-        <b-col cols="6">
-          <div class="d-flex justify-content-end">
-            <b-button class="btn main-btn">
-              <CheckIcon fill="#fff" />
-              <span class="ml-1"> {{ buttonTitle }}</span>
-            </b-button>
-          </div>
-        </b-col>
-      </b-row>
+  <div>
+    <Header :title="subPageTitle" />
+    <div class="content">
+      <div class="header-content">
+        <b-row class="align-items-center">
+          <b-col cols="6">
+            <HeadPage :title="title" />
+          </b-col>
+          <b-col cols="6">
+            <div class="d-flex justify-content-end">
+              <b-button class="btn main-btn">
+                <CheckIcon fill="#fff" />
+                <span class="ml-1"> {{ buttonTitle }}</span>
+              </b-button>
+            </div>
+          </b-col>
+        </b-row>
+      </div>
+      <TableList
+        :items="items"
+        :rows="rows"
+        :fields="fields"
+        :is-show="true"
+        :is-edit="true"
+        :is-delete="true"
+      />
     </div>
-    <TableList
-      :items="items"
-      :rows="rows"
-      :fields="fields"
-      :is-show="true"
-      :is-edit="true"
-      :is-delete="true"
-    />
   </div>
 </template>
 
@@ -30,6 +33,7 @@
 export default {
   data() {
     return {
+      subPageTitle: 'الصلاحيات',
       title: ' صلاحيات مديري الإدارات',
       buttonTitle: 'حفظ ',
       fields: [
@@ -85,4 +89,5 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+</style>

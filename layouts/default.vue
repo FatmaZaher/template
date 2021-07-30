@@ -2,7 +2,7 @@
   <b-container fluid>
     <SideBar />
     <div class="page-content">
-      <Header />
+      
       <nuxt />
     </div>
   </b-container>

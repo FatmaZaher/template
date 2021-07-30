@@ -15,6 +15,7 @@
             labelfor="confirmPassword"
             labelname="تأكيد كلمة المرور"
             typeinput="password"
+            icon="PasswordIcon"
           />
 
           <div class="footer-button">

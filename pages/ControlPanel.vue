@@ -1,5 +1,8 @@
 <template>
-  <div class="content">control panel</div>
+  <div>
+    <Header :title="title" />
+    <div class="content">control panel</div>
+  </div>
 </template>
 
 <script>

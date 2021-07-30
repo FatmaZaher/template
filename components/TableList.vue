@@ -121,12 +121,27 @@
           </nuxt-link>
         </div>
       </template>
+      <template #cell(actionText)="data">
+        <div>
+          <b-button v-if="index">
+            <span class="spanId"> {{ data.index }}</span>
+          </b-button>
+          <nuxt-link :to="'/Action/ActionText'">
+            <FileIcon />
+          </nuxt-link>
+        </div>
+      </template>
       <template #cell(all)="data">
         <div class="action">
           <b-button v-if="index">
             <span class="spanId"> {{ data.index }}</span>
           </b-button>
-          <b-form-checkbox v-model="allChecked" name="check-button" switch class="allCheck">
+          <b-form-checkbox
+            v-model="allChecked"
+            name="check-button"
+            switch
+            class="allCheck"
+          >
           </b-form-checkbox>
         </div>
       </template>

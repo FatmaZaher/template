@@ -1,20 +1,23 @@
 <template>
-  <div class="content">
-    <div class="header-content">
-      <b-row class="row align-items-center">
-         <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
-        </b-col>
-      </b-row>
+  <div>
+    <Header :title="title" />
+    <div class="content">
+      <div class="header-content">
+        <b-row class="row align-items-center">
+          <b-col cols="6">
+            <HeadPage :title="title" />
+          </b-col>
+        </b-row>
+      </div>
+      <TableList
+        :items="items"
+        :rows="rows"
+        :fields="fields"
+        :is-show="true"
+        :is-edit="true"
+        :is-delete="true"
+      />
     </div>
-    <TableList
-      :items="items"
-      :rows="rows"
-      :fields="fields"
-      :is-show="true"
-      :is-edit="true"
-      :is-delete="true"
-    />
   </div>
 </template>
 
@@ -53,14 +56,14 @@ export default {
           actual: 'مثال',
           id: 7,
         },
-         {
+        {
           reportNo: '07',
           sampleCode: '40 C2',
           verificationCase: 'تم التحقق',
           actual: 'مثال',
           id: 7,
         },
-         {
+        {
           reportNo: '09',
           sampleCode: '70 82',
           verificationCase: 'تم التحقق',

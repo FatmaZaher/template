@@ -1,32 +1,35 @@
 <template>
-  <div class="content">
-    <div class="header-content">
-      <b-row class="align-items-center">
-        <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
-        </b-col>
-        <b-col cols="6">
-          <div class="d-flex justify-content-end">
-            <b-button @click="openModal" class="btn main-btn mr-3">
+  <div>
+    <Header :title="title" />
+    <div class="content">
+      <div class="header-content">
+        <b-row class="align-items-center">
+          <b-col cols="6">
+            <HeadPage :title="title" />
+          </b-col>
+          <b-col cols="6">
+            <div class="d-flex justify-content-end">
+              <b-button @click="openModal" class="btn main-btn mr-3">
                 <PlusIcon />
                 <span class="ml-1"> {{ buttonTitle }}</span>
-            </b-button>
-            <AddModal
-              v-model="openmodal"
-              :buttonTitle="buttonTitle"
-              :is-section-modal="true"
-            />
-          </div>
-        </b-col>
-      </b-row>
+              </b-button>
+              <AddModal
+                v-model="openmodal"
+                :buttonTitle="buttonTitle"
+                :is-section-modal="true"
+              />
+            </div>
+          </b-col>
+        </b-row>
+      </div>
+      <TableList
+        :items="items"
+        :rows="rows"
+        :fields="fields"
+        :is-edit="true"
+        :is-delete="true"
+      />
     </div>
-    <TableList
-      :items="items"
-      :rows="rows"
-      :fields="fields"
-      :is-edit="true"
-      :is-delete="true"
-    />
   </div>
 </template>
 
@@ -82,7 +85,6 @@ export default {
           secORadmin: 'قسم الشئون الماليه والمحاسبة',
           id: 11,
         },
-
       ],
     }
   },

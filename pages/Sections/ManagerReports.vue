@@ -1,19 +1,22 @@
 <template>
-  <div class="content">
-    <div class="header-content">
-      <b-row class="align-items-center">
-        <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
-        </b-col>
-      </b-row>
+  <div>
+    <Header :title="title" />
+    <div class="content">
+      <div class="header-content">
+        <b-row class="align-items-center">
+          <b-col cols="6">
+            <HeadPage :title="title" />
+          </b-col>
+        </b-row>
+      </div>
+      <TableList
+        :items="items"
+        :rows="rows"
+        :fields="fields"
+        :is-objection="true"
+        :is-justification="true"
+      />
     </div>
-    <TableList
-      :items="items"
-      :rows="rows"
-      :fields="fields"
-      :is-objection="true"
-      :is-justification="true"
-    />
   </div>
 </template>
 <script>
@@ -67,7 +70,7 @@ export default {
           key: 'active',
           label: 'النشاط',
         },
-         {
+        {
           key: 'adminManager',
           label: 'مدير الإدارة',
         },
@@ -78,10 +81,6 @@ export default {
         {
           key: 'rangName',
           label: 'اسم النطاق',
-        },
-        {
-          key: 'monitoringHealth',
-          label: 'هل الرصد خاطئ؟',
         },
         {
           key: 'monitoringHealth',

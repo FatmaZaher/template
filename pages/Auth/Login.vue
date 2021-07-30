@@ -10,11 +10,13 @@
             labelfor="employeeEmail"
             labelname="البريد الإلكتروني"
             typeinput="email"
+            icon="EmailIcon"
           />
           <Input
             labelfor="password"
             labelname="كلمة المرور"
             typeinput="password"
+            icon="PasswordIcon"
           />
           <div class="forgot">
             <nuxt-link :to="'/Auth/ForgotPassword'">

@@ -1,5 +1,6 @@
 .form-group {
   margin-bottom: 35px;
+  position: relative;
   label {
     font-size: 15px;
     text-align: left;
@@ -30,8 +31,11 @@
         height: 35px;
       }
     }
-    .vs__open-indicator{
+    .vs__open-indicator {
       fill: var(--main-color);
+    }
+    .vs__actions {
+      display: none;
     }
   }
   .custom-file-input ~ .custom-file-label[data-browse]::after {
@@ -55,9 +59,19 @@
     padding: 0 !important;
     .btn {
       height: 35px !important;
-      svg{
+      svg {
         fill: var(--main-color);
       }
+    }
+  }
+  .inputIcon {
+    position: absolute;
+    right: 6%;
+    top: 37px;
+    background-color: #edf8f2;
+    svg {
+      width: 20px;
+      fill: var(--main-color);
     }
   }
 }
@@ -82,12 +96,11 @@
 .dropdown-menu {
   min-width: 269px !important;
 }
-.custom-control-input:checked ~ .custom-control-label::before{
+.custom-control-input:checked ~ .custom-control-label::before {
   border-color: var(--main-color);
   background-color: var(--main-color);
 }
-.allCheck .custom-control-input:checked ~ .custom-control-label::before{
+.allCheck .custom-control-input:checked ~ .custom-control-label::before {
   border-color: var(--red-color);
   background-color: var(--red-color);
 }
-

@@ -1,20 +1,23 @@
 <template>
-  <div class="content">
-    <div class="header-content">
-      <b-row class="align-items-center">
-        <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
-        </b-col>
-      </b-row>
+  <div>
+    <Header :title="title" />
+    <div class="content">
+      <div class="header-content">
+        <b-row class="align-items-center">
+          <b-col cols="6">
+            <HeadPage :title="title" />
+          </b-col>
+        </b-row>
+      </div>
+      <TableList
+        :items="items"
+        :rows="rows"
+        :fields="fields"
+        :is-show="true"
+        :is-edit="true"
+        :is-delete="true"
+      />
     </div>
-    <TableList
-      :items="items"
-      :rows="rows"
-      :fields="fields"
-      :is-show="true"
-      :is-edit="true"
-      :is-delete="true"
-    />
   </div>
 </template>
 <script>
@@ -58,7 +61,7 @@ export default {
           id: 4,
         },
         {
-           reportNo: '02',
+          reportNo: '02',
           sampleNo: '002',
           complianceCase: 'غير ممتثل',
           objectionReson: 'السبب',
@@ -74,7 +77,7 @@ export default {
           id: 4,
         },
         {
-           reportNo: '04',
+          reportNo: '04',
           sampleNo: '004',
           complianceCase: 'ممتثل',
           objectionReson: 'السبب',

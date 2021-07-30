@@ -7,6 +7,9 @@
       :multiple="isMulti"
       dir="rtl"
     ></v-select>
+    <span class="inputIcon">
+      <component :is="icon"></component>
+    </span>
   </b-form-group>
 </template>
 <script>
@@ -32,6 +35,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    icon: {
+      type: String,
+      default: 'PointIcon',
+    },
   },
   computed: {
     select: {
@@ -45,3 +52,5 @@ export default {
   },
 }
 </script>
+<style scoped lang="scss">
+</style>

@@ -10,6 +10,7 @@
             labelfor="reportNo"
             labelname="رقم التقرير"
             typeinput="number"
+            icon="ListIcon"
           />
         </b-col>
         <b-col md="6" v-if="isReportCode">
@@ -17,6 +18,7 @@
             labelfor="reportCode"
             labelname="رمز التقرير"
             typeinput="text"
+            icon="CodesIcon"
           />
         </b-col>
         <b-col md="6" v-if="isSampleName">
@@ -24,6 +26,7 @@
             labelfor="sampleName"
             labelname="اسم العينة"
             typeinput="text"
+            icon="FileCodeIcon"
           />
         </b-col>
         <b-col md="6" v-if="isSampleCode">
@@ -31,6 +34,7 @@
             labelfor="sampleCode"
             labelname="رمز العينة"
             typeinput="text"
+            icon="CodesIcon"
           />
         </b-col>
         <b-col md="6" v-if="isAdministration">
@@ -38,6 +42,7 @@
             labelfor="administration"
             label="الإدارة"
             :options="administrationList"
+            icon="AdminIcon"
           />
         </b-col>
         <b-col md="6" v-if="isReleaseDate">
@@ -48,6 +53,7 @@
             labelfor="checkpoint"
             label="نقطة التحقق"
             :options="checkpointList"
+            icon="CheckIcon"
           />
         </b-col>
         <b-col md="6" v-if="isSamplesNo">
@@ -55,6 +61,7 @@
             labelfor="samplesNo"
             labelname="عدد العينات"
             typeinput="number"
+            icon="ListIcon"
           />
         </b-col>
         <b-col md="6" v-if="isComplianceCase">
@@ -62,6 +69,7 @@
             labelfor="complianceCase"
             label="حالة الامتثال"
             :options="complianceCaseList"
+            icon="CheckIcon"
           />
         </b-col>
         <b-col md="6" v-if="isActionName">
@@ -69,6 +77,7 @@
             labelfor="actionName"
             label="إسم الإجراء"
             :options="actionList"
+            icon="ActiveIcon"
           />
         </b-col>
         <b-col md="6" v-if="isReportType">
@@ -76,6 +85,7 @@
             labelfor="reportsType"
             label="نوع التقرير"
             :options="reportsTypeList"
+            icon="FileIcon"
           />
         </b-col>
         <b-col md="6" v-if="isVerificationCase">
@@ -83,6 +93,7 @@
             labelfor="verificationCase"
             label="حالة التحقق"
             :options="verificationCaseList"
+            icon="CheckIcon"
           />
         </b-col>
         <b-col md="6" v-if="isCasesCode">
@@ -90,16 +101,23 @@
             labelfor="casesCodes"
             labelname="رموز الحالات"
             typeinput="text"
+            icon="CodesIcon"
           />
         </b-col>
         <b-col md="6" v-if="isActive">
-          <Input labelfor="active" labelname="النشاط" typeinput="text" />
+          <Input
+            labelfor="active"
+            labelname="النشاط"
+            typeinput="text"
+            icon="ActiveIcon"
+          />
         </b-col>
         <b-col v-if="isActual">
           <Input
             labelfor="actual"
             labelname="الاحتواء والاجراء الفعلي"
             typeinput="text"
+            icon="CheckIcon"
           />
         </b-col>
         <b-col v-if="isQualityNotes">
@@ -119,6 +137,7 @@
             labelfor="rangName"
             label="اسم النطاق"
             :options="rangLsit"
+            icon="RangIcon"
           />
         </b-col>
         <b-col md="6" v-if="isRepetitiveCase">
@@ -126,6 +145,7 @@
             labelfor="repetitiveCase"
             labelname="الحالة التكرارية"
             typeinput="number"
+            icon="RepeatIcon"
           />
         </b-col>
         <b-col md="6" v-if="isMonitoringCaseSelect">
@@ -133,6 +153,7 @@
             labelfor="monitoringCase"
             label="حالة الرصد"
             :options="monitoringCaseList"
+            icon="SourceIcon"
           />
         </b-col>
         <b-col md="6" v-if="isMonitoringStatusCode">
@@ -140,6 +161,7 @@
             labelfor="monitoringStatusCode"
             labelname="رمز حالة الرصد"
             typeinput="text"
+            icon="CodesIcon"
           />
         </b-col>
         <b-col md="6" v-if="isMonitoringCase">
@@ -147,6 +169,7 @@
             labelfor="monitoringCase"
             labelname="حالة الرصد"
             typeinput="text"
+            icon="SourceIcon"
           />
         </b-col>
         <b-col md="6" v-if="isResponsible">
@@ -154,6 +177,7 @@
             labelfor="responsible"
             labelname="المسؤولية"
             typeinput="text"
+            icon="FileCodeIcon"
           />
         </b-col>
         <b-col md="6" v-if="isResponsible1">
@@ -161,6 +185,7 @@
             labelfor="responsible1"
             labelname="المسؤولية 1"
             typeinput="text"
+            icon="FileCodeIcon"
           />
         </b-col>
         <b-col md="6" v-if="isResponsible2">
@@ -168,6 +193,7 @@
             labelfor="responsible2"
             labelname="المسؤولية 2"
             typeinput="text"
+            icon="FileCodeIcon"
           />
         </b-col>
         <b-col md="6" v-if="isResponsible3">
@@ -175,6 +201,7 @@
             labelfor="responsible3"
             labelname="المسؤولية 3"
             typeinput="text"
+            icon="FileCodeIcon"
           />
         </b-col>
         <b-col md="6" v-if="isMonitoringPers">
@@ -182,6 +209,7 @@
             labelfor="monitoringPers"
             labelname="نسبة صحة الرصد"
             typeinput="text"
+            icon="PerIcon"
           />
         </b-col>
         <b-col md="6" v-if="isCompliancePers">
@@ -189,6 +217,7 @@
             labelfor="compliancePers"
             labelname="نسبة الإمتثال"
             typeinput="text"
+            icon="PerIcon"
           />
         </b-col>
         <div v-if="isSectionModal" class="sectionForm">
@@ -206,16 +235,19 @@
                 labelfor="section"
                 labelname="القسم (الوكالة)"
                 typeinput="text"
+                icon="AdminIcon"
               />
               <VSelectInput
                 labelfor="sectionManagerName"
                 label="إسم مدير القسم"
                 :options="employeeNameList"
+                icon="UserIcon"
               />
               <VSelectInput
                 labelfor="administration"
                 label="إسم الإدارة التي يندرج تحتها القسم"
                 :options="administrationList"
+                icon="AdminIcon"
               />
             </div>
             <div v-if="selected == 2">
@@ -223,19 +255,24 @@
                 labelfor="administration"
                 labelname="الإدارة"
                 typeinput="text"
+                icon="AdminIcon"
               />
               <VSelectInput
                 labelfor="adminManagerName"
                 label="إسم مدير الإدارة"
                 v-modal="kkkk"
                 :options="employeeNameList"
+                icon="UserIcon"
               />
             </div>
           </div>
         </div>
         <div v-if="isDeleteModal" class="text-center w-100">
-          <div class="iconModal my-2" style="backgroundColor: var(--red-color) !important" >
-            <TrashIcon class="icon"/>
+          <div
+            class="iconModal my-2"
+            style="backgroundcolor: var(--red-color) !important"
+          >
+            <TrashIcon class="icon" />
           </div>
           <p class="my-4">{{ deleteText }}</p>
           <div class="footer-button d-flex justify-content-center">
@@ -266,11 +303,13 @@
             labelfor="administration"
             labelname="الإدارة"
             typeinput="text"
+            icon="AdminIcon"
           />
           <Input
             labelfor="compliancePers"
             labelname="نسبة الإمتثال"
             typeinput="text"
+            icon="PerIcon"
           />
           <div class="footer-button">
             <b-button
@@ -301,13 +340,17 @@
             >
           </div>
         </div>
+
+        <b-col
+          md="6"
+          offset-md="3"
+          v-if="saveButton"
+          class="footer-button d-flex justify-content-center"
+        >
+          <b-button type="submit" class="fot-btn main-btn w-100">حفظ</b-button>
+        </b-col>
       </b-row>
-      <div
-        v-if="saveButton"
-        class="footer-button d-flex justify-content-center"
-      >
-        <b-button type="submit" class="fot-btn main-btn">حفظ</b-button>
-      </div>
+
     </b-form>
   </b-modal>
 </template>
@@ -524,19 +567,4 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-.iconModal {
-  background-color: var(--main-color);
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-  line-height: 100px;
-  .icon {
-    width: 30px;
-  }
-  svg {
-    fill: #fff;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

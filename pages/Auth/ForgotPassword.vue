@@ -10,6 +10,7 @@
             labelfor="employeeEmail"
             labelname="البريد الإلكتروني"
             typeinput="email"
+            icon="EmailIcon"
           />
           <div class="footer-button">
             <b-button type="submit" class="fot-btn main-btn w-100 my-3">

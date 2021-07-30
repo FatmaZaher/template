@@ -1,9 +1,11 @@
 <template>
-  <div class="content">
+  <div>
+    <Header :title="title" />
+    <div class="content">
     <div class="header-content">
       <b-row class="align-items-center">
         <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
+          <HeadPage :title="title" />
         </b-col>
         <b-col cols="6">
           <div class="d-flex justify-content-end">
@@ -25,7 +27,8 @@
       :is-edit="true"
       :is-delete="true"
     />
-  </div>
+  </div></div>
+  
 </template>
 
 <script>

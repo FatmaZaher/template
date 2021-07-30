@@ -3,7 +3,7 @@
     <div class="header-content">
       <b-row class="row align-items-center text-left">
         <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
+          <HeadPage :title="title" />
         </b-col>
         <b-col cols="6">
           <div class="d-flex justify-content-end">

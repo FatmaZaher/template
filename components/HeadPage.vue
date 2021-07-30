@@ -9,13 +9,4 @@ export default {
 }
 </script>
 <style lang="scss">
-.title{
-  font-size: 18px;
-  font-weight: 700;
-}
-@media (max-width: 767px) {
- .title {
-    font-size: 15px;
-  }
-}
 </style>

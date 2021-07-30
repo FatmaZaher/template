@@ -1,20 +1,23 @@
 <template>
-  <div class="content">
-    <div class="header-content">
-      <b-row class="align-items-center">
-        <b-col cols="6">
-          <HeadPage :title="title"></HeadPage>
-        </b-col>
-      </b-row>
+  <div>
+    <Header :title="subPageTitle" />
+    <div class="content">
+      <div class="header-content">
+        <b-row class="align-items-center">
+          <b-col cols="6">
+            <HeadPage :title="title" />
+          </b-col>
+        </b-row>
+      </div>
+      <TableList
+        :items="items"
+        :rows="rows"
+        :fields="fields"
+        :is-show="true"
+        :is-edit="true"
+        :is-delete="true"
+      />
     </div>
-    <TableList
-      :items="items"
-      :rows="rows"
-      :fields="fields"
-      :is-show="true"
-      :is-edit="true"
-      :is-delete="true"
-    />
   </div>
 </template>
 
@@ -23,6 +26,7 @@ export default {
   data() {
     return {
       title: ' إمتثال الموظفين للإدارة الواحدة',
+      subPageTitle: 'إمتثال الموظفين',
       buttonTitle: 'إضافة جديد ',
       fields: [
         {

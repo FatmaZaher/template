@@ -1,52 +1,50 @@
 <template>
-  <div class="content">
-    <b-row>
-      <b-col md="4">
-        <b-form-group label-cols="2" label="الإدارة" label-for="input-sm">
-          <!--<b-form-input
-            id="input-sm"
-            type="text"
-            v-model="search"
-            placeholder="البحث عن الإدارة"
-          ></b-form-input>-->
-          <v-select
-            class="input"
-            v-model="search"
-            :options="administrationList"
-            :multiple="isMulti"
-            dir="rtl"
-          ></v-select>
-        </b-form-group>
-      </b-col>
-      <b-col></b-col>
-    </b-row>
-    <b-row class="w-100 m-0">
-      <b-col
-        cols="6"
-        md="3"
-        class="w-100 p-3 mb-3"
-        v-for="department in filterdepartments"
-        :key="department.administration"
-        :department="department"
-      >
-        <nuxt-link :to="'/StaffRepresentation'">
-          <div class="box p-3">
-            <b-row>
-              <b-col class="d-flex align-items-center">
-                <span class="main-btn"> {{ department.compliancePers }} </span>
-              </b-col>
-              <b-col>
-                <img :src="department.img" alt="" />
-              </b-col>
-            </b-row>
-            <div class="text-center mt-3">
-              {{ department.administration }}
+  <div>
+    <Header :subHead="false" />
+    <div class="content">
+      <b-row>
+        <b-col md="4">
+          <b-form-group label-cols="2" label="الإدارة" label-for="input-sm">
+            <v-select
+              class="input"
+              v-model="search"
+              :options="administrationList"
+              dir="rtl"
+            ></v-select>
+            <span class="inputIcon"> <SearchIcon /></span>
+          </b-form-group>
+        </b-col>
+        <b-col></b-col>
+      </b-row>
+      <b-row class="w-100 m-0">
+        <b-col
+          cols="6"
+          md="3"
+          class="w-100 p-3 mb-3"
+          v-for="department in filterdepartments"
+          :key="department.administration"
+          :department="department"
+        >
+          <nuxt-link :to="'/StaffRepresentation'">
+            <div class="box p-3">
+              <b-row>
+                <b-col class="d-flex align-items-center">
+                  <span class="main-btn">
+                    {{ department.compliancePers }}
+                  </span>
+                </b-col>
+                <b-col>
+                  <img :src="department.img" alt="" />
+                </b-col>
+              </b-row>
+              <div class="text-center mt-3">
+                {{ department.administration }}
+              </div>
             </div>
-          </div>
-        </nuxt-link>
-      </b-col>
-    </b-row>
-    <!--<div class="content">
+          </nuxt-link>
+        </b-col>
+      </b-row>
+      <!--<div class="content">
       <b-button class="btn main-btn">
         <nuxt-link :to="'/Reports/Objections/Objections11'">
           اعتراضات مسؤول الإدارة
@@ -74,6 +72,7 @@
         <nuxt-link :to="'/Error'"> error </nuxt-link>
       </b-button>
     </div>-->
+    </div>
   </div>
 </template>
 <script>
@@ -137,5 +136,8 @@ a {
 .box {
   box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.1);
   border-radius: 25px;
+}
+.inputIcon {
+  top: 8px;
 }
 </style>
