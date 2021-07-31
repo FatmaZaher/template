@@ -10,6 +10,7 @@
             labelfor="newPassword"
             labelname="كلمة المرور الجديدة"
             typeinput="password"
+            icon="PasswordIcon"
           />
           <Input
             labelfor="confirmPassword"

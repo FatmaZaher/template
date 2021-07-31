@@ -10,6 +10,7 @@
             labelfor="username"
             labelname="اسم المستخدم"
             typeinput="text"
+            icon="UserIcon"
           />
           <Input
             labelfor="employeeEmail"
