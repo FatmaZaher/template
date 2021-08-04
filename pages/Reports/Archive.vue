@@ -5,7 +5,7 @@
       <div class="header-content">
         <b-row>
           <b-col cols="4" class="d-flex align-items-center">
-            <HeadPage :title="title" />
+           
           </b-col>
           <b-col cols="8">
             <div class="d-flex justify-content-end">
@@ -31,6 +31,7 @@
         :fields="fields"
         :is-edit="true"
         :is-delete="true"
+        :is-show="true"
         :delete-text="deleteText"
       />
     </div>
@@ -87,46 +88,6 @@ export default {
         {
           key: 'active',
           label: 'النشاط',
-        },
-        {
-          key: 'adminManager',
-          label: 'مدير الإدارة',
-        },
-        {
-          key: 'verificationResult',
-          label: 'نتيجة التحقق',
-        },
-        {
-          key: 'rangName',
-          label: 'اسم النطاق',
-        },
-        {
-          key: 'monitoringHealth',
-          label: 'هل الرصد خاطئ؟',
-        },
-        {
-          key: 'actual',
-          label: 'الإحتواء والإجراء الفوري',
-        },
-        {
-          key: 'qualityManagerNotes',
-          label: 'ملاحظات مدير الجودة',
-        },
-        {
-          key: 'stakeholderNotes',
-          label: 'ملاحظات الجهة المعنية',
-        },
-        {
-          key: 'responsible1',
-          label: 'المسؤولية 1',
-        },
-        {
-          key: 'responsible2',
-          label: 'المسؤولية 2',
-        },
-        {
-          key: 'responsible3',
-          label: 'المسؤولية 3',
         },
         {
           key: 'id',

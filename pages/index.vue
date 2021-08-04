@@ -2,46 +2,27 @@
   <div>
     <Header :subHead="false" />
     <div class="content">
-      <b-row>
-        <b-col md="4">
-          <b-form-group label-cols="2" label="الإدارة" label-for="input-sm">
-            <v-select
-              class="input"
-              v-model="search"
-              :options="administrationList"
-              dir="rtl"
-            ></v-select>
-            <span class="inputIcon"> <SearchIcon /></span>
-          </b-form-group>
-        </b-col>
-        <b-col></b-col>
-      </b-row>
       <b-row class="w-100 m-0">
         <b-col
-          cols="6"
-          md="3"
-          class="w-100 mb-3"
-          v-for="department in filterdepartments"
-          :key="department.administration"
-          :department="department"
+          cols="12"
+          md="4"
+          class="w-100 mb-m-3 mb-5"
+          v-for="card in cards"
+          :key="card.title"
+          :card="card"
         >
-          <nuxt-link :to="'/StaffRepresentation'" >
-            <div class="box p-md-3 p-3">
-              <b-row>
-                <b-col md="6" class="m-2 m-md-0 d-flex align-items-center justify-content-center">
-                  <span class="main-btn">
-                    {{ department.compliancePers }}
-                  </span>
-                </b-col>
-                <b-col md="6" class="d-flex align-items-center justify-content-center">
-                  <img :src="department.img" alt="" />
-                </b-col>
-              </b-row>
-              <div class="text-center mt-md-3 mt-1 adminName">
-                {{ department.administration }}
+          <div class="box p-md-5 p-4 mb-m-0 mb-5">
+            <div class="backCard">
+              <div class="svgCard d-flex align-items-center">
+                <component :is="card.icon"></component>
               </div>
             </div>
-          </nuxt-link>
+            <nuxt-link :to="card.link" class="w-100">
+              <div class="main-btn text-center">
+                {{ card.buttontitle }}
+              </div>
+            </nuxt-link>
+          </div>
         </b-col>
       </b-row>
       <!--<div class="content">
@@ -79,73 +60,54 @@
 export default {
   data() {
     return {
-      search: '',
-      departments: [
+      cards: [
         {
-          administration: 'الإدارة المالية',
-          img: require('~/assets/images/Screenshot_9.png'),
-          compliancePers: '50%',
+          buttontitle: 'تقرير مستوى الثقة',
+          icon: 'CheckListIcon',
+          link: '/Reports/ConfidenceLevel',
         },
         {
-          administration: 'الإدارة التسويقية',
-          img: require('~/assets/images/Screenshot_10.png'),
-          compliancePers: '70%',
+          buttontitle: 'اللوحة القيادية',
+          icon: 'DataIcon',
+          link: '',
         },
         {
-          administration: 'إدارة التخطيط',
-          img: require('~/assets/images/Screenshot_12.png'),
-          compliancePers: '90%',
+          buttontitle: 'تقرير إمتثال الإدارات',
+          icon: 'ReportIcon',
+          link: '/AdminCompliance',
         },
-        {
-          administration: 'إدارة الإنتاج',
-          img: require('~/assets/images/Screenshot_13.png'),
-          compliancePers: '60%',
-        },
-        {
-          administration: 'إدارة الجودة',
-          img: require('~/assets/images/Screenshot_13.png'),
-          compliancePers: '75%',
-        },
-        {
-          administration: 'إدارة الخدمات',
-          img: require('~/assets/images/Screenshot_13.png'),
-          compliancePers: '60%',
-        },
-      ],
-      administrationList: [
-        'إدارة التسويق',
-        'الإدارة المالية',
-        'إدارة الإنتاج',
-        'إدارة التخطيط',
       ],
     }
   },
-  computed: {
-    filterdepartments: function () {
-      return this.departments.filter((department) => {
-        return department.administration.match(this.search)
-      })
-    },
-  },
+  computed: {},
 }
 </script>
 <style scoped lang="scss">
-a {
-  color: var(--text-color);
+.content {
+  padding: 100px 40px;
 }
 .box {
-  box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 36px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px;
-  img{
-    height: 50px;
+  .backCard {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    .svgCard {
+      height: 230px;
+      width: 100%;
+      background-image: radial-gradient(#f5fff4, var(--main-color));
+      position: absolute;
+      border-radius: 15px;
+      padding: 30px;
+      top: -80px;
+    }
+    .main-btn {
+      border-radius: 15px;
+    }
   }
-  .adminName{
-     @media (max-width: 767px) {
-       font-size: 10px;
-     }
+  svg {
+    height: 100%;
   }
-}
-.inputIcon {
-  top: 8px;
 }
 </style>
