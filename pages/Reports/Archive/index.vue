@@ -10,7 +10,7 @@
           <b-col cols="8">
             <div class="d-flex justify-content-end">
               <b-button class="btn main-btn mr-md-3 mr-1">
-                <nuxt-link :to="'/Reports/ReportIssuance'">
+                <nuxt-link :to="'/Reports/Archive/ArchiveAdd'">
                   <PlusIcon />
                   <span class="ml-1"> {{ buttonTitle }}</span>
                 </nuxt-link>
@@ -41,7 +41,7 @@
 export default {
   data() {
     return {
-      title: 'كافة التقارير',
+      title: 'الأرشيف',
       buttonTitle: 'إضافة تقرير',
       deleteText: 'هل تريد حذف التقرير من قائمة التقارير؟',
       fields: [
