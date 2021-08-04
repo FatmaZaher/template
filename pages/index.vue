@@ -102,9 +102,9 @@ export default {
       padding: 30px;
       top: -80px;
     }
-    .main-btn {
-      border-radius: 15px;
-    }
+  }
+  .main-btn {
+    border-radius: 15px;
   }
   svg {
     height: 100%;
