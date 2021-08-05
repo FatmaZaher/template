@@ -28,6 +28,7 @@
               icon="SourceIcon"
             />
           </b-col>
+          <b-col cols="12">
           <div class="footer-button d-flex justify-content-between">
             <b-button type="submit" class="fot-btn main-btn w-100 mt-3 mr-3"
               >حفظ</b-button
@@ -36,6 +37,7 @@
               >إلغاء</b-button
             >
           </div>
+          </b-col>
         </b-row>
       </b-form>
     </div>

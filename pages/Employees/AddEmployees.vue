@@ -99,15 +99,16 @@
               accept=".jpg, .jpeg , .png, .gif"
             />
           </b-col>
-
-          <div class="footer-button d-flex justify-content-between">
-            <b-button type="submit" class="fot-btn main-btn w-100 mt-3 mr-3"
-              >حفظ</b-button
-            >
-            <b-button type="" class="fot-btn main-btn w-100 mt-3 close-btn"
-              >إلغاء</b-button
-            >
-          </div>
+          <b-col md="12">
+            <div class="footer-button d-flex justify-content-between">
+              <b-button type="submit" class="fot-btn main-btn w-100 mt-3 mr-3"
+                >حفظ</b-button
+              >
+              <b-button type="" class="fot-btn main-btn w-100 mt-3 close-btn"
+                >إلغاء</b-button
+              >
+            </div>
+          </b-col>
         </b-row>
       </b-form>
     </div>

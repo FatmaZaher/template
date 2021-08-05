@@ -18,7 +18,6 @@
             typeinput="password"
             icon="PasswordIcon"
           />
-
           <div class="footer-button">
             <b-button type="submit" class="fot-btn main-btn w-100 my-3">
               تعيين كلمة مرور جديدة

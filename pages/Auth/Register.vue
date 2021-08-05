@@ -37,7 +37,6 @@
             تمتلك حساب؟
             <nuxt-link :to="'/Auth/Login'"> تسجيل الدخول </nuxt-link>
           </p>
-
           <div class="footer-button">
             <b-button type="submit" class="fot-btn main-btn w-100 mt-3">تسجيل</b-button>
           </div>
