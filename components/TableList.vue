@@ -17,7 +17,7 @@
           <b-button
             class="btn main-btn"
             v-if="isObjection"
-            style="backgroundColor: #ec6848 !important"
+            style="backgroundColor: var(--orange-color) !important"
           >
             <nuxt-link :to="'/Reports/Objections/objectionSubmit'">
               إعتراض

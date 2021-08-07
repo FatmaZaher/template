@@ -6,12 +6,12 @@
         <b-col
           cols="12"
           md="4"
-          class="w-100 mb-m-3 mb-5"
+          class="w-100 mb-md-0 mb-5"
           v-for="card in cards"
           :key="card.title"
           :card="card"
         >
-          <div class="box p-md-5 p-4 mb-m-0 mb-5">
+          <div class="box p-md-5 p-4 mb-md-0 mb-5">
             <div class="backCard">
               <div class="svgCard d-flex align-items-center">
                 <component :is="card.icon"></component>

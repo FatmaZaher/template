@@ -97,7 +97,7 @@ export default {
   bottom: 0;
   z-index: 4;
   left: 0;
-  background-color: #00000087;
+  background-color: var(--overlay-color);
   transition: 0.5s ease;
   opacity: 0;
   display: none;

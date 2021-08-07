@@ -3,12 +3,13 @@
   --text-color: #393d48;
   --muted-color: #707070;
   --back-color: #63c2573b;
-  --red-color: #e00009
+  --red-color: #e00009;
+  --overlay-color: #00000087;
+  --orange-color: #ec6848 ;
 }
 
 @import 'header';
 @import 'page';
-@import 'btnHeader';
 @import 'tableList';
 @import 'modal';
 @import 'tabs';
@@ -17,3 +18,4 @@
 @import 'form';
 @import 'auth';
 @import 'menu-icons';
+@import 'button'
