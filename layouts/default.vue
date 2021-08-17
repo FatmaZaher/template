@@ -1,6 +1,6 @@
 <template>
   <b-container fluid>
-    <SideBar />
+    
     <div class="page-content">
       
       <nuxt />
